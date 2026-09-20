@@ -7,6 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/recruiting",
     "/performance",
     "/systems",
+    "/case-studies",
+    "/ueber-mpp",
+    "/insights",
     "/kontakt",
     "/impressum",
     "/datenschutz"
