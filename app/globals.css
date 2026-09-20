@@ -4281,3 +4281,170 @@ html {
   color: var(--ink);
   border: 1px solid var(--ink);
 }
+
+
+/* === PREMIUM INTERACTION POLISH === */
+
+.button--primary,
+.service-panel__link i,
+.os-pillar__icon,
+.process-golden__node,
+.operating-line__node {
+  will-change: transform;
+}
+
+.button--primary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.button--primary::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -1;
+  background:
+    linear-gradient(
+      105deg,
+      transparent 15%,
+      rgba(255, 255, 255, 0.34) 42%,
+      transparent 68%
+    );
+  transform: translateX(-125%);
+  transition: transform 680ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button--primary:hover::before,
+.button--primary:focus-visible::before {
+  transform: translateX(125%);
+}
+
+.button--primary > span,
+.service-panel__link i {
+  transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.button--primary:hover > span,
+.button--primary:focus-visible > span {
+  transform: translateX(0.22rem);
+}
+
+.asset-image {
+  isolation: isolate;
+}
+
+.asset-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 68%, rgba(17, 19, 21, 0.07));
+  opacity: 0;
+  transition: opacity 350ms ease;
+}
+
+.asset-image[data-loaded="true"]:hover::before {
+  opacity: 1;
+}
+
+.service-panel__media,
+.process-golden__visual,
+.insight-card__visual,
+.insights-index__visual {
+  transform: translateZ(0);
+}
+
+.service-panel__media img,
+.process-golden__visual img,
+.insight-card__visual img,
+.insights-index__visual img,
+.founder-golden__visual img,
+.os-hero__visual img {
+  backface-visibility: hidden;
+  transform-origin: center center;
+}
+
+.service-panel {
+  transition:
+    background-color 320ms ease,
+    transform 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-panel:hover {
+  transform: translateY(-0.35rem);
+}
+
+.service-panel__link i {
+  transition:
+    transform 300ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-radius 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-panel__link:hover i,
+.service-panel__link:focus-visible i {
+  transform: translateX(0.18rem) rotate(-8deg);
+  border-radius: 42%;
+}
+
+.os-pillar__orbit {
+  transition:
+    border-color 300ms ease,
+    opacity 300ms ease;
+}
+
+.os-pillar:hover .os-pillar__orbit {
+  border-color: rgba(17, 19, 21, 0.5);
+}
+
+.os-pillar__icon {
+  transition:
+    transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 320ms ease;
+}
+
+.os-pillar:hover .os-pillar__icon {
+  transform: scale(1.045);
+  box-shadow: 0 18px 50px rgba(17, 19, 21, 0.08);
+}
+
+.process-golden__step h3,
+.service-panel__body h3,
+.insight-card h3,
+.insights-index__card h2 {
+  text-wrap: balance;
+}
+
+.hero h1,
+.os-hero__copy h2,
+.founder-golden__copy h2,
+.process-golden__intro h2,
+.final-cta h2 {
+  text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button--primary::before,
+  .service-panel,
+  .service-panel__link i,
+  .os-pillar__icon,
+  .asset-image::before {
+    transition: none !important;
+  }
+
+  .service-panel:hover,
+  .os-pillar:hover .os-pillar__icon,
+  .service-panel__link:hover i,
+  .service-panel__link:focus-visible i {
+    transform: none !important;
+  }
+}
+
+@media (hover: none) {
+  .service-panel:hover,
+  .os-pillar:hover .os-pillar__icon,
+  .service-panel__link:hover i {
+    transform: none;
+  }
+}
