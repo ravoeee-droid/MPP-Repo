@@ -70,10 +70,10 @@ export function OperatingSystem() {
 
         <AssetImage
           className="os-hero__visual"
-          src="/assets/systems/approach-workshop.webp"
+          src="/assets/systems/approach-workshop.png"
           alt="MPP Workshop zur Organisationsentwicklung"
           label="APPROACH / WORKSHOP"
-          note="Upload: public/assets/systems/approach-workshop.webp"
+          note="Upload: public/assets/systems/approach-workshop.png"
         />
       </div>
 
