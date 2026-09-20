@@ -3,18 +3,24 @@ export function SiteHeader() {
     <header className="site-header">
       <a className="brand-lockup" href="#top" aria-label="MPP Startseite">
         <span className="brand-mark">MPP</span>
-        <span className="brand-subline">People · Performance · Systems</span>
+        <span className="brand-subline">
+          <b>PEOPLE</b>
+          <b>PERFORMANCE</b>
+          <b>SYSTEMS</b>
+        </span>
       </a>
 
       <nav className="site-nav" aria-label="Hauptnavigation">
-        <a href="#operating-system">Ansatz</a>
         <a href="#services">Leistungen</a>
-        <a href="#diagnostic">Diagnostic</a>
+        <a href="#operating-system">Ansatz</a>
+        <a href="#founder">Über uns</a>
+        <a href="#insights">Insights</a>
+        <a href="#contact">Kontakt</a>
       </nav>
 
-      <a className="button button--header" href="#diagnostic">
-        Gespräch vorbereiten
-        <span aria-hidden="true">↗</span>
+      <a className="button button--header button--primary" href="#contact">
+        Gemeinsam morgen bauen
+        <span aria-hidden="true">→</span>
       </a>
     </header>
   );
