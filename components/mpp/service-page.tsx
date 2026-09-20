@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
@@ -35,7 +36,7 @@ export function ServicePage({
   return (
     <main id="main-content">
       <MotionScenes />
-      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
+      <Link className="skip-link" href="#main-content">Zum Inhalt springen</Link>
       <SiteHeader />
       <MiaAssistant />
 
@@ -45,10 +46,10 @@ export function ServicePage({
           <h1>{title}</h1>
           <p>{intro}</p>
           <div className="hero__actions">
-            <a className="button button--primary" href="/#diagnostic">
+            <Link className="button button--primary" href="/#diagnostic">
               Potenziale ins Wirken bringen <span aria-hidden="true">→</span>
-            </a>
-            <a className="text-link" href="/#contact">Gespräch starten</a>
+            </Link>
+            <Link className="text-link" href="/#contact">Gespräch starten</Link>
           </div>
         </div>
 
@@ -115,9 +116,9 @@ export function ServicePage({
             Das MPP Growth Diagnostic gibt in fünf kurzen Fragen eine erste
             strukturierte Richtung — ohne erfundene Benchmarks.
           </p>
-          <a className="button button--primary" href="/#diagnostic">
+          <Link className="button button--primary" href="/#diagnostic">
             Diagnostic starten <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </section>
 
