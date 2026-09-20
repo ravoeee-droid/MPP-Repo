@@ -10,6 +10,9 @@ type AssetImageProps = {
   label?: string;
   note?: string;
   eager?: boolean;
+  sizes?: string;
+  quality?: 90 | 95 | 100;
+  objectPosition?: string;
   children?: React.ReactNode;
 };
 
@@ -20,19 +23,30 @@ export function AssetImage({
   label = "ASSET",
   note = "Finales Asset folgt.",
   eager = false,
+  sizes = "100vw",
+  quality = 95,
+  objectPosition = "50% 50%",
   children
 }: AssetImageProps) {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={`asset-slot asset-image ${className}`} data-loaded={loaded}>
+    <div
+      className={`asset-slot asset-image ${className}`}
+      data-loaded={loaded}
+      data-quality={quality}
+    >
       <Image
         src={src}
         alt={alt}
         fill
-        sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 42vw"
+        sizes={sizes}
+        quality={quality}
         priority={eager}
-        style={{ objectFit: "cover" }}
+        style={{
+          objectFit: "cover",
+          objectPosition
+        }}
         onLoad={() => setLoaded(true)}
         onError={() => setLoaded(false)}
       />
