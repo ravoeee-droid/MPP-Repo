@@ -90,7 +90,7 @@ export function MiaAssistant() {
         </div>
 
         <div className="mia-panel__footer">
-          <a href="#diagnostic" onClick={() => setOpen(false)}>
+          <a href="/#diagnostic" onClick={() => setOpen(false)}>
             Growth Diagnostic öffnen <span aria-hidden="true">→</span>
           </a>
           <small>
