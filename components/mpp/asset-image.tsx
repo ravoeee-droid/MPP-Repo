@@ -37,7 +37,7 @@ export function AssetImage({
   function verifyDeliveredResolution(image: HTMLImageElement) {
     const renderedWidth = image.getBoundingClientRect().width;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    const motionSafety = 1.06;
+    const motionSafety = 1.0;
     const requiredWidth = renderedWidth * dpr * motionSafety;
     const isSharpEnough = image.naturalWidth >= requiredWidth * 0.96;
 
