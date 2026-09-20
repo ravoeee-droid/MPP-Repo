@@ -1,3 +1,5 @@
+import { AssetImage } from "@/components/mpp/asset-image";
+
 const services = [
   {
     index: "01",
@@ -6,7 +8,9 @@ const services = [
     text: "Wir besetzen Schlüsselrollen mit Menschen, die fachlich überzeugen und kulturell zu Ihnen passen – für nachhaltige Wirkung im System.",
     link: "Mehr über Recruiting",
     href: "/recruiting",
-    asset: "PEOPLE / VISUAL"
+    asset: "PEOPLE / VISUAL",
+    src: "/assets/people/recruiting.webp",
+    alt: "Recruiting Gespräch bei MPP"
   },
   {
     index: "02",
@@ -15,7 +19,9 @@ const services = [
     text: "Wir stärken Vertriebsorganisationen mit den richtigen Menschen, klaren Zielen und wirksamen Methoden – für messbare und planbare Leistung.",
     link: "Mehr über Vertriebsleistung",
     href: "/performance",
-    asset: "PERFORMANCE / VISUAL"
+    asset: "PERFORMANCE / VISUAL",
+    src: "/assets/performance/meeting.webp",
+    alt: "Performance Gespräch im Vertriebsumfeld"
   },
   {
     index: "03",
@@ -24,7 +30,9 @@ const services = [
     text: "Wir entwickeln Organisationen, Prozesse und Führungssysteme, die Menschen stärken und Wachstum dauerhaft ermöglichen.",
     link: "Mehr über Unternehmensentwicklung",
     href: "/systems",
-    asset: "SYSTEMS / VISUAL"
+    asset: "SYSTEMS / VISUAL",
+    src: "/assets/systems/structure.webp",
+    alt: "Strukturen und Organisationsentwicklung"
   }
 ];
 
@@ -45,12 +53,13 @@ export function Services() {
       <div className="services__grid">
         {services.map((service) => (
           <article className="service-panel" key={service.label}>
-            <div className="service-panel__media asset-slot asset-slot--service">
-              <div className="asset-slot__meta">
-                <span>{service.asset}</span>
-                <strong>Finales Section-Asset folgt.</strong>
-              </div>
-            </div>
+            <AssetImage
+              className="service-panel__media"
+              src={service.src}
+              alt={service.alt}
+              label={service.asset}
+              note={`Upload: public${service.src}`}
+            />
 
             <div className="service-panel__body">
               <div className="service-panel__rule">
