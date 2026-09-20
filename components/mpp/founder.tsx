@@ -1,3 +1,5 @@
+import { AssetImage } from "@/components/mpp/asset-image";
+
 export function Founder() {
   return (
     <section className="founder section-pad" id="founder">
@@ -41,18 +43,19 @@ export function Founder() {
             <a className="button button--primary" href="#contact">
               Lassen Sie uns ins Gespräch kommen <span aria-hidden="true">→</span>
             </a>
-            <a className="text-link" href="#contact">
+            <a className="text-link" href="/kontakt">
               Mehr über mich
             </a>
           </div>
         </div>
 
-        <div className="founder-golden__visual asset-slot" role="img" aria-label="Founder Bildplatzhalter">
-          <div className="asset-slot__meta">
-            <span>FOUNDER / PORTRAIT</span>
-            <strong>Freigegebenes Founder-Asset folgt.</strong>
-          </div>
-
+        <AssetImage
+          className="founder-golden__visual"
+          src="/assets/founder/portrait.webp"
+          alt="Mattias Pedro Panthel, Inhaber von MPP"
+          label="FOUNDER / PORTRAIT"
+          note="Upload: public/assets/founder/portrait.webp"
+        >
           <div className="founder-golden__signature">
             <span className="founder-golden__name">Mattias Pedro Panthel</span>
             <b>MATTIAS PEDRO PANTHEL</b>
@@ -63,7 +66,7 @@ export function Founder() {
             <span>Unternehmen für morgen.</span>
             <i aria-hidden="true" />
           </div>
-        </div>
+        </AssetImage>
       </div>
     </section>
   );
