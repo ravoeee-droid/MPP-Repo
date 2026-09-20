@@ -49,6 +49,29 @@ for (const capture of captures) {
     timeout: 30000
   });
 
+  // Trigger native lazy-loading without enabling motion. This validates every
+  // image on the full page, not only the initial viewport.
+  await page.evaluate(async () => {
+    const pause = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    let previousY = -1;
+
+    while (window.scrollY !== previousY) {
+      previousY = window.scrollY;
+      window.scrollBy(0, Math.max(window.innerHeight * 0.85, 520));
+      await pause(90);
+
+      if (
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 4
+      ) {
+        break;
+      }
+    }
+
+    await pause(250);
+    window.scrollTo(0, 0);
+  });
+
   await page
     .waitForFunction(
       () =>
@@ -56,7 +79,7 @@ for (const capture of captures) {
           (img) => img.complete && img.naturalWidth > 0
         ),
       undefined,
-      { timeout: 15000 }
+      { timeout: 20000 }
     )
     .catch(() => {});
 
