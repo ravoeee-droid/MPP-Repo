@@ -65,6 +65,7 @@ export function AssetImage({
         fill
         sizes={sizes}
         quality={quality}
+        unoptimized
         priority={eager}
         style={{
           objectFit: "cover",
