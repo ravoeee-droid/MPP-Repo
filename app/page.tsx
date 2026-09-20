@@ -10,6 +10,7 @@ import { ProofTriad } from "@/components/mpp/proof-triad";
 import { TrustStack } from "@/components/mpp/trust-stack";
 import { Fit } from "@/components/mpp/fit";
 import { Faq } from "@/components/mpp/faq";
+import { Insights } from "@/components/mpp/insights";
 import { FinalCta } from "@/components/mpp/final-cta";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MotionScenes } from "@/components/mpp/motion-scenes";
@@ -31,6 +32,7 @@ export default function HomePage() {
       <ProofTriad />
       <TrustStack />
       <Fit />
+      <Insights />
       <Faq />
       <FinalCta />
       <SiteFooter />
