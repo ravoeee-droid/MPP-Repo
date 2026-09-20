@@ -4915,3 +4915,70 @@ html {
     image-rendering: auto;
   }
 }
+
+
+/* === NATIVE 4:3 PHOTO MASTER LOCK ===
+   Uploaded production masters are 1448×1086 (4:3). Large photo slots are
+   therefore capped around 700 CSS px and keep a 4:3 composition so a 2×
+   display never has to invent detail through aggressive enlargement. */
+
+.hero__visual,
+.os-hero__visual,
+.founder-golden__visual,
+.about-page__visual,
+.service-detail__visual,
+.service-story__visual,
+.service-method__visual {
+  width: 100%;
+  max-width: 700px;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 3;
+  justify-self: end;
+}
+
+.hero__visual-wrap {
+  align-items: flex-end;
+}
+
+.os-hero {
+  align-items: center;
+}
+
+.founder-golden,
+.about-page,
+.service-detail__hero,
+.service-story__grid,
+.service-method__grid {
+  align-items: center;
+}
+
+.service-panel__media,
+.process-golden__visual,
+.insight-card__visual,
+.insights-index__visual {
+  min-height: 0 !important;
+  aspect-ratio: 4 / 3;
+}
+
+.asset-image > img {
+  object-fit: cover;
+}
+
+@media (max-width: 760px) {
+  .hero__visual,
+  .os-hero__visual,
+  .founder-golden__visual,
+  .about-page__visual,
+  .service-detail__visual,
+  .service-story__visual,
+  .service-method__visual,
+  .service-panel__media,
+  .process-golden__visual,
+  .insight-card__visual,
+  .insights-index__visual {
+    width: 100%;
+    max-width: none;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 3;
+  }
+}
