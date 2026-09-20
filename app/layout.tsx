@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { MotionProvider } from "@/components/mpp/motion-provider";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -19,7 +20,11 @@ const sans = Manrope({
 export const metadata: Metadata = {
   title: "MPP — People. Performance. Systems.",
   description:
-    "MPP verbindet Menschen, Leistung und Systeme zu einer klaren Grundlage für nachhaltiges Wachstum."
+    "MPP verbindet Menschen, Leistung und Systeme zu einer klaren Grundlage für nachhaltiges Wachstum.",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 export default function RootLayout({
@@ -27,7 +32,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
-      <body className={`${display.variable} ${sans.variable}`}>{children}</body>
+      <body className={`${display.variable} ${sans.variable}`}>
+        <MotionProvider>{children}</MotionProvider>
+      </body>
     </html>
   );
 }
