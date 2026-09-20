@@ -16,6 +16,8 @@ type AssetImageProps = {
   children?: React.ReactNode;
 };
 
+type ResolutionState = "pending" | "ok" | "soft";
+
 export function AssetImage({
   src,
   alt,
@@ -24,17 +26,38 @@ export function AssetImage({
   note = "Finales Asset folgt.",
   eager = false,
   sizes = "100vw",
-  quality = 95,
+  quality = 100,
   objectPosition = "50% 50%",
   children
 }: AssetImageProps) {
   const [loaded, setLoaded] = useState(false);
+  const [resolutionState, setResolutionState] =
+    useState<ResolutionState>("pending");
+
+  function verifyDeliveredResolution(image: HTMLImageElement) {
+    const renderedWidth = image.getBoundingClientRect().width;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const motionSafety = 1.06;
+    const requiredWidth = renderedWidth * dpr * motionSafety;
+    const isSharpEnough = image.naturalWidth >= requiredWidth * 0.96;
+
+    setResolutionState(isSharpEnough ? "ok" : "soft");
+
+    if (!isSharpEnough && process.env.NODE_ENV !== "production") {
+      console.warn(
+        `[MPP image quality] ${src} delivered at ${image.naturalWidth}px for ~${Math.round(
+          requiredWidth
+        )}px required retina width. Check sizes/source resolution.`
+      );
+    }
+  }
 
   return (
     <div
       className={`asset-slot asset-image ${className}`}
       data-loaded={loaded}
       data-quality={quality}
+      data-resolution={resolutionState}
     >
       <Image
         src={src}
@@ -47,8 +70,16 @@ export function AssetImage({
           objectFit: "cover",
           objectPosition
         }}
-        onLoad={() => setLoaded(true)}
-        onError={() => setLoaded(false)}
+        onLoad={(event) => {
+          setLoaded(true);
+          requestAnimationFrame(() =>
+            verifyDeliveredResolution(event.currentTarget)
+          );
+        }}
+        onError={() => {
+          setLoaded(false);
+          setResolutionState("pending");
+        }}
       />
 
       {!loaded && (
