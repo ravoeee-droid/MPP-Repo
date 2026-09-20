@@ -1,69 +1,125 @@
 const pillars = [
   {
     number: "01",
-    name: "PEOPLE",
-    title: "Die richtigen Menschen in die richtigen Rollen.",
-    body: "Nicht mehr Lebensläufe. Sondern Klarheit darüber, wer wirklich zur Aufgabe, Verantwortung und Organisation passt."
+    name: "People",
+    body: "Die richtigen Menschen\nin die richtigen Rollen.",
+    icon: "people"
   },
   {
     number: "02",
-    name: "PERFORMANCE",
-    title: "Potenzial wird erst durch Leistung wertvoll.",
-    body: "Führung, Verantwortung und Vertrieb werden so ausgerichtet, dass Leistung nicht von Zufall oder Einzelpersonen abhängt."
+    name: "Performance",
+    body: "Leistung im Alltag,\nbesonders im Vertrieb,\nwirksam machen.",
+    icon: "performance"
   },
   {
     number: "03",
-    name: "SYSTEMS",
-    title: "Struktur macht Wachstum tragfähig.",
-    body: "Rollen, Prozesse und Entscheidungen greifen ineinander — damit das Unternehmen wachsen kann, ohne an Komplexität zu verlieren."
+    name: "Systems",
+    body: "Strukturen, Prozesse und\nFührung schaffen, die\nWachstum tragen.",
+    icon: "systems"
   }
 ];
+
+function PillarIcon({ type }: { type: string }) {
+  if (type === "people") {
+    return (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="13" r="5" />
+        <circle cx="12" cy="18" r="4" />
+        <circle cx="36" cy="18" r="4" />
+        <path d="M15 37v-5a9 9 0 0 1 18 0v5M5 37v-5a7 7 0 0 1 10-6M43 37v-5a7 7 0 0 0-10-6" />
+      </svg>
+    );
+  }
+
+  if (type === "performance") {
+    return (
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <path d="M9 37V28M18 37V21M27 37V14M36 37V8" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 48 48" aria-hidden="true">
+      <path d="m24 7 15 8-15 8-15-8 15-8Z" />
+      <path d="m9 23 15 8 15-8M9 31l15 8 15-8" />
+    </svg>
+  );
+}
 
 export function OperatingSystem() {
   return (
     <section className="os-section section-pad" id="operating-system">
-      <div className="section-kicker">
-        <span>02 / MPP OPERATING SYSTEM</span>
-        <span>People → Performance → Systems → Growth</span>
+      <div className="os-hero">
+        <div className="os-hero__copy">
+          <p className="eyebrow">Unser Ansatz</p>
+          <h2>
+            So entsteht
+            <br />
+            Wachstum mit System.
+          </h2>
+          <p>
+            MPP ist das Growth Operating System für Organisationen, die mehr
+            erreichen wollen. Wir bringen die richtigen Menschen in die richtigen
+            Rollen, machen Leistung im Alltag wirksam und schaffen Strukturen,
+            die nachhaltiges Wachstum tragen.
+          </p>
+        </div>
+
+        <div className="os-hero__visual asset-slot" role="img" aria-label="MPP Workshop Bildplatzhalter">
+          <div className="asset-slot__meta">
+            <span>APPROACH / WORKSHOP</span>
+            <strong>Finales Bild folgt.</strong>
+          </div>
+        </div>
       </div>
 
-      <div className="os-intro">
-        <h2>
-          So entsteht
-          <br />
-          <em>Wachstum mit System.</em>
-        </h2>
-        <p>
-          MPP verbindet Menschen, Leistung und Strukturen zu einem
-          zusammenhängenden Operating System für Unternehmen, die nicht nur
-          kurzfristig wachsen wollen.
-        </p>
-      </div>
+      <div className="os-flow">
+        <div className="os-flow__rail" aria-hidden="true" />
+        <div className="os-flow__side os-flow__side--left">
+          <span>POTENZIALE</span>
+          <span>INS WIRKEN</span>
+          <span>BRINGEN</span>
+          <i />
+        </div>
 
-      <div className="os-track">
-        <div className="os-track__line" aria-hidden="true" />
         {pillars.map((pillar) => (
-          <article className="os-card" key={pillar.name}>
-            <div className="os-card__head">
-              <span>{pillar.number}</span>
-              <span className="os-card__node" />
-              <b>{pillar.name}</b>
+          <article className="os-pillar" key={pillar.name}>
+            <span className="os-pillar__number">{pillar.number}</span>
+            <div className="os-pillar__orbit">
+              <div className="os-pillar__icon">
+                <PillarIcon type={pillar.icon} />
+              </div>
             </div>
-            <h3>{pillar.title}</h3>
-            <p>{pillar.body}</p>
+            <h3>{pillar.name}</h3>
+            <p>
+              {pillar.body.split("\n").map((line) => (
+                <span key={line}>{line}</span>
+              ))}
+            </p>
           </article>
         ))}
-        <article className="os-card os-card--growth">
-          <div className="os-card__head">
-            <span>04</span>
-            <span className="os-card__node" />
-            <b>GROWTH</b>
-          </div>
-          <h3>Wachstum wird zum Ergebnis des Systems.</h3>
-          <p>
-            Nicht mehr ein einzelner Hebel, sondern das Zusammenspiel entscheidet.
-          </p>
-        </article>
+
+        <div className="os-flow__side os-flow__side--right">
+          <span>KLARER</span>
+          <span>MENSCHLICHER</span>
+          <span>WIRKSAMER</span>
+          <strong>GEMEINSAM<br />MORGEN BAUEN</strong>
+          <i />
+        </div>
+      </div>
+
+      <div className="os-actions">
+        <a className="button button--primary" href="#contact">
+          Gemeinsam morgen bauen <span aria-hidden="true">→</span>
+        </a>
+        <a className="text-link" href="#services">
+          Mehr über unseren Ansatz
+        </a>
+        <div className="os-actions__signoff">
+          <i />
+          <span>Unternehmen für morgen.</span>
+        </div>
       </div>
     </section>
   );
