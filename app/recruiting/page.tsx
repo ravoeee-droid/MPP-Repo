@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function RecruitingPage() {
   return (
     <main id="main-content">
-      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
+      <Link className="skip-link" href="#main-content">Zum Inhalt springen</Link>
       <SiteHeader />
       <MiaAssistant />
 
@@ -30,9 +31,9 @@ export default function RecruitingPage() {
               mit der Frage, welche Verantwortung eine Rolle wirklich tragen soll
               und welcher Mensch fachlich wie kulturell dazu passt.
             </p>
-            <a className="button button--primary" href="/kontakt?fokus=people">
+            <Link className="button button--primary" href="/kontakt?fokus=people">
               Schlüsselrolle besprechen <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
           <AssetImage
             className="service-detail__visual"
