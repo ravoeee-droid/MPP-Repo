@@ -31,10 +31,12 @@ const failures = [];
 const report = [];
 
 for (const capture of captures) {
-  const page = await browser.newPage({
+  const context = await browser.newContext({
     viewport: { width: capture.width, height: capture.height },
-    deviceScaleFactor: 1
+    deviceScaleFactor: 1,
+    reducedMotion: "reduce"
   });
+  const page = await context.newPage();
 
   const consoleErrors = [];
   page.on("console", (message) => {
@@ -47,17 +49,29 @@ for (const capture of captures) {
     timeout: 30000
   });
 
-  await page.waitForTimeout(900);
+  await page
+    .waitForFunction(
+      () =>
+        Array.from(document.images).every(
+          (img) => img.complete && img.naturalWidth > 0
+        ),
+      undefined,
+      { timeout: 15000 }
+    )
+    .catch(() => {});
+
+  await page.waitForTimeout(500);
 
   const checks = await page.evaluate((forbidden) => {
     const html = document.documentElement;
     const bodyText = document.body.innerText || "";
     const images = Array.from(document.images);
+
     const brokenImages = images
       .filter((img) => !img.complete || img.naturalWidth === 0)
       .map((img) => img.currentSrc || img.src);
 
-    const hiddenAssetFallbacks = Array.from(
+    const visibleAssetFallbacks = Array.from(
       document.querySelectorAll(".asset-slot__meta")
     ).filter((el) => {
       const style = getComputedStyle(el);
@@ -71,12 +85,41 @@ for (const capture of captures) {
       );
     }).length;
 
+    const overflowOffenders = Array.from(document.querySelectorAll("body *"))
+      .map((el) => {
+        const rect = el.getBoundingClientRect();
+        const style = getComputedStyle(el);
+        return { el, rect, style };
+      })
+      .filter(
+        ({ rect, style }) =>
+          style.display !== "none" &&
+          style.visibility !== "hidden" &&
+          (rect.right > window.innerWidth + 2 || rect.left < -2)
+      )
+      .slice(0, 20)
+      .map(({ el, rect, style }) => ({
+        node:
+          el.tagName.toLowerCase() +
+          (el.id ? "#" + el.id : "") +
+          (el.className && typeof el.className === "string"
+            ? "." + el.className.trim().replace(/\s+/g, ".")
+            : ""),
+        left: Math.round(rect.left),
+        right: Math.round(rect.right),
+        width: Math.round(rect.width),
+        position: style.position,
+        whiteSpace: style.whiteSpace,
+        text: (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 90)
+      }));
+
     return {
       title: document.title,
       statusOverflow: html.scrollWidth - window.innerWidth,
       brokenImages,
-      visibleAssetFallbacks: hiddenAssetFallbacks,
+      visibleAssetFallbacks,
       forbiddenText: forbidden.filter((text) => bodyText.includes(text)),
+      overflowOffenders,
       bodyHeight: document.body.scrollHeight
     };
   }, forbiddenVisibleText);
@@ -89,7 +132,10 @@ for (const capture of captures) {
   }
   if (checks.statusOverflow > 2) {
     currentFailures.push(
-      `horizontal overflow +${checks.statusOverflow}px at ${capture.width}px`
+      `horizontal overflow +${checks.statusOverflow}px at ${capture.width}px; offenders: ${checks.overflowOffenders
+        .slice(0, 6)
+        .map((x) => `${x.node}[${x.left},${x.right}]`)
+        .join(", ")}`
     );
   }
   if (checks.brokenImages.length) {
@@ -133,7 +179,7 @@ for (const capture of captures) {
     });
   }
 
-  await page.close();
+  await context.close();
 }
 
 await browser.close();
