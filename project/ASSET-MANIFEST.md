@@ -29,13 +29,19 @@ The website now attempts these exact paths automatically. If a file is missing, 
 
 ### People
 - `public/assets/people/recruiting.webp`
+- `public/assets/people/detail-role.webp`
+- `public/assets/people/detail-selection.webp`
 
 ### Performance
 - `public/assets/performance/meeting.webp`
+- `public/assets/performance/detail-rhythm.webp`
+- `public/assets/performance/detail-coaching.webp`
 
 ### Systems
 - `public/assets/systems/approach-workshop.webp`
 - `public/assets/systems/structure.webp`
+- `public/assets/systems/detail-mapping.webp`
+- `public/assets/systems/detail-process.webp`
 
 ### Process
 - `public/assets/process/01-analyse.webp`
@@ -77,7 +83,7 @@ Founder identity verified from MPP's public imprint:
 - Mattias Pedro Panthel
 - Inhaber MPP / MPP - Recruit
 
-Detailed biography, years of experience and career milestones still require client/source evidence.
+Founder identity and selected public career milestones are now verified against the public MPP imprint and public professional profiles. Any additional biography, quantified experience claims or private client history still require client/source evidence.
 
 AI-generated founder approximations must not be presented as documentary proof photography.
 
