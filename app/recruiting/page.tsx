@@ -38,10 +38,10 @@ export default function RecruitingPage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/people/recruiting.webp"
+            src="/assets/people/recruiting.png"
             alt="Recruiting Gespräch bei MPP"
             label="PEOPLE / RECRUITING"
-            note="Upload: public/assets/people/recruiting.webp"
+            note="Upload: public/assets/people/recruiting.png"
             eager
           />
         </div>
@@ -101,12 +101,12 @@ export default function RecruitingPage() {
           }
         ]}
         visualOne={{
-          src: "/assets/people/detail-role.webp",
+          src: "/assets/people/detail-role.png",
           alt: "MPP Gespräch zur Schärfung einer Schlüsselrolle",
           label: "PEOPLE / ROLE CLARITY"
         }}
         visualTwo={{
-          src: "/assets/people/detail-selection.webp",
+          src: "/assets/people/detail-selection.png",
           alt: "MPP Auswahl- und Recruitingprozess",
           label: "PEOPLE / SELECTION"
         }}
