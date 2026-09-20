@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 export default function PerformancePage() {
   return (
     <main id="main-content">
-      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
+      <Link className="skip-link" href="#main-content">Zum Inhalt springen</Link>
       <SiteHeader />
       <MiaAssistant />
 
@@ -31,9 +32,9 @@ export default function PerformancePage() {
               soll im Alltag nachvollziehbar, entwickelbar und weniger abhängig
               von einzelnen Top-Performern werden.
             </p>
-            <a className="button button--primary" href="/kontakt?fokus=performance">
+            <Link className="button button--primary" href="/kontakt?fokus=performance">
               Performance-Hebel besprechen <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
           <AssetImage
             className="service-detail__visual"
