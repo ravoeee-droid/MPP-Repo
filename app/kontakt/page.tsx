@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
+
+export const metadata: Metadata = {
+  title: "Kontakt | MPP",
+  description: "Kontakt zu MPP in Köln: Telefon, E-Mail und direkter Einstieg in das Erstgespräch."
+};
 
 export default function KontaktPage() {
   return (
