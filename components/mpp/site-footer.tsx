@@ -7,15 +7,21 @@ export function SiteFooter() {
       </div>
 
       <div className="site-footer__links">
-        <a href="#operating-system">Ansatz</a>
-        <a href="#services">Leistungen</a>
-        <a href="#diagnostic">Diagnostic</a>
-        <a href="#trust">Trust</a>
+        <a href="/recruiting">Recruiting</a>
+        <a href="/performance">Performance</a>
+        <a href="/systems">Systems</a>
+        <a href="/#operating-system">Ansatz</a>
+        <a href="/kontakt">Kontakt</a>
       </div>
 
       <div className="site-footer__legal">
-        <span>Impressum / Datenschutz werden mit den finalen Unternehmensdaten ergänzt.</span>
-        <span>© MPP</span>
+        <div>
+          <a href="/impressum">Impressum</a>
+          <a href="https://www.mpp-recruit.com/datenschutzerklarung/">
+            Datenschutz
+          </a>
+        </div>
+        <span>© MPP · Unternehmen für morgen.</span>
       </div>
     </footer>
   );
