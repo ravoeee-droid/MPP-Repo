@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
 import { AssetImage } from "@/components/mpp/asset-image";
+import { ServiceDetailBody } from "@/components/mpp/service-detail-body";
 
 export const metadata: Metadata = {
   title: "Performance & Vertrieb | MPP",
@@ -27,7 +28,7 @@ export default function PerformancePage() {
               <em>keine Zufälligkeit.</em>
             </h1>
             <p>
-              MPP bietet Vertriebsunterstützung und Coaching an. Die neue
+              MPP bietet Vertriebsunterstützung und Coaching an. Die
               Performance-Perspektive übersetzt das in ein klares Ziel: Leistung
               soll im Alltag nachvollziehbar, entwickelbar und weniger abhängig
               von einzelnen Top-Performern werden.
@@ -52,6 +53,65 @@ export default function PerformancePage() {
           <article><span>03</span><h2>Wirkung</h2><p>Methoden und Routinen auf reale Ergebnisse im Alltag ausrichten.</p></article>
         </div>
       </section>
+
+      <ServiceDetailBody
+        axis="performance"
+        chapter="PERFORMANCE / DIE EIGENTLICHE FRAGE"
+        statement="Nicht: Wie motivieren wir mehr? Sondern: Was macht gute Leistung wiederholbar?"
+        intro="Wenn Ergebnisse dauerhaft von einzelnen Top-Performern abhängen, fehlt selten nur Motivation. Häufig fehlen Klarheit, gemeinsame Standards oder ein Führungsrhythmus, der Leistung im Alltag unterstützt."
+        pains={[
+          {
+            title: "Erfolg steckt in Köpfen.",
+            text: "Gute Verkäufer oder Führungskräfte wissen, was funktioniert – das Wissen wird aber nicht systematisch übertragbar."
+          },
+          {
+            title: "Ziele sind da, Orientierung fehlt.",
+            text: "Kennzahlen existieren, aber Prioritäten, Verhalten und Entscheidungslogik sind nicht klar genug miteinander verbunden."
+          },
+          {
+            title: "Coaching bleibt punktuell.",
+            text: "Einzelne Trainings helfen kurzfristig, greifen aber nicht dauerhaft in Routinen und Führungsarbeit ein."
+          }
+        ]}
+        phases={[
+          {
+            title: "Leistungslogik verstehen",
+            text: "Wir machen sichtbar, was heute gute Ergebnisse erzeugt und wo Wirkung verloren geht."
+          },
+          {
+            title: "Standards und Führung ausrichten",
+            text: "Ziele, Routinen und Verantwortlichkeiten werden so klar, dass Leistung entwickelbar wird."
+          },
+          {
+            title: "Im Alltag verankern",
+            text: "Die relevanten Methoden werden in echte Arbeits- und Führungsrhythmen übersetzt."
+          }
+        ]}
+        outcomes={[
+          {
+            title: "Mehr Orientierung",
+            text: "Teams wissen klarer, welche Handlungen und Prioritäten wirklich Wirkung erzeugen."
+          },
+          {
+            title: "Weniger Abhängigkeit",
+            text: "Erfolg hängt weniger ausschließlich an einzelnen Leistungsträgern."
+          },
+          {
+            title: "Bessere Entwicklungsbasis",
+            text: "Führung und Coaching können konkreter an realem Verhalten und Ergebnissen ansetzen."
+          }
+        ]}
+        visualOne={{
+          src: "/assets/performance/detail-rhythm.webp",
+          alt: "MPP Arbeit an Vertriebs- und Führungsrhythmen",
+          label: "PERFORMANCE / RHYTHM"
+        }}
+        visualTwo={{
+          src: "/assets/performance/detail-coaching.webp",
+          alt: "MPP Coaching im Vertriebsumfeld",
+          label: "PERFORMANCE / COACHING"
+        }}
+      />
 
       <SiteFooter />
     </main>
