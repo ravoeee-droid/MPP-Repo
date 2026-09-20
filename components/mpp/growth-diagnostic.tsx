@@ -176,7 +176,7 @@ export function GrowthDiagnostic() {
                 strukturierte erste Orientierung für das Gespräch.
               </p>
               <div className="diagnostic__result-actions">
-                <a className="button button--primary" href="#top">
+                <a className="button button--primary" href={`/kontakt?fokus=${strongest}`}>
                   Erstgespräch vorbereiten <span aria-hidden="true">→</span>
                 </a>
                 <button className="text-link text-link--dark" type="button" onClick={reset}>
