@@ -3855,3 +3855,36 @@ html {
     min-height: 34rem;
   }
 }
+
+
+.contact-page__focus {
+  max-width: 36rem;
+  margin-top: 2.4rem;
+  padding: 1.2rem 0 1.4rem;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-page__focus > span {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: var(--graphite);
+  font-size: 0.57rem;
+  letter-spacing: 0.14em;
+}
+
+.contact-page__focus > strong {
+  display: block;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.65rem, 2.5vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.contact-page__focus > p {
+  margin: 0.8rem 0 0;
+  color: var(--graphite);
+  font-size: 0.75rem;
+  line-height: 1.55;
+}
