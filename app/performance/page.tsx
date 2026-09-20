@@ -39,10 +39,10 @@ export default function PerformancePage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/performance/meeting.webp"
+            src="/assets/performance/meeting.png"
             alt="MPP Gespräch zu Vertriebsleistung und Performance"
             label="PERFORMANCE / VERTRIEB"
-            note="Upload: public/assets/performance/meeting.webp"
+            note="Upload: public/assets/performance/meeting.png"
             eager
           />
         </div>
@@ -102,12 +102,12 @@ export default function PerformancePage() {
           }
         ]}
         visualOne={{
-          src: "/assets/performance/detail-rhythm.webp",
+          src: "/assets/performance/detail-rhythm.png",
           alt: "MPP Arbeit an Vertriebs- und Führungsrhythmen",
           label: "PERFORMANCE / RHYTHM"
         }}
         visualTwo={{
-          src: "/assets/performance/detail-coaching.webp",
+          src: "/assets/performance/detail-coaching.png",
           alt: "MPP Coaching im Vertriebsumfeld",
           label: "PERFORMANCE / COACHING"
         }}
