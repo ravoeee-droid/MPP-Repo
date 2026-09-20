@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function UeberMppPage() {
   return (
     <main id="main-content">
-      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
+      <Link className="skip-link" href="#main-content">Zum Inhalt springen</Link>
       <SiteHeader />
       <MiaAssistant />
 
@@ -43,9 +44,9 @@ export default function UeberMppPage() {
             </strong>
           </div>
 
-          <a className="button button--primary" href="/kontakt">
+          <Link className="button button--primary" href="/kontakt">
             Ins Gespräch kommen <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
 
         <AssetImage
