@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 type AssetImageProps = {
@@ -25,12 +26,13 @@ export function AssetImage({
 
   return (
     <div className={`asset-slot asset-image ${className}`} data-loaded={loaded}>
-      <img
+      <Image
         src={src}
         alt={alt}
-        loading={eager ? "eager" : "lazy"}
-        fetchPriority={eager ? "high" : "auto"}
-        decoding="async"
+        fill
+        sizes="(max-width: 760px) 100vw, (max-width: 1200px) 50vw, 42vw"
+        priority={eager}
+        style={{ objectFit: "cover" }}
         onLoad={() => setLoaded(true)}
         onError={() => setLoaded(false)}
       />
