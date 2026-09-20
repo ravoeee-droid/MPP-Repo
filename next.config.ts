@@ -22,7 +22,10 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    formats: ["image/avif", "image/webp"]
+    formats: ["image/webp"],
+    qualities: [90, 95, 100],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1440, 1600, 1920, 2560, 3200, 3840],
+    imageSizes: [32, 48, 64, 96, 128, 256, 384]
   },
   async headers() {
     return [
