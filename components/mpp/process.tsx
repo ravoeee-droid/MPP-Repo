@@ -1,23 +1,29 @@
+import { AssetImage } from "@/components/mpp/asset-image";
+
 const stages = [
   {
     index: "01",
     name: "Analyse",
-    body: "Wir verstehen Ihre Ausgangslage, hören genau hin und erkennen, was wirklich zählt – im System, bei den Menschen und in den Zielen."
+    body: "Wir verstehen Ihre Ausgangslage, hören genau hin und erkennen, was wirklich zählt – im System, bei den Menschen und in den Zielen.",
+    src: "/assets/process/01-analyse.webp"
   },
   {
     index: "02",
     name: "Klarheit",
-    body: "Wir verdichten Erkenntnisse, priorisieren gemeinsam und entwickeln ein klares, realistisches Zielbild – als Grundlage für wirksame Entscheidungen."
+    body: "Wir verdichten Erkenntnisse, priorisieren gemeinsam und entwickeln ein klares, realistisches Zielbild – als Grundlage für wirksame Entscheidungen.",
+    src: "/assets/process/02-klarheit.webp"
   },
   {
     index: "03",
     name: "Umsetzung",
-    body: "Wir bringen die vereinbarte Lösung in die Praxis – mit klarer Verantwortung, pragmatischem Vorgehen und enger Begleitung im Alltag."
+    body: "Wir bringen die vereinbarte Lösung in die Praxis – mit klarer Verantwortung, pragmatischem Vorgehen und enger Begleitung im Alltag.",
+    src: "/assets/process/03-umsetzung.webp"
   },
   {
     index: "04",
     name: "Entwicklung",
-    body: "Wir messen Wirkung, lernen gemeinsam und entwickeln weiter – damit Fortschritt kein Projekt bleibt, sondern Teil Ihrer Organisation wird."
+    body: "Wir messen Wirkung, lernen gemeinsam und entwickeln weiter – damit Fortschritt kein Projekt bleibt, sondern Teil Ihrer Organisation wird.",
+    src: "/assets/process/04-entwicklung.webp"
   }
 ];
 
@@ -44,12 +50,13 @@ export function Process() {
       <div className="process-golden__grid">
         {stages.map((stage) => (
           <article className="process-golden__step" key={stage.name}>
-            <div className="process-golden__visual asset-slot" aria-hidden="true">
-              <div className="asset-slot__meta">
-                <span>{stage.name.toUpperCase()} / VISUAL</span>
-                <strong>Finales Process-Asset folgt.</strong>
-              </div>
-            </div>
+            <AssetImage
+              className="process-golden__visual"
+              src={stage.src}
+              alt={`MPP Prozessphase ${stage.name}`}
+              label={`${stage.name.toUpperCase()} / VISUAL`}
+              note={`Upload: public${stage.src}`}
+            />
 
             <div className="process-golden__timeline">
               <span className="process-golden__node" />
