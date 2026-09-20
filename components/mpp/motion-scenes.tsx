@@ -38,7 +38,7 @@ export function MotionScenes() {
       });
 
       gsap.utils.toArray<HTMLElement>(
-        ".os-card, .service-panel, .problem__friction-cell, .process-step, .proof-case"
+        ".os-card, .service-panel, .problem__friction-cell, .process-step, .proof-case, .trust-card, .fit-row, .faq-item"
       ).forEach((element) => {
         gsap.from(element, {
           y: 34,
