@@ -50,6 +50,16 @@ export function ProofTriad() {
           </article>
         ))}
       </div>
+
+      <div className="proof__footer">
+        <p>
+          Keine erfundenen Kennzahlen. Case Studies werden erst veröffentlicht,
+          wenn Ausgangslage, Ergebnis und Freigabe belegt sind.
+        </p>
+        <a className="button button--primary" href="/case-studies">
+          Case-Study-System ansehen <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </section>
   );
 }
