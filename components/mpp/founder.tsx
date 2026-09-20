@@ -1,36 +1,64 @@
 export function Founder() {
   return (
     <section className="founder section-pad" id="founder">
-      <div className="section-kicker">
-        <span>06 / FOUNDER</span>
-        <span>Menschen. Systeme. Zukunft.</span>
-      </div>
+      <div className="founder-golden">
+        <div className="founder-golden__copy">
+          <p className="eyebrow">Menschen. Leistung. Systeme.</p>
 
-      <div className="founder__grid">
-        <div className="founder__media asset-slot" role="img" aria-label="Founder Bildplatzhalter">
+          <h2>
+            Unternehmen
+            <br />
+            verändern sich durch
+            <br />
+            Menschen, die
+            <br />
+            Verantwortung
+            <br />
+            übernehmen.
+          </h2>
+
+          <blockquote>
+            <i aria-hidden="true">”</i>
+            <p>
+              Die richtigen Menschen sind erst der Anfang.
+              <br />
+              Erst Systeme machen aus Potenzial nachhaltige Leistung.
+            </p>
+          </blockquote>
+
+          <div className="founder-golden__rule" />
+
+          <p className="founder-golden__body">
+            MPP verbindet Recruiting, Vertriebsleistung und Unternehmensberatung.
+            Im Mittelpunkt stehen passende Menschen, wirksame Leistung und
+            Strukturen, die Entwicklung im Alltag tragen.
+          </p>
+
+          <div className="founder-golden__actions">
+            <a className="button button--primary" href="#contact">
+              Lassen Sie uns ins Gespräch kommen <span aria-hidden="true">→</span>
+            </a>
+            <a className="text-link" href="#contact">
+              Mehr über mich
+            </a>
+          </div>
+        </div>
+
+        <div className="founder-golden__visual asset-slot" role="img" aria-label="Founder Bildplatzhalter">
           <div className="asset-slot__meta">
             <span>FOUNDER / PORTRAIT</span>
             <strong>Freigegebenes Founder-Asset folgt.</strong>
           </div>
-        </div>
 
-        <div className="founder__content">
-          <p className="eyebrow">Persönliche Verantwortung statt Beratung aus der Distanz</p>
-          <blockquote>
-            „Unternehmen wachsen nicht, weil ein einzelner Hebel funktioniert.
-            Sie wachsen, wenn Menschen, Leistung und Struktur zusammenpassen.“
-          </blockquote>
-          <p>
-            Die Founder-Story wird hier bewusst erst mit den verifizierten
-            biografischen Fakten finalisiert. Bis dahin zeigt die Section nur die
-            Haltung hinter dem MPP-System — ohne erfundene Karriere- oder
-            Erfolgsclaims.
-          </p>
+          <div className="founder-golden__signature">
+            <span className="founder-golden__name">Mattias Pedro Panthel</span>
+            <b>MATTIAS PEDRO PANTHEL</b>
+            <small>Inhaber MPP</small>
+          </div>
 
-          <div className="founder__facts">
-            <div><span>PEOPLE</span><b>Wer passt wirklich?</b></div>
-            <div><span>PERFORMANCE</span><b>Was macht Leistung reproduzierbar?</b></div>
-            <div><span>SYSTEMS</span><b>Was trägt auch ohne Dauerfeuer?</b></div>
+          <div className="hero__image-caption">
+            <span>Unternehmen für morgen.</span>
+            <i aria-hidden="true" />
           </div>
         </div>
       </div>
