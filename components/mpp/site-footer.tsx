@@ -1,3 +1,4 @@
+import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
@@ -7,19 +8,19 @@ export function SiteFooter() {
       </div>
 
       <div className="site-footer__links">
-        <a href="/recruiting">Recruiting</a>
-        <a href="/performance">Performance</a>
-        <a href="/systems">Systems</a>
-        <a href="/case-studies">Case Studies</a>
-        <a href="/ueber-mpp">Über MPP</a>
-        <a href="/insights">Insights</a>
-        <a href="/kontakt">Kontakt</a>
+        <Link href="/recruiting">Recruiting</Link>
+        <Link href="/performance">Performance</Link>
+        <Link href="/systems">Systems</Link>
+        <Link href="/case-studies">Case Studies</Link>
+        <Link href="/ueber-mpp">Über MPP</Link>
+        <Link href="/insights">Insights</Link>
+        <Link href="/kontakt">Kontakt</Link>
       </div>
 
       <div className="site-footer__legal">
         <div>
-          <a href="/impressum">Impressum</a>
-          <a href="/datenschutz">Datenschutz</a>
+          <Link href="/impressum">Impressum</Link>
+          <Link href="/datenschutz">Datenschutz</Link>
         </div>
         <span>© MPP · Unternehmen für morgen.</span>
       </div>
