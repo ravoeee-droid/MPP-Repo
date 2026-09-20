@@ -2,126 +2,129 @@
 
 Updated: 2026-09-20
 
-## Core build completed
+## Automated quality gate — PASS
 
-- Next.js 16 / React 19 foundation
-- editorial MPP design tokens and typography
-- responsive Golden Master header + mobile navigation
-- Hero aligned to selected reference
+Latest verified CI run:
+- Dependency install: PASS
+- Typecheck: PASS
+- ESLint: PASS
+- Next.js production build: PASS
+- Workflow: MPP Build Verification
+- Run ID: 35493783604
+
+This proves code/build integrity for the current main branch. It does **not** replace visual QA.
+
+## Built
+
+### Core system
+- Next.js 16 / React 19 / TypeScript
+- editorial MPP design tokens
+- responsive Header + mobile navigation
+- Cormorant Garamond / Manrope type system
+- Lenis smooth-scroll foundation
+- GSAP / ScrollTrigger motion system
+- reduced-motion handling
+- accessible skip links / main landmarks
+- staging robots noindex lock
+- sitemap
+- verified Organization JSON-LD
+- automated GitHub quality gate
+
+### Homepage
+- Golden Master Hero structure
 - Hero Operating Line
-- Operating System aligned to selected reference
-- Services aligned to selected reference
+- MPP Operating System
+- Services
 - interactive 5-step Growth Diagnostic
-- diagnostic → contextual contact journey for People / Performance / Systems
-- Problem / category-reframing section
-- Founder section aligned to selected reference
-- Process section aligned to selected reference
-- People / Performance / Systems Proof Engine
+- Problem / category reframing
+- Founder / trust experience
+- Process
+- People / Performance / Systems proof engine
 - Trust OS
 - Fit / qualification
-- editorial Insights
+- Insights
 - FAQ
 - Final CTA
 - Footer
 - Mia · MPP KI-Assistentin front-end shell
-- GSAP reveal / scroll choreography
-- Lenis synchronized with GSAP ScrollTrigger
-- reduced-motion support
-- skip links / mobile navigation accessibility layer
-- preview noindex + robots disallow lock
-- automatic asset loader with safe fallback state
 
-## Routes built
-
-- /
+### Editorial routes
 - /recruiting
 - /performance
 - /systems
-- /ueber-mpp
 - /case-studies
+- /ueber-mpp
 - /insights
 - /kontakt
 - /impressum
 - /datenschutz
 - custom 404
 
-## Asset pipeline
+## Truth / trust state
+- No fabricated review counts
+- No fabricated customer logos
+- No fabricated case metrics
+- No fabricated certifications
+- No fabricated BAFA/TÜV badge claims
+- No invented founder quote attribution
+- Founder name/contact/address only where verified
+- Growth Diagnostic explicitly positioned as directional, not scientific diagnosis
+- Mia explicitly identified as AI, not a real employee
 
-Core imagery is auto-wired to exact paths in `project/ASSET-MANIFEST.md`.
+## Waiting for uploaded assets
 
-When approved WebP files are uploaded to those locations, the fallback slots disappear automatically without another layout rewrite.
+The website deliberately keeps neutral asset states until approved material is uploaded.
 
-Still needed:
-- canonical dark/light logo assets
-- favicon/app icons
-- Golden Master reference boards in /references
-- final approved founder/people/performance/systems/process/insights images
-- icon SVG set
-- approved Google reviews
-- approved customer logos
-- verified case-study evidence
-- exact BAFA/funding evidence if used
-- any TÜV/ISO/IHK/membership proof if used
+Needed:
+- canonical MPP dark/light logos
+- compact mark / favicon
+- Golden Master reference mockups
+- approved Founder Hero
+- approved Founder portrait
+- People visual
+- Performance visual
+- Systems visual
+- Process visuals
+- Trust / case assets
+- Insight assets
+- final icon set
+- verified reviews / customer references / case results / credentials
 
-## Verified public facts in use
+Asset folders already exist under:
+`public/assets/`
 
-- owner: Mattias Pedro Panthel
-- MPP - Recruit
-- Cologne address/contact data
-- recruiting / matching
-- sales support / coaching
-- business consulting including process optimisation, organisational development and strategic personnel management
+## Next Golden Master pass after assets arrive
 
-MPP's current website states that numerous services are BAFA-eligible. This remains a SOURCE CLAIM and is not presented as a certification badge or guaranteed funding.
+1. map exact uploaded filenames
+2. replace all neutral asset slots
+3. Hero pixel-near comparison with Golden Master
+4. Operating System visual + motion comparison
+5. Services visual comparison
+6. Founder comparison
+7. Process comparison
+8. desktop visual QA: 1440
+9. mobile visual QA: 390 / 430
+10. wide desktop whitespace check
+11. asset/crop/performance corrections
+12. full regression pass
 
-## Production blockers
+## QA state
 
-See `project/LEGAL-BLOCKERS.md`.
-
-Before launch:
-- final privacy implementation matched to actual stack
-- booking / lead-delivery decision
-- Mia provider + approved knowledge base
-- analytics / consent decision
-- real proof assets
-- logo source of truth
-- final legal/business review
-- production SEO index switch
-
-## Verification state
-
-GitHub Actions workflow exists for:
-- dependency install
-- TypeScript check
-- production build
-
-Current evidence:
 - Code authored: PASS
-- GitHub writes: PASS
-- Local production build: UNVERIFIED
-- CI result: UNVERIFIED until an observable check completes
-- Visual QA: UNVERIFIED until rendered screenshots are available
-- Runtime QA: UNVERIFIED
+- Typecheck: PASS
+- Lint: PASS
+- Production build: PASS
+- Route architecture: BUILT
+- Visual QA against final assets: UNVERIFIED
+- Browser runtime QA: UNVERIFIED
+- Final media integrity: BLOCKED BY ASSET UPLOAD
+- Final trust/proof integrity: BLOCKED BY CLIENT EVIDENCE
 
 Per framework, UNVERIFIED is not PASS.
-
-## Next exact pass after asset upload
-
-1. verify auto-wired images
-2. compare Hero at 1440px with Golden Master reference
-3. compare Operating System with reference
-4. compare Services with reference
-5. compare Founder + Process with references
-6. tune image crops / type / spacing
-7. tune scroll choreography
-8. visual QA 1440 + 1920
-9. visual QA 390 + 430 + 768
-10. regression fix loop
-11. trust/content replacement
-12. Release Evidence
 
 ## Release state
 
 **REVISION_REQUIRED / BUILD IN PROGRESS**
 
-No final production deploy without explicit human approval.
+Preview QA is allowed.
+No final production deploy, domain switch or production-ready declaration without explicit human approval.
