@@ -96,6 +96,8 @@ export default function UeberMppPage() {
           label="FOUNDER / PORTRAIT"
           note="Upload: public/assets/founder/portrait.webp"
           eager
+          quality={100}
+          sizes="(max-width: 760px) 100vw, (max-width: 1400px) 58vw, 900px"
         >
           <div className="founder-golden__signature">
             <span className="founder-golden__name">Mattias Pedro Panthel</span>
