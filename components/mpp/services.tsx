@@ -9,7 +9,7 @@ const services = [
     link: "Mehr über Recruiting",
     href: "/recruiting",
     asset: "PEOPLE / VISUAL",
-    src: "/assets/people/recruiting.webp",
+    src: "/assets/people/recruiting.png",
     alt: "Recruiting Gespräch bei MPP"
   },
   {
@@ -20,7 +20,7 @@ const services = [
     link: "Mehr über Vertriebsleistung",
     href: "/performance",
     asset: "PERFORMANCE / VISUAL",
-    src: "/assets/performance/meeting.webp",
+    src: "/assets/performance/meeting.png",
     alt: "Performance Gespräch im Vertriebsumfeld"
   },
   {
@@ -31,7 +31,7 @@ const services = [
     link: "Mehr über Unternehmensentwicklung",
     href: "/systems",
     asset: "SYSTEMS / VISUAL",
-    src: "/assets/systems/structure.webp",
+    src: "/assets/systems/structure.png",
     alt: "Strukturen und Organisationsentwicklung"
   }
 ];
