@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
 import { MotionProvider } from "@/components/mpp/motion-provider";
+import { MotionScenes } from "@/components/mpp/motion-scenes";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -58,7 +59,10 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <MotionProvider>{children}</MotionProvider>
+        <MotionProvider>
+          <MotionScenes />
+          {children}
+        </MotionProvider>
       </body>
     </html>
   );
