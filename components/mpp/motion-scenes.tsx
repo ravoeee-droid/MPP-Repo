@@ -6,194 +6,366 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export function MotionScenes() {
   useEffect(() => {
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) return;
-
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-      gsap.from(".hero__copy > *", {
-        y: 30,
-        opacity: 0,
-        duration: 0.95,
-        ease: "power3.out",
-        stagger: 0.08
-      });
+    const mm = gsap.matchMedia();
+    const cleanups: Array<() => void> = [];
 
-      gsap.from(".hero__visual-wrap", {
-        x: 36,
-        opacity: 0,
-        duration: 1.05,
-        ease: "power3.out",
-        delay: 0.14
-      });
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      const ctx = gsap.context(() => {
+        const heroTimeline = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      gsap.from(".operating-line--hero .operating-line__rail", {
-        scaleX: 0,
-        duration: 1.15,
-        ease: "power3.out",
-        transformOrigin: "left center",
-        delay: 0.34
-      });
+        heroTimeline
+          .from(".hero__copy > *", {
+            y: 34,
+            opacity: 0,
+            duration: 0.95,
+            stagger: 0.075
+          })
+          .from(
+            ".hero__visual-wrap",
+            {
+              x: 42,
+              opacity: 0,
+              duration: 1.12
+            },
+            0.12
+          )
+          .from(
+            ".operating-line--hero .operating-line__rail",
+            {
+              scaleX: 0,
+              duration: 1.15,
+              transformOrigin: "left center"
+            },
+            0.38
+          )
+          .from(
+            ".operating-line--hero .operating-line__node",
+            {
+              scale: 0,
+              duration: 0.42,
+              ease: "back.out(1.8)",
+              stagger: 0.12
+            },
+            0.53
+          );
 
-      gsap.from(".operating-line--hero .operating-line__node", {
-        scale: 0,
-        duration: 0.42,
-        ease: "back.out(1.8)",
-        stagger: 0.12,
-        delay: 0.5
-      });
-
-      gsap.from(".os-hero__copy > *", {
-        y: 28,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-        stagger: 0.07,
-        scrollTrigger: {
-          trigger: ".os-hero",
-          start: "top 78%",
-          once: true
+        const heroImg = document.querySelector<HTMLElement>(".hero__visual img");
+        if (heroImg) {
+          gsap.fromTo(
+            heroImg,
+            { yPercent: -2, scale: 1.045 },
+            {
+              yPercent: 5,
+              scale: 1.075,
+              ease: "none",
+              scrollTrigger: {
+                trigger: ".hero",
+                start: "top top",
+                end: "bottom top",
+                scrub: 0.8
+              }
+            }
+          );
         }
-      });
 
-      gsap.from(".os-hero__visual", {
-        clipPath: "inset(0 0 100% 0)",
-        duration: 1.05,
-        ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: ".os-hero__visual",
-          start: "top 82%",
-          once: true
-        }
-      });
-
-      gsap.from(".os-flow__rail", {
-        scaleX: 0,
-        transformOrigin: "left center",
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".os-flow",
-          start: "top 82%",
-          end: "bottom 45%",
-          scrub: 0.6
-        }
-      });
-
-      gsap.from(".os-pillar__icon", {
-        scale: 0.55,
-        opacity: 0,
-        duration: 0.6,
-        ease: "back.out(1.6)",
-        stagger: 0.18,
-        scrollTrigger: {
-          trigger: ".os-flow",
-          start: "top 73%",
-          once: true
-        }
-      });
-
-      gsap.utils.toArray<HTMLElement>(".service-panel").forEach((element, index) => {
-        gsap.from(element, {
-          y: 28 + index * 5,
+        gsap.from(".os-hero__copy > *", {
+          y: 30,
           opacity: 0,
-          duration: 0.88,
+          duration: 0.82,
           ease: "power3.out",
+          stagger: 0.075,
           scrollTrigger: {
-            trigger: element,
-            start: "top 88%",
+            trigger: ".os-hero",
+            start: "top 79%",
             once: true
           }
         });
-      });
 
-      gsap.from(".founder-golden__visual", {
-        clipPath: "inset(0 0 0 100%)",
-        duration: 1,
-        ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: ".founder-golden",
-          start: "top 77%",
-          once: true
-        }
-      });
-
-      gsap.from(".founder-golden__copy > *", {
-        y: 24,
-        opacity: 0,
-        duration: 0.78,
-        stagger: 0.07,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: ".founder-golden__copy",
-          start: "top 80%",
-          once: true
-        }
-      });
-
-      gsap.from(".process-golden__timeline i", {
-        scaleX: 0,
-        transformOrigin: "left center",
-        duration: 0.75,
-        stagger: 0.12,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".process-golden__grid",
-          start: "top 78%",
-          once: true
-        }
-      });
-
-      gsap.from(".process-golden__node", {
-        scale: 0,
-        duration: 0.38,
-        stagger: 0.12,
-        ease: "back.out(1.8)",
-        scrollTrigger: {
-          trigger: ".process-golden__grid",
-          start: "top 78%",
-          once: true
-        }
-      });
-
-      const revealSelectors = [
-        ".problem__friction-cell",
-        ".proof-case",
-        ".trust-card",
-        ".fit-row",
-        ".insight-card",
-        ".faq-item"
-      ];
-
-      gsap.utils.toArray<HTMLElement>(revealSelectors.join(", ")).forEach((element) => {
-        gsap.from(element, {
-          y: 28,
-          opacity: 0,
-          duration: 0.78,
-          ease: "power3.out",
+        gsap.from(".os-hero__visual", {
+          clipPath: "inset(0 0 100% 0)",
+          duration: 1.05,
+          ease: "power3.inOut",
           scrollTrigger: {
-            trigger: element,
-            start: "top 88%",
+            trigger: ".os-hero__visual",
+            start: "top 84%",
             once: true
           }
         });
+
+        gsap.fromTo(
+          ".os-flow__rail",
+          { scaleX: 0 },
+          {
+            scaleX: 1,
+            transformOrigin: "left center",
+            ease: "none",
+            scrollTrigger: {
+              trigger: ".os-flow",
+              start: "top 82%",
+              end: "bottom 46%",
+              scrub: 0.5
+            }
+          }
+        );
+
+        gsap.utils.toArray<HTMLElement>(".os-pillar").forEach((pillar, index) => {
+          const icon = pillar.querySelector<HTMLElement>(".os-pillar__icon");
+          const orbit = pillar.querySelector<HTMLElement>(".os-pillar__orbit");
+
+          if (icon) {
+            gsap.from(icon, {
+              scale: 0.58,
+              opacity: 0,
+              duration: 0.58,
+              delay: index * 0.08,
+              ease: "back.out(1.55)",
+              scrollTrigger: {
+                trigger: pillar,
+                start: "top 80%",
+                once: true
+              }
+            });
+          }
+
+          if (orbit) {
+            gsap.fromTo(
+              orbit,
+              { rotate: -4 },
+              {
+                rotate: 4,
+                ease: "none",
+                scrollTrigger: {
+                  trigger: pillar,
+                  start: "top bottom",
+                  end: "bottom top",
+                  scrub: 1
+                }
+              }
+            );
+          }
+        });
+
+        gsap.utils.toArray<HTMLElement>(".service-panel").forEach((panel, index) => {
+          gsap.from(panel, {
+            y: 32 + index * 5,
+            opacity: 0,
+            duration: 0.9,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: panel,
+              start: "top 88%",
+              once: true
+            }
+          });
+
+          const media = panel.querySelector<HTMLElement>(".service-panel__media");
+          if (media) {
+            gsap.from(media, {
+              clipPath: index % 2 === 0 ? "inset(100% 0 0 0)" : "inset(0 0 100% 0)",
+              duration: 1.05,
+              ease: "power3.inOut",
+              scrollTrigger: {
+                trigger: media,
+                start: "top 88%",
+                once: true
+              }
+            });
+          }
+        });
+
+        gsap.from(".founder-golden__visual", {
+          clipPath: "inset(0 0 0 100%)",
+          duration: 1.05,
+          ease: "power3.inOut",
+          scrollTrigger: {
+            trigger: ".founder-golden",
+            start: "top 78%",
+            once: true
+          }
+        });
+
+        gsap.from(".founder-golden__copy > *", {
+          y: 26,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.075,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".founder-golden__copy",
+            start: "top 80%",
+            once: true
+          }
+        });
+
+        gsap.from(".founder-golden__signature", {
+          x: 18,
+          opacity: 0,
+          duration: 0.75,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".founder-golden__visual",
+            start: "top 62%",
+            once: true
+          }
+        });
+
+        gsap.utils.toArray<HTMLElement>(".process-golden__step").forEach((step, index) => {
+          const visual = step.querySelector<HTMLElement>(".process-golden__visual");
+          const line = step.querySelector<HTMLElement>(".process-golden__timeline i");
+          const node = step.querySelector<HTMLElement>(".process-golden__node");
+
+          if (visual) {
+            gsap.from(visual, {
+              clipPath: "inset(100% 0 0 0)",
+              duration: 0.92,
+              delay: index * 0.06,
+              ease: "power3.inOut",
+              scrollTrigger: {
+                trigger: step,
+                start: "top 86%",
+                once: true
+              }
+            });
+          }
+
+          if (line) {
+            gsap.from(line, {
+              scaleX: 0,
+              transformOrigin: "left center",
+              duration: 0.72,
+              delay: index * 0.08,
+              ease: "power2.out",
+              scrollTrigger: {
+                trigger: step,
+                start: "top 83%",
+                once: true
+              }
+            });
+          }
+
+          if (node) {
+            gsap.from(node, {
+              scale: 0,
+              duration: 0.38,
+              delay: 0.08 + index * 0.08,
+              ease: "back.out(1.8)",
+              scrollTrigger: {
+                trigger: step,
+                start: "top 83%",
+                once: true
+              }
+            });
+          }
+        });
+
+        gsap.utils
+          .toArray<HTMLElement>(
+            ".problem__friction-cell, .proof-case, .trust-card, .fit-row, .insight-card, .faq-item"
+          )
+          .forEach((element) => {
+            gsap.from(element, {
+              y: 28,
+              opacity: 0,
+              duration: 0.78,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 89%",
+                once: true
+              }
+            });
+          });
+
+        gsap.from(".final-cta__growth i", {
+          scaleX: 0,
+          transformOrigin: "left center",
+          stagger: 0.12,
+          duration: 0.62,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".final-cta__growth",
+            start: "top 90%",
+            once: true
+          }
+        });
+
+        gsap.utils.toArray<HTMLElement>(".asset-image").forEach((container) => {
+          if (container.closest(".hero")) return;
+
+          const image = container.querySelector<HTMLElement>("img");
+          if (!image) return;
+
+          gsap.fromTo(
+            image,
+            { yPercent: -2.5, scale: 1.035 },
+            {
+              yPercent: 2.5,
+              scale: 1.065,
+              ease: "none",
+              scrollTrigger: {
+                trigger: container,
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 1
+              }
+            }
+          );
+        });
       });
 
-      gsap.from(".final-cta__growth i", {
-        scaleX: 0,
-        transformOrigin: "left center",
-        stagger: 0.12,
-        duration: 0.62,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".final-cta__growth",
-          start: "top 90%",
-          once: true
-        }
-      });
+      return () => ctx.revert();
     });
 
-    return () => ctx.revert();
+    mm.add(
+      "(prefers-reduced-motion: no-preference) and (pointer: fine) and (min-width: 900px)",
+      () => {
+        const targets = gsap.utils.toArray<HTMLElement>(
+          ".button--primary, .service-panel__link i"
+        );
+
+        targets.forEach((target) => {
+          const moveX = gsap.quickTo(target, "x", {
+            duration: 0.32,
+            ease: "power3.out"
+          });
+          const moveY = gsap.quickTo(target, "y", {
+            duration: 0.32,
+            ease: "power3.out"
+          });
+
+          const onMove = (event: PointerEvent) => {
+            const rect = target.getBoundingClientRect();
+            const x = event.clientX - rect.left - rect.width / 2;
+            const y = event.clientY - rect.top - rect.height / 2;
+
+            moveX(x * 0.1);
+            moveY(y * 0.14);
+          };
+
+          const onLeave = () => {
+            moveX(0);
+            moveY(0);
+          };
+
+          target.addEventListener("pointermove", onMove);
+          target.addEventListener("pointerleave", onLeave);
+
+          cleanups.push(() => {
+            target.removeEventListener("pointermove", onMove);
+            target.removeEventListener("pointerleave", onLeave);
+          });
+        });
+      }
+    );
+
+    ScrollTrigger.refresh();
+
+    return () => {
+      cleanups.forEach((cleanup) => cleanup());
+      mm.revert();
+    };
   }, []);
 
   return null;
