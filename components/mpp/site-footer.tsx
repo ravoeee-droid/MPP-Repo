@@ -17,9 +17,7 @@ export function SiteFooter() {
       <div className="site-footer__legal">
         <div>
           <a href="/impressum">Impressum</a>
-          <a href="https://www.mpp-recruit.com/datenschutzerklarung/">
-            Datenschutz
-          </a>
+          <a href="/datenschutz">Datenschutz</a>
         </div>
         <span>© MPP · Unternehmen für morgen.</span>
       </div>
