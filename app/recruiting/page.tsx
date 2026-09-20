@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
+import { AssetImage } from "@/components/mpp/asset-image";
 
 export const metadata: Metadata = {
   title: "Recruiting | MPP",
@@ -29,16 +30,18 @@ export default function RecruitingPage() {
               mit der Frage, welche Verantwortung eine Rolle wirklich tragen soll
               und welcher Mensch fachlich wie kulturell dazu passt.
             </p>
-            <a className="button button--primary" href="/#contact">
+            <a className="button button--primary" href="/kontakt?fokus=people">
               Schlüsselrolle besprechen <span aria-hidden="true">→</span>
             </a>
           </div>
-          <div className="service-detail__visual asset-slot" aria-hidden="true">
-            <div className="asset-slot__meta">
-              <span>PEOPLE / RECRUITING</span>
-              <strong>Finales Recruiting-Asset folgt.</strong>
-            </div>
-          </div>
+          <AssetImage
+            className="service-detail__visual"
+            src="/assets/people/recruiting.webp"
+            alt="Recruiting Gespräch bei MPP"
+            label="PEOPLE / RECRUITING"
+            note="Upload: public/assets/people/recruiting.webp"
+            eager
+          />
         </div>
 
         <div className="service-detail__principles">
