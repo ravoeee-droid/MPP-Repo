@@ -11,6 +11,29 @@ export const metadata: Metadata = {
     "Über MPP und Inhaber Mattias Pedro Panthel: Recruiting, Vertriebsleistung und Unternehmensberatung in einer gemeinsamen People-Performance-Systems-Logik."
 };
 
+const career = [
+  {
+    period: "2016–2022",
+    role: "Operations Manager",
+    company: "Provita GmbH"
+  },
+  {
+    period: "2022–2023",
+    role: "Niederlassungsleiter",
+    company: "Unique Medicum"
+  },
+  {
+    period: "2024",
+    role: "Chief Operating Officer",
+    company: "BruDi Personalmanagment GmbH"
+  },
+  {
+    period: "SEIT 2023",
+    role: "Geschäftsführer",
+    company: "MPP-Recruit"
+  }
+];
+
 export default function UeberMppPage() {
   return (
     <main id="main-content">
@@ -30,9 +53,9 @@ export default function UeberMppPage() {
           </h1>
           <p>
             MPP wird von Mattias Pedro Panthel geführt. Die öffentlich
-            beschriebenen Leistungsfelder reichen von Recruiting über Vertrieb
-            bis zur Unternehmensberatung. Die neue Website verbindet diese
-            Felder in einer gemeinsamen Logik: People, Performance und Systems.
+            dokumentierte Laufbahn verbindet operative Führung, Personal,
+            Organisation und unternehmerische Verantwortung – heute gebündelt
+            in MPP.
           </p>
 
           <div className="about-page__principle">
@@ -47,6 +70,23 @@ export default function UeberMppPage() {
           <Link className="button button--primary" href="/kontakt">
             Ins Gespräch kommen <span aria-hidden="true">→</span>
           </Link>
+
+          <div className="about-page__profiles">
+            <a
+              href="https://de.linkedin.com/in/mattias-pedro-panthel-024341271"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://www.xing.com/profile/MattiasPedro_Panthel"
+              target="_blank"
+              rel="noreferrer"
+            >
+              XING <span aria-hidden="true">↗</span>
+            </a>
+          </div>
         </div>
 
         <AssetImage
@@ -63,6 +103,23 @@ export default function UeberMppPage() {
             <small>Inhaber MPP</small>
           </div>
         </AssetImage>
+      </section>
+
+      <section className="career-strip section-pad" aria-label="Berufliche Stationen">
+        <div className="section-kicker">
+          <span>PUBLIC CAREER / VERIFIED</span>
+          <span>Öffentlich dokumentierte Berufsstationen</span>
+        </div>
+
+        <div className="career-strip__grid">
+          {career.map((item) => (
+            <article key={item.period + item.company}>
+              <span>{item.period}</span>
+              <h2>{item.role}</h2>
+              <p>{item.company}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <SiteFooter />
