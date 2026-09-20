@@ -1,0 +1,32 @@
+{
+  "brand": "MPP",
+  "system": "People · Performance · Systems",
+  "viewBox": "0 0 24 24",
+  "strokeWidth": 1.7,
+  "linecap": "round",
+  "linejoin": "round",
+  "defaultColor": "currentColor",
+  "signalColor": "#DBFF3E",
+  "icons": [
+    "people",
+    "recruiting",
+    "performance",
+    "systems",
+    "structure",
+    "analysis",
+    "strategy",
+    "growth",
+    "confidentiality",
+    "calendar",
+    "conversation",
+    "search",
+    "case-study",
+    "review",
+    "check",
+    "arrow",
+    "diagnostic",
+    "leadership",
+    "process",
+    "role"
+  ]
+}
