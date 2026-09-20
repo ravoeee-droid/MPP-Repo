@@ -3,7 +3,7 @@ export function FinalCta() {
     <section className="final-cta" id="contact">
       <div className="final-cta__inner">
         <div className="section-kicker section-kicker--dark">
-          <span>14 / NÄCHSTER SCHRITT</span>
+          <span>15 / NÄCHSTER SCHRITT</span>
           <span>Kein Pitch-Marathon. Erst Klarheit.</span>
         </div>
 
