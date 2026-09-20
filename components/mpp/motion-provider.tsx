@@ -5,10 +5,14 @@ import { useEffect } from "react";
 
 export function MotionProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) return;
+
     const lenis = new Lenis({
-      duration: 1.05,
+      duration: 1.02,
       smoothWheel: true,
-      touchMultiplier: 1
+      touchMultiplier: 1,
+      anchors: true
     });
 
     let frame = 0;
