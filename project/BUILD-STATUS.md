@@ -2,17 +2,26 @@
 
 Updated: 2026-09-20
 
-## Automated quality gate — PASS
+## Automated quality gate
 
-Latest verified CI run:
+Last verified green CI run:
 - Dependency install: PASS
 - Typecheck: PASS
 - ESLint: PASS
 - Next.js production build: PASS
 - Workflow: MPP Build Verification
 - Run ID: 35493783604
+- Verified commit era: before the latest Golden-Master motion / credibility / service-detail expansion
 
-This proves code/build integrity for the current main branch. It does **not** replace visual QA.
+Current main now contains additional commits after that verified run, including:
+- premium motion / parallax / magnetic interactions
+- verified founder credibility layer
+- expanded Recruiting / Performance / Systems routes
+- global route-aware motion system
+
+Therefore the **current HEAD must be treated as CI-PENDING / UNVERIFIED until the next successful workflow result is observed**.
+
+The previous green run proves the baseline architecture built successfully; it does not automatically validate later commits.
 
 ## Built
 
@@ -47,11 +56,14 @@ This proves code/build integrity for the current main branch. It does **not** re
 - Final CTA
 - Footer
 - Mia · MPP KI-Assistentin front-end shell
+- premium scroll parallax / clip reveals / magnetic CTA microinteractions
+- route-aware motion system across homepage and editorial routes
+- verified founder career credibility layer
 
 ### Editorial routes
-- /recruiting
-- /performance
-- /systems
+- /recruiting — expanded full service journey
+- /performance — expanded full service journey
+- /systems — expanded full service journey
 - /case-studies
 - /ueber-mpp
 - /insights
@@ -111,9 +123,10 @@ Asset folders already exist under:
 ## QA state
 
 - Code authored: PASS
-- Typecheck: PASS
-- Lint: PASS
-- Production build: PASS
+- Last verified Typecheck: PASS
+- Last verified Lint: PASS
+- Last verified Production build: PASS
+- Current HEAD after latest commits: CI-PENDING / UNVERIFIED
 - Route architecture: BUILT
 - Visual QA against final assets: UNVERIFIED
 - Browser runtime QA: UNVERIFIED
