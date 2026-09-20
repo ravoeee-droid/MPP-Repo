@@ -4448,3 +4448,115 @@ html {
     transform: none;
   }
 }
+
+
+/* === VERIFIED CREDIBILITY LAYER === */
+
+.trust-card[data-verified="true"] .trust-card__state {
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.trust-card[data-verified="true"] {
+  background:
+    linear-gradient(180deg, rgba(219, 255, 62, 0.055), transparent 42%);
+}
+
+.about-page__profiles {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+}
+
+.about-page__profiles a {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  padding-bottom: 0.18rem;
+  border-bottom: 1px solid var(--graphite);
+  color: var(--graphite);
+  font-size: 0.7rem;
+}
+
+.career-strip {
+  padding-top: 0;
+  background: var(--ivory);
+}
+
+.career-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--ink);
+}
+
+.career-strip__grid article {
+  min-height: 15rem;
+  padding: 1.3rem clamp(1rem, 2vw, 2rem) 1.6rem 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--line);
+}
+
+.career-strip__grid article + article {
+  padding-left: clamp(1rem, 2vw, 2rem);
+}
+
+.career-strip__grid article:last-child {
+  border-right: 0;
+}
+
+.career-strip__grid span {
+  color: var(--graphite);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.career-strip__grid h2 {
+  margin: auto 0 0.6rem;
+  max-width: 10ch;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.8rem, 2.5vw, 3rem);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.career-strip__grid p {
+  margin: 0;
+  color: var(--graphite);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 900px) {
+  .career-strip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .career-strip__grid article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .career-strip__grid article:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 560px) {
+  .career-strip__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .career-strip__grid article,
+  .career-strip__grid article + article {
+    min-height: 11rem;
+    padding: 1.2rem 0 1.4rem;
+    border-right: 0;
+    border-top: 1px solid var(--line);
+  }
+
+  .career-strip__grid article:first-child {
+    border-top: 0;
+  }
+}
