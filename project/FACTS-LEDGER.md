@@ -19,11 +19,15 @@ Status values:
 | Recruiting / candidate-company matching | VERIFIED | Current MPP homepage + About page | yes |
 | Sales / sales coaching | VERIFIED | Current MPP “Vertrieb” page | yes |
 | Consulting focus: process optimisation, organisational development, strategic personnel management | VERIFIED | Current MPP “Unternehmensberatung” page | yes |
+| Mattias Pedro Panthel: Geschäftsführer MPP-Recruit since Oct. 2023 | VERIFIED | Public XING profile, accessed 2026-09-20 | yes |
+| Mattias Pedro Panthel: COO, BruDi Personalmanagment GmbH, Apr.–Dec. 2024 | VERIFIED | Public XING profile, accessed 2026-09-20 | yes |
+| Mattias Pedro Panthel: Niederlassungsleiter, Unique Medicum, Mar. 2022–Dec. 2023 | VERIFIED | Public XING profile, accessed 2026-09-20 | yes |
+| Mattias Pedro Panthel: Operations Manager, Provita GmbH, Mar. 2016–Feb. 2022 | VERIFIED | Public XING profile, accessed 2026-09-20 | yes |
+| Public LinkedIn profile connects Mattias Pedro Panthel with MPP-Recruit | VERIFIED | Public LinkedIn profile, accessed 2026-09-20 | yes |
 | “Zahlreiche meiner Leistungen sind BAFA-förderfähig.” | SOURCE CLAIM | Current MPP “Unternehmensberatung” page | only after exact eligibility/status review; do not use as certification badge |
 | “People. Performance. Systems.” | PROJECT DECISION | Branding strategy | after client approval |
 | Hero “Die richtigen Menschen sind erst der Anfang.” | PROJECT DECISION | Website strategy | after client approval |
 | People → Performance → Systems → Growth model | PROJECT DECISION | Website strategy | after client approval |
-| Founder detailed career history / years of experience | UNKNOWN | client evidence needed | no |
 | Google rating + review count | NEEDS CLIENT EVIDENCE | Google profile / approved source | no |
 | Customer logos | NEEDS CLIENT EVIDENCE | client approval | no |
 | Case-study metrics | NEEDS CLIENT EVIDENCE | client data | no |
@@ -37,6 +41,8 @@ Status values:
 - https://www.mpp-recruit.com/vertrieb/
 - https://www.mpp-recruit.com/unternehmensberatung/
 - https://www.mpp-recruit.com/impressum/
+- https://de.linkedin.com/in/mattias-pedro-panthel-024341271
+- https://www.xing.com/profile/MattiasPedro_Panthel
 
 ## Rule
 Before any real company claim is added to production copy, add it here with source and status.
