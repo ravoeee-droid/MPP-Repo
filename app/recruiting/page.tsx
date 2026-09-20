@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
 import { AssetImage } from "@/components/mpp/asset-image";
+import { ServiceDetailBody } from "@/components/mpp/service-detail-body";
 
 export const metadata: Metadata = {
   title: "Recruiting | MPP",
@@ -51,6 +52,65 @@ export default function RecruitingPage() {
           <article><span>03</span><h2>Integration denken</h2><p>Besetzung endet nicht mit der Unterschrift, sondern mit wirksamer Verantwortung.</p></article>
         </div>
       </section>
+
+      <ServiceDetailBody
+        axis="people"
+        chapter="PEOPLE / DIE EIGENTLICHE FRAGE"
+        statement="Nicht: Wer kann den Job? Sondern: Wer kann diese Verantwortung wirklich tragen?"
+        intro="Eine Besetzung wird teuer, wenn Rolle, Erwartung und Umfeld vor der Suche nicht sauber geklärt sind. MPP betrachtet deshalb zuerst das System, in das die Person hineinwirken soll."
+        pains={[
+          {
+            title: "Die Rolle ist zu unscharf.",
+            text: "Aufgaben sind beschrieben, aber Verantwortung, Entscheidungsraum und Erfolgskriterien bleiben offen."
+          },
+          {
+            title: "Lebenslauf ersetzt Passung.",
+            text: "Fachliche Stationen wirken richtig, aber Führungsstil, Umfeld und reale Wirkung wurden nicht konsequent geprüft."
+          },
+          {
+            title: "Der Prozess endet zu früh.",
+            text: "Mit der Unterschrift ist die Suche beendet – obwohl die eigentliche Wirkung erst in den ersten Monaten entsteht."
+          }
+        ]}
+        phases={[
+          {
+            title: "Rollenbild schärfen",
+            text: "Aufgabe, Verantwortung, Umfeld und Erfolgskriterien werden zuerst konkret."
+          },
+          {
+            title: "Passung systematisch prüfen",
+            text: "Fachliche Eignung und Wirkung im realen Unternehmenskontext werden zusammen betrachtet."
+          },
+          {
+            title: "Übergang sauber gestalten",
+            text: "Der Start wird so gedacht, dass Verantwortung schnell und realistisch übernommen werden kann."
+          }
+        ]}
+        outcomes={[
+          {
+            title: "Mehr Klarheit vor der Suche",
+            text: "Entscheider wissen genauer, welche Person tatsächlich gebraucht wird."
+          },
+          {
+            title: "Weniger Zufall in der Auswahl",
+            text: "Passung wird nachvollziehbarer als ein reines Bauchgefühl oder CV-Matching."
+          },
+          {
+            title: "Bessere Grundlage für Wirkung",
+            text: "Die Rolle ist so vorbereitet, dass neue Verantwortung im Alltag greifen kann."
+          }
+        ]}
+        visualOne={{
+          src: "/assets/people/detail-role.webp",
+          alt: "MPP Gespräch zur Schärfung einer Schlüsselrolle",
+          label: "PEOPLE / ROLE CLARITY"
+        }}
+        visualTwo={{
+          src: "/assets/people/detail-selection.webp",
+          alt: "MPP Auswahl- und Recruitingprozess",
+          label: "PEOPLE / SELECTION"
+        }}
+      />
 
       <SiteFooter />
     </main>
