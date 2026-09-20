@@ -43,7 +43,7 @@ export function Founder() {
             <a className="button button--primary" href="#contact">
               Lassen Sie uns ins Gespräch kommen <span aria-hidden="true">→</span>
             </a>
-            <a className="text-link" href="/kontakt">
+            <a className="text-link" href="/ueber-mpp">
               Mehr über mich
             </a>
           </div>
@@ -55,6 +55,8 @@ export function Founder() {
           alt="Mattias Pedro Panthel, Inhaber von MPP"
           label="FOUNDER / PORTRAIT"
           note="Upload: public/assets/founder/portrait.webp"
+          quality={100}
+          sizes="(max-width: 760px) 100vw, (max-width: 1400px) 58vw, 900px"
         >
           <div className="founder-golden__signature">
             <span className="founder-golden__name">Mattias Pedro Panthel</span>
