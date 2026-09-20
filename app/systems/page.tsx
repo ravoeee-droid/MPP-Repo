@@ -39,10 +39,10 @@ export default function SystemsPage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/systems/structure.webp"
+            src="/assets/systems/structure.png"
             alt="MPP Workshop zu Strukturen und Organisationsentwicklung"
             label="SYSTEMS / ORGANISATION"
-            note="Upload: public/assets/systems/structure.webp"
+            note="Upload: public/assets/systems/structure.png"
             eager
           />
         </div>
@@ -102,12 +102,12 @@ export default function SystemsPage() {
           }
         ]}
         visualOne={{
-          src: "/assets/systems/detail-mapping.webp",
+          src: "/assets/systems/detail-mapping.png",
           alt: "MPP Mapping von Rollen und Organisationsstrukturen",
           label: "SYSTEMS / MAPPING"
         }}
         visualTwo={{
-          src: "/assets/systems/detail-process.webp",
+          src: "/assets/systems/detail-process.png",
           alt: "MPP Prozess- und Organisationsarbeit",
           label: "SYSTEMS / PROCESS"
         }}
