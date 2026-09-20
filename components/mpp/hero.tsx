@@ -41,6 +41,8 @@ export function Hero() {
             label="FOUNDER / HERO"
             note="Upload: public/assets/founder/hero.webp"
             eager
+            quality={100}
+            sizes="(max-width: 760px) 100vw, (max-width: 1400px) 58vw, 900px"
           >
             <div className="hero__image-caption">
               <span>Unternehmen für morgen.</span>
