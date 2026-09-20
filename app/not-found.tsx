@@ -1,10 +1,11 @@
+import Link from "next/link";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 
 export default function NotFound() {
   return (
     <main id="main-content">
-      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
+      <Link className="skip-link" href="#main-content">Zum Inhalt springen</Link>
       <SiteHeader />
 
       <section className="not-found">
@@ -20,9 +21,9 @@ export default function NotFound() {
             Zurück zur MPP-Startseite und von dort den passenden Hebel zwischen
             People, Performance und Systems wählen.
           </p>
-          <a className="button button--primary" href="/">
+          <Link className="button button--primary" href="/">
             Zur Startseite <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </section>
 
