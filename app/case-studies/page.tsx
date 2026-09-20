@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
@@ -32,7 +33,7 @@ const pillars = [
 export default function CaseStudiesPage() {
   return (
     <main id="main-content">
-      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
+      <Link className="skip-link" href="#main-content">Zum Inhalt springen</Link>
       <SiteHeader />
       <MiaAssistant />
 
@@ -67,9 +68,9 @@ export default function CaseStudiesPage() {
 
         <div className="case-index__cta">
           <span>Sie möchten wissen, ob ein ähnlicher Ansatz bei Ihnen sinnvoll ist?</span>
-          <a className="button button--primary" href="/#diagnostic">
+          <Link className="button button--primary" href="/#diagnostic">
             Growth Diagnostic starten <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </section>
 
