@@ -7,7 +7,20 @@ export const metadata: Metadata = {
   description: "Kontakt zu MPP in Köln: Telefon, E-Mail und direkter Einstieg in das Erstgespräch."
 };
 
-export default function KontaktPage() {
+const focusLabels: Record<string, string> = {
+  people: "People / Recruiting",
+  performance: "Performance / Vertrieb",
+  systems: "Systems / Organisation"
+};
+
+export default async function KontaktPage({
+  searchParams
+}: {
+  searchParams: Promise<{ fokus?: string }>;
+}) {
+  const params = await searchParams;
+  const focus = params.fokus && focusLabels[params.fokus] ? focusLabels[params.fokus] : null;
+
   return (
     <main id="main-content">
       <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
@@ -26,6 +39,17 @@ export default function KontaktPage() {
             Strukturen professionalisieren möchten, können Sie MPP direkt
             kontaktieren.
           </p>
+
+          {focus ? (
+            <div className="contact-page__focus">
+              <span>GROWTH DIAGNOSTIC</span>
+              <strong>Ihr aktueller Schwerpunkt: {focus}</strong>
+              <p>
+                Diese Einordnung ist nur eine erste Orientierung. Im Gespräch wird
+                geprüft, ob dort tatsächlich der stärkste Hebel liegt.
+              </p>
+            </div>
+          ) : null}
         </div>
 
         <div className="contact-page__details">
