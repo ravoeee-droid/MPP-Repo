@@ -6,21 +6,21 @@ const insights = [
     category: "PEOPLE",
     title: "Warum eine gute Besetzung nicht bei der Stellenbeschreibung beginnt.",
     text: "Die entscheidende Frage ist nicht nur, wen Sie suchen — sondern welche Verantwortung diese Person im System wirklich tragen soll.",
-    src: "/assets/insights/people.webp"
+    src: "/assets/insights/people.png"
   },
   {
     number: "02",
     category: "PERFORMANCE",
     title: "Warum Leistung nicht dauerhaft von Top-Performern abhängen darf.",
     text: "Wenn Ergebnisse an Einzelpersonen hängen, fehlt meist nicht Motivation, sondern ein reproduzierbarer Rahmen für Führung und Vertrieb.",
-    src: "/assets/insights/performance.webp"
+    src: "/assets/insights/performance.png"
   },
   {
     number: "03",
     category: "SYSTEMS",
     title: "Wann Wachstum zum Organisationsproblem wird.",
     text: "Mehr Aufträge, mehr Menschen und mehr Entscheidungen brauchen klare Rollen und Prozesse — sonst steigt Komplexität schneller als Wirkung.",
-    src: "/assets/insights/systems.webp"
+    src: "/assets/insights/systems.png"
   }
 ];
 
