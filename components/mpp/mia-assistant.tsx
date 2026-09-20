@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
 
@@ -193,12 +194,12 @@ export function MiaAssistant() {
         </div>
 
         <div className="mia-panel__footer">
-          <a href="/#diagnostic" onClick={() => setOpen(false)}>
+          <Link href="/#diagnostic" onClick={() => setOpen(false)}>
             Growth Diagnostic öffnen <span aria-hidden="true">→</span>
-          </a>
-          <a className="mia-panel__contact" href={contactFocus} onClick={() => setOpen(false)}>
+          </Link>
+          <Link className="mia-panel__contact" href={contactFocus} onClick={() => setOpen(false)}>
             Gespräch vorbereiten <span aria-hidden="true">↗</span>
-          </a>
+          </Link>
           <small>
             Demo-Shell: Mia nutzt aktuell ausschließlich freigegebene
             Projektlogik. Vor Production wird sie an eine verifizierte
