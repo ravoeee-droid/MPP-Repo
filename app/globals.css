@@ -3888,3 +3888,68 @@ html {
   font-size: 0.75rem;
   line-height: 1.55;
 }
+
+
+/* === QUALIFIED CONTACT JOURNEY === */
+
+.contact-page__intro h1 > span {
+  display: inline;
+}
+
+.contact-focus {
+  margin-top: 2rem;
+  padding: 1rem 0 1.1rem;
+  max-width: 38rem;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-focus > span,
+.contact-page__promise > span {
+  display: block;
+  margin-bottom: 0.7rem;
+  color: var(--graphite);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.contact-focus p {
+  margin: 0;
+  color: var(--graphite);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
+.contact-page__details > .contact-page__promise {
+  min-height: 10rem;
+  display: block;
+  padding-top: 1.5rem;
+}
+
+.contact-page__promise ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: contact-step;
+}
+
+.contact-page__promise li {
+  counter-increment: contact-step;
+  min-height: 3.1rem;
+  display: grid;
+  grid-template-columns: 2.2rem 1fr;
+  align-items: center;
+  gap: 0.7rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.25rem;
+}
+
+.contact-page__promise li::before {
+  content: "0" counter(contact-step);
+  color: var(--graphite);
+  font-family: var(--font-sans), Arial, sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+}
