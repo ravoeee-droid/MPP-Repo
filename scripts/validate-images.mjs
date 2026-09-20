@@ -3,30 +3,30 @@ import path from "node:path";
 import sharp from "sharp";
 
 const rules = [
-  { file: "public/assets/founder/hero.png", minWidth: 2800, minHeight: 1800, label: "Founder Hero" },
-  { file: "public/assets/founder/portrait.png", minWidth: 2000, minHeight: 2600, label: "Founder Portrait" },
+  { file: "public/assets/founder/hero.png", minWidth: 1400, minHeight: 1050, label: "Founder Hero" },
+  { file: "public/assets/founder/portrait.png", minWidth: 1400, minHeight: 1050, label: "Founder Portrait" },
 
-  { file: "public/assets/people/recruiting.png", minWidth: 2200, minHeight: 1600, label: "People / Recruiting" },
-  { file: "public/assets/people/detail-role.png", minWidth: 2200, minHeight: 1600, label: "People / Role Detail" },
-  { file: "public/assets/people/detail-selection.png", minWidth: 2200, minHeight: 1600, label: "People / Selection Detail" },
+  { file: "public/assets/people/recruiting.png", minWidth: 1400, minHeight: 1050, label: "People / Recruiting" },
+  { file: "public/assets/people/detail-role.png", minWidth: 1400, minHeight: 1050, label: "People / Role Detail" },
+  { file: "public/assets/people/detail-selection.png", minWidth: 1400, minHeight: 1050, label: "People / Selection Detail" },
 
-  { file: "public/assets/performance/meeting.png", minWidth: 2200, minHeight: 1600, label: "Performance / Meeting" },
-  { file: "public/assets/performance/detail-rhythm.png", minWidth: 2200, minHeight: 1600, label: "Performance / Rhythm Detail" },
-  { file: "public/assets/performance/detail-coaching.png", minWidth: 2200, minHeight: 1600, label: "Performance / Coaching Detail" },
+  { file: "public/assets/performance/meeting.png", minWidth: 1400, minHeight: 1050, label: "Performance / Meeting" },
+  { file: "public/assets/performance/detail-rhythm.png", minWidth: 1400, minHeight: 1050, label: "Performance / Rhythm Detail" },
+  { file: "public/assets/performance/detail-coaching.png", minWidth: 1400, minHeight: 1050, label: "Performance / Coaching Detail" },
 
-  { file: "public/assets/systems/approach-workshop.png", minWidth: 2400, minHeight: 1600, label: "Systems / Workshop" },
-  { file: "public/assets/systems/structure.png", minWidth: 2200, minHeight: 1600, label: "Systems / Structure" },
-  { file: "public/assets/systems/detail-mapping.png", minWidth: 2200, minHeight: 1600, label: "Systems / Mapping Detail" },
-  { file: "public/assets/systems/detail-process.png", minWidth: 2200, minHeight: 1600, label: "Systems / Process Detail" },
+  { file: "public/assets/systems/approach-workshop.png", minWidth: 1400, minHeight: 1050, label: "Systems / Workshop" },
+  { file: "public/assets/systems/structure.png", minWidth: 1400, minHeight: 1050, label: "Systems / Structure" },
+  { file: "public/assets/systems/detail-mapping.png", minWidth: 1400, minHeight: 1050, label: "Systems / Mapping Detail" },
+  { file: "public/assets/systems/detail-process.png", minWidth: 1400, minHeight: 1050, label: "Systems / Process Detail" },
 
-  { file: "public/assets/process/01-analyse.png", minWidth: 1600, minHeight: 1200, label: "Process / Analyse" },
-  { file: "public/assets/process/02-klarheit.png", minWidth: 1600, minHeight: 1200, label: "Process / Klarheit" },
-  { file: "public/assets/process/03-umsetzung.png", minWidth: 1600, minHeight: 1200, label: "Process / Umsetzung" },
-  { file: "public/assets/process/04-entwicklung.png", minWidth: 1600, minHeight: 1200, label: "Process / Entwicklung" },
+  { file: "public/assets/process/01-analyse.png", minWidth: 1400, minHeight: 1050, label: "Process / Analyse" },
+  { file: "public/assets/process/02-klarheit.png", minWidth: 1400, minHeight: 1050, label: "Process / Klarheit" },
+  { file: "public/assets/process/03-umsetzung.png", minWidth: 1400, minHeight: 1050, label: "Process / Umsetzung" },
+  { file: "public/assets/process/04-entwicklung.png", minWidth: 1400, minHeight: 1050, label: "Process / Entwicklung" },
 
-  { file: "public/assets/insights/people.png", minWidth: 1800, minHeight: 1400, label: "Insight / People" },
-  { file: "public/assets/insights/performance.png", minWidth: 1800, minHeight: 1400, label: "Insight / Performance" },
-  { file: "public/assets/insights/systems.png", minWidth: 1800, minHeight: 1400, label: "Insight / Systems" }
+  { file: "public/assets/insights/people.png", minWidth: 1400, minHeight: 1050, label: "Insight / People" },
+  { file: "public/assets/insights/performance.png", minWidth: 1400, minHeight: 1050, label: "Insight / Performance" },
+  { file: "public/assets/insights/systems.png", minWidth: 1400, minHeight: 1050, label: "Insight / Systems" }
 ];
 
 const root = process.cwd();
@@ -72,7 +72,7 @@ if (checked === 0) {
 
 if (failures > 0) {
   console.error(
-    `Image quality gate failed: ${failures} uploaded asset(s) are below the minimum source resolution.`
+    `Image quality gate failed: ${failures} uploaded asset(s) are below the minimum 4:3 production-master resolution.`
   );
   process.exit(1);
 }
