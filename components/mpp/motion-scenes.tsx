@@ -1,10 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 export function MotionScenes() {
+  const pathname = usePathname();
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -262,7 +265,7 @@ export function MotionScenes() {
 
         gsap.utils
           .toArray<HTMLElement>(
-            ".problem__friction-cell, .proof-case, .trust-card, .fit-row, .insight-card, .faq-item"
+            ".problem__friction-cell, .proof-case, .trust-card, .fit-row, .insight-card, .faq-item, .service-detail__principles article, .service-story__pains article, .service-method__steps article, .service-outcomes__grid article, .career-strip__grid article, .case-index__card, .insights-index__card"
           )
           .forEach((element) => {
             gsap.from(element, {
@@ -273,6 +276,41 @@ export function MotionScenes() {
               scrollTrigger: {
                 trigger: element,
                 start: "top 89%",
+                once: true
+              }
+            });
+          });
+
+        gsap.utils
+          .toArray<HTMLElement>(
+            ".service-detail__visual, .service-story__visual, .service-method__visual, .about-page__visual"
+          )
+          .forEach((visual, index) => {
+            gsap.from(visual, {
+              clipPath: index % 2 === 0 ? "inset(0 0 100% 0)" : "inset(0 100% 0 0)",
+              duration: 1,
+              ease: "power3.inOut",
+              scrollTrigger: {
+                trigger: visual,
+                start: "top 86%",
+                once: true
+              }
+            });
+          });
+
+        gsap.utils
+          .toArray<HTMLElement>(
+            ".service-detail__hero > div:first-child, .service-story__intro > *, .service-method__copy > *, .service-outcomes__intro > *, .service-detail-cta > *, .about-page__copy > *"
+          )
+          .forEach((element) => {
+            gsap.from(element, {
+              y: 26,
+              opacity: 0,
+              duration: 0.78,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: element,
+                start: "top 90%",
                 once: true
               }
             });
@@ -366,7 +404,7 @@ export function MotionScenes() {
       cleanups.forEach((cleanup) => cleanup());
       mm.revert();
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
