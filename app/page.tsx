@@ -13,12 +13,14 @@ import { Faq } from "@/components/mpp/faq";
 import { FinalCta } from "@/components/mpp/final-cta";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MotionScenes } from "@/components/mpp/motion-scenes";
+import { MiaAssistant } from "@/components/mpp/mia-assistant";
 
 export default function HomePage() {
   return (
     <main>
       <MotionScenes />
       <SiteHeader />
+      <MiaAssistant />
       <Hero />
       <OperatingSystem />
       <Services />
