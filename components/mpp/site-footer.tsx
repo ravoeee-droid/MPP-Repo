@@ -10,7 +10,9 @@ export function SiteFooter() {
         <a href="/recruiting">Recruiting</a>
         <a href="/performance">Performance</a>
         <a href="/systems">Systems</a>
-        <a href="/#operating-system">Ansatz</a>
+        <a href="/case-studies">Case Studies</a>
+        <a href="/ueber-mpp">Über MPP</a>
+        <a href="/insights">Insights</a>
         <a href="/kontakt">Kontakt</a>
       </div>
 
