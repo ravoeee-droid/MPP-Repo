@@ -17,14 +17,17 @@ export function Founder() {
             übernehmen.
           </h2>
 
-          <blockquote>
-            <i aria-hidden="true">”</i>
-            <p>
-              Die richtigen Menschen sind erst der Anfang.
-              <br />
-              Erst Systeme machen aus Potenzial nachhaltige Leistung.
-            </p>
-          </blockquote>
+          <div className="founder-golden__principle">
+            <i aria-hidden="true">→</i>
+            <div>
+              <span>MPP PRINZIP</span>
+              <p>
+                Die richtigen Menschen sind erst der Anfang.
+                <br />
+                Erst Systeme machen aus Potenzial nachhaltige Leistung.
+              </p>
+            </div>
+          </div>
 
           <div className="founder-golden__rule" />
 
