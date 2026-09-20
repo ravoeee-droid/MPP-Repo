@@ -1,3 +1,5 @@
+import { AssetImage } from "@/components/mpp/asset-image";
+
 export function Hero() {
   return (
     <section className="hero" id="top">
@@ -32,20 +34,18 @@ export function Hero() {
         </div>
 
         <div className="hero__visual-wrap">
-          <div
-            className="hero__visual asset-slot"
-            role="img"
-            aria-label="Platzhalter für das freigegebene Founder-Hero-Bild"
+          <AssetImage
+            className="hero__visual"
+            src="/assets/founder/hero.webp"
+            alt="Mattias Pedro Panthel im Gespräch"
+            label="FOUNDER / HERO"
+            note="Upload: public/assets/founder/hero.webp"
           >
-            <div className="asset-slot__meta">
-              <span>FOUNDER / HERO</span>
-              <strong>Finales Bild wird aus dem Asset-Paket eingesetzt.</strong>
-            </div>
             <div className="hero__image-caption">
               <span>Unternehmen für morgen.</span>
               <i aria-hidden="true" />
             </div>
-          </div>
+          </AssetImage>
         </div>
       </div>
 
