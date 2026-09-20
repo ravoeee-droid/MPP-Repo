@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
+import { AssetImage } from "@/components/mpp/asset-image";
 
 export const metadata: Metadata = {
   title: "Unternehmensberatung & Systems | MPP",
@@ -30,16 +31,18 @@ export default function SystemsPage() {
               Systems macht daraus die organisatorische Perspektive: Rollen,
               Prozesse und Entscheidungen müssen Wachstum tragen können.
             </p>
-            <a className="button button--primary" href="/#contact">
+            <a className="button button--primary" href="/kontakt?fokus=systems">
               Strukturen besprechen <span aria-hidden="true">→</span>
             </a>
           </div>
-          <div className="service-detail__visual asset-slot" aria-hidden="true">
-            <div className="asset-slot__meta">
-              <span>SYSTEMS / ORGANISATION</span>
-              <strong>Finales Systems-Asset folgt.</strong>
-            </div>
-          </div>
+          <AssetImage
+            className="service-detail__visual"
+            src="/assets/systems/structure.webp"
+            alt="MPP Workshop zu Strukturen und Organisationsentwicklung"
+            label="SYSTEMS / ORGANISATION"
+            note="Upload: public/assets/systems/structure.webp"
+            eager
+          />
         </div>
 
         <div className="service-detail__principles">
