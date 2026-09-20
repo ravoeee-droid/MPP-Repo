@@ -16,21 +16,21 @@ const articles = [
     category: "PEOPLE",
     title: "Warum eine gute Besetzung nicht bei der Stellenbeschreibung beginnt.",
     intro: "Welche Verantwortung soll die Rolle wirklich tragen – und in welchem System muss die Person wirksam werden?",
-    image: "/assets/insights/people.webp"
+    image: "/assets/insights/people.png"
   },
   {
     index: "02",
     category: "PERFORMANCE",
     title: "Warum Leistung nicht dauerhaft von Top-Performern abhängen darf.",
     intro: "Wenn Ergebnisse an Einzelpersonen hängen, lohnt sich ein Blick auf Führung, Routinen und Vertriebsstruktur.",
-    image: "/assets/insights/performance.webp"
+    image: "/assets/insights/performance.png"
   },
   {
     index: "03",
     category: "SYSTEMS",
     title: "Wann Wachstum zum Organisationsproblem wird.",
     intro: "Mehr Menschen und mehr Entscheidungen brauchen klare Rollen und Prozesse – sonst wächst Reibung schneller als Wirkung.",
-    image: "/assets/insights/systems.webp"
+    image: "/assets/insights/systems.png"
   }
 ];
 
