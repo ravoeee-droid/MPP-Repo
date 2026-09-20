@@ -6,23 +6,27 @@ export function Hero() {
           <p className="eyebrow">Menschen. Leistung. Systeme.</p>
 
           <h1>
-            Die richtigen Menschen
+            Die richtigen
             <br />
-            sind erst <em>der Anfang.</em>
+            Menschen sind
+            <br />
+            erst der Anfang.
           </h1>
 
           <p className="hero__lede">
-            MPP bringt die richtigen Menschen in die richtigen Rollen, stärkt
-            Leistung im System und schafft Strukturen, in denen Wachstum möglich
-            wird.
+            MPP bringt die richtigen Menschen in Rollen,
+            <br className="desktop-only" />
+            stärkt Leistung im System und baut Strukturen,
+            <br className="desktop-only" />
+            in denen Wachstum möglich wird.
           </p>
 
           <div className="hero__actions">
             <a className="button button--primary" href="#diagnostic">
-              Wachstumspotenziale erkennen <span aria-hidden="true">→</span>
+              Potenziale ins Wirken bringen <span aria-hidden="true">→</span>
             </a>
             <a className="text-link" href="#operating-system">
-              Unser Ansatz <span aria-hidden="true">↘</span>
+              Mehr über unseren Ansatz
             </a>
           </div>
         </div>
@@ -37,11 +41,10 @@ export function Hero() {
               <span>FOUNDER / HERO</span>
               <strong>Finales Bild wird aus dem Asset-Paket eingesetzt.</strong>
             </div>
-          </div>
-
-          <div className="hero__caption">
-            <span>01</span>
-            <p>Menschen sind der Anfang. Das System entscheidet, was daraus wird.</p>
+            <div className="hero__image-caption">
+              <span>Unternehmen für morgen.</span>
+              <i aria-hidden="true" />
+            </div>
           </div>
         </div>
       </div>
@@ -50,19 +53,29 @@ export function Hero() {
         <div className="operating-line__rail" />
         <div className="operating-line__item">
           <span className="operating-line__node" />
-          <div><b>PEOPLE</b><small>Richtige Menschen. Richtige Rollen.</small></div>
+          <div>
+            <b>PEOPLE</b>
+            <small>Talente verbinden.<br />Verantwortung ermöglichen.</small>
+          </div>
         </div>
         <div className="operating-line__item">
           <span className="operating-line__node" />
-          <div><b>PERFORMANCE</b><small>Leistung wird systematisch wirksam.</small></div>
+          <div>
+            <b>PERFORMANCE</b>
+            <small>Leistung stärken.<br />Wirkung steigern.</small>
+          </div>
         </div>
         <div className="operating-line__item">
           <span className="operating-line__node" />
-          <div><b>SYSTEMS</b><small>Strukturen tragen das Wachstum.</small></div>
+          <div>
+            <b>SYSTEMS</b>
+            <small>Strukturen entwickeln.<br />Wachstum ermöglichen.</small>
+          </div>
         </div>
-        <div className="operating-line__item operating-line__item--growth">
-          <span className="operating-line__node" />
-          <div><b>GROWTH</b><small>Nachhaltig statt zufällig.</small></div>
+        <div className="operating-line__descriptor">
+          <span>KLARER</span>
+          <span>MENSCHLICHER</span>
+          <span>WIRKSAMER</span>
         </div>
       </div>
     </section>
