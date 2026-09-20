@@ -8,6 +8,7 @@ type AssetImageProps = {
   className?: string;
   label?: string;
   note?: string;
+  eager?: boolean;
   children?: React.ReactNode;
 };
 
@@ -17,6 +18,7 @@ export function AssetImage({
   className = "",
   label = "ASSET",
   note = "Finales Asset folgt.",
+  eager = false,
   children
 }: AssetImageProps) {
   const [loaded, setLoaded] = useState(false);
@@ -26,7 +28,8 @@ export function AssetImage({
       <img
         src={src}
         alt={alt}
-        loading="lazy"
+        loading={eager ? "eager" : "lazy"}
+        fetchPriority={eager ? "high" : "auto"}
         decoding="async"
         onLoad={() => setLoaded(true)}
         onError={() => setLoaded(false)}
