@@ -3759,3 +3759,99 @@ html {
   font-size: clamp(0.95rem, 1.18vw, 1.15rem);
   line-height: 1.45;
 }
+
+
+/* === ABOUT MPP ROUTE === */
+
+.about-page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(4rem, 7vw, 7rem) var(--gutter) clamp(6rem, 10vw, 10rem);
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(3rem, 7vw, 8rem);
+  align-items: stretch;
+}
+
+.about-page__copy {
+  padding-top: clamp(2rem, 5vw, 5rem);
+}
+
+.about-page__copy h1 {
+  margin: 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(4.5rem, 7vw, 8rem);
+  font-weight: 500;
+  line-height: 0.84;
+  letter-spacing: -0.06em;
+}
+
+.about-page__copy h1 em {
+  font-weight: 500;
+}
+
+.about-page__copy > p:not(.eyebrow) {
+  max-width: 38rem;
+  margin: 2.3rem 0 0;
+  color: var(--graphite);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.about-page__principle {
+  margin: clamp(3rem, 5vw, 5rem) 0 2rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.about-page__principle span {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--graphite);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+}
+
+.about-page__principle strong {
+  display: block;
+  max-width: 33rem;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.8rem, 2.6vw, 3rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+.about-page__copy .button {
+  min-width: 18rem;
+  border-radius: 999px;
+}
+
+.about-page__visual {
+  min-height: clamp(42rem, 61vw, 58rem);
+  border: 0;
+}
+
+.site-header .brand-mark::after,
+.site-footer .brand-mark::after {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .about-page {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page__copy {
+    padding-top: 1rem;
+  }
+
+  .about-page__copy h1 {
+    font-size: clamp(4rem, 17vw, 6.5rem);
+  }
+
+  .about-page__visual {
+    min-height: 34rem;
+  }
+}
