@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
+import { AssetImage } from "@/components/mpp/asset-image";
 
 export const metadata: Metadata = {
   title: "Performance & Vertrieb | MPP",
@@ -30,16 +31,18 @@ export default function PerformancePage() {
               soll im Alltag nachvollziehbar, entwickelbar und weniger abhängig
               von einzelnen Top-Performern werden.
             </p>
-            <a className="button button--primary" href="/#contact">
+            <a className="button button--primary" href="/kontakt?fokus=performance">
               Performance-Hebel besprechen <span aria-hidden="true">→</span>
             </a>
           </div>
-          <div className="service-detail__visual asset-slot" aria-hidden="true">
-            <div className="asset-slot__meta">
-              <span>PERFORMANCE / VERTRIEB</span>
-              <strong>Finales Performance-Asset folgt.</strong>
-            </div>
-          </div>
+          <AssetImage
+            className="service-detail__visual"
+            src="/assets/performance/meeting.webp"
+            alt="MPP Gespräch zu Vertriebsleistung und Performance"
+            label="PERFORMANCE / VERTRIEB"
+            note="Upload: public/assets/performance/meeting.webp"
+            eager
+          />
         </div>
 
         <div className="service-detail__principles">
