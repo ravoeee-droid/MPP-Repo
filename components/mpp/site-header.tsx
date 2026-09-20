@@ -15,8 +15,8 @@ export function SiteHeader() {
       <nav className="site-nav" aria-label="Hauptnavigation">
         <a href="/#services">Leistungen</a>
         <a href="/#operating-system">Ansatz</a>
-        <a href="/#founder">Über uns</a>
-        <a href="/#insights">Insights</a>
+        <a href="/ueber-mpp">Über uns</a>
+        <a href="/insights">Insights</a>
         <a href="/kontakt">Kontakt</a>
       </nav>
 
