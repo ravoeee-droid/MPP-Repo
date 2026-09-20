@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
 import { AssetImage } from "@/components/mpp/asset-image";
+
+export const metadata: Metadata = {
+  title: "Über MPP | People. Performance. Systems.",
+  description:
+    "Über MPP und Inhaber Mattias Pedro Panthel: Recruiting, Vertriebsleistung und Unternehmensberatung in einer gemeinsamen People-Performance-Systems-Logik."
+};
 
 export default function UeberMppPage() {
   return (
