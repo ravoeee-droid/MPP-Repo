@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
+
+export const metadata: Metadata = {
+  title: "Datenschutz | MPP",
+  description: "Datenschutzinformationen für die neue MPP Website."
+};
 
 export default function DatenschutzPage() {
   return (
