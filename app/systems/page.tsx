@@ -1,10 +1,17 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
 
+export const metadata: Metadata = {
+  title: "Unternehmensberatung & Systems | MPP",
+  description: "MPP Unternehmensberatung für Prozessoptimierung, Organisationsentwicklung und strategisches Personalmanagement."
+};
+
 export default function SystemsPage() {
   return (
-    <main>
+    <main id="main-content">
+      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
       <SiteHeader />
       <MiaAssistant />
 
