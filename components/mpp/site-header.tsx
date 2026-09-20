@@ -1,7 +1,9 @@
+import { MobileNav } from "@/components/mpp/mobile-nav";
+
 export function SiteHeader() {
   return (
     <header className="site-header">
-      <a className="brand-lockup" href="/#top" aria-label="MPP Startseite">
+      <a className="brand-lockup" href="#top" aria-label="MPP Startseite">
         <span className="brand-mark">MPP</span>
         <span className="brand-subline">
           <b>PEOPLE</b>
@@ -11,17 +13,19 @@ export function SiteHeader() {
       </a>
 
       <nav className="site-nav" aria-label="Hauptnavigation">
-        <a href="/#services">Leistungen</a>
-        <a href="/#operating-system">Ansatz</a>
-        <a href="/#founder">Über uns</a>
-        <a href="/#insights">Insights</a>
-        <a href="/kontakt">Kontakt</a>
+        <a href="#services">Leistungen</a>
+        <a href="#operating-system">Ansatz</a>
+        <a href="#founder">Über uns</a>
+        <a href="#insights">Insights</a>
+        <a href="#contact">Kontakt</a>
       </nav>
 
-      <a className="button button--header button--primary" href="/#contact">
+      <a className="button button--header button--primary" href="#contact">
         Gemeinsam morgen bauen
         <span aria-hidden="true">→</span>
       </a>
+
+      <MobileNav />
     </header>
   );
 }
