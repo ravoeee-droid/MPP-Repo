@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const links = [
@@ -52,21 +53,21 @@ export function MobileNav() {
 
           <nav aria-label="Mobile Navigation">
             {links.map((link, index) => (
-              <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+              <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
                 <span>0{index + 1}</span>
                 <strong>{link.label}</strong>
                 <i aria-hidden="true">↗</i>
-              </a>
+              </Link>
             ))}
           </nav>
 
-          <a
+          <Link
             className="button button--primary mobile-nav-panel__cta"
             href="/#contact"
             onClick={() => setOpen(false)}
           >
             Gemeinsam morgen bauen <span aria-hidden="true">→</span>
-          </a>
+          </Link>
         </div>
       </div>
     </>
