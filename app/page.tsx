@@ -13,13 +13,11 @@ import { Faq } from "@/components/mpp/faq";
 import { Insights } from "@/components/mpp/insights";
 import { FinalCta } from "@/components/mpp/final-cta";
 import { SiteFooter } from "@/components/mpp/site-footer";
-import { MotionScenes } from "@/components/mpp/motion-scenes";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
 
 export default function HomePage() {
   return (
     <main id="main-content">
-      <MotionScenes />
       <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
       <SiteHeader />
       <MiaAssistant />
