@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "/#services", label: "Leistungen" },
   { href: "/#operating-system", label: "Ansatz" },
-  { href: "/#founder", label: "Über uns" },
-  { href: "/#insights", label: "Insights" },
+  { href: "/ueber-mpp", label: "Über uns" },
+  { href: "/insights", label: "Insights" },
   { href: "/kontakt", label: "Kontakt" }
 ];
 
