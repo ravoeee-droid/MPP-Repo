@@ -1,10 +1,17 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
 import { MiaAssistant } from "@/components/mpp/mia-assistant";
 
+export const metadata: Metadata = {
+  title: "Recruiting | MPP",
+  description: "MPP Recruiting: Schlüsselrollen passgenau besetzen und Menschen mit Unternehmen verbinden."
+};
+
 export default function RecruitingPage() {
   return (
-    <main>
+    <main id="main-content">
+      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
       <SiteHeader />
       <MiaAssistant />
 
