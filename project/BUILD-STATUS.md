@@ -160,3 +160,17 @@ Important:
 The selected Golden Master boards are layout references only. Their embedded photography must never be cropped out and reused as production photography.
 
 The previously supplied small founder reference portrait is identity/reference material, not a valid large-format hero master. Large founder imagery must come from a genuinely high-resolution source or a newly approved high-resolution production asset.
+
+
+## Asset wiring update — 2026-09-20
+
+The uploaded production set is now wired into runtime paths:
+- Founder Hero / Founder Portrait: WIRED
+- People master: WIRED
+- Performance master: WIRED
+- Systems master: WIRED
+- Process / Insights: WIRED from the four uploaded master scenes with intentional crops
+- Logo system / app icon: WIRED
+- SVG icon system: WIRED
+
+Remaining visual work is screenshot QA and crop/spacing tuning; the website no longer depends on empty image placeholders for these primary surfaces.
