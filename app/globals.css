@@ -4239,3 +4239,37 @@ html {
     font-size: clamp(3.7rem, 15vw, 6rem);
   }
 }
+
+
+.proof__footer {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid var(--line-dark);
+}
+
+.proof__footer p {
+  max-width: 38rem;
+  margin: 0;
+  color: #9ea29f;
+  font-size: 0.74rem;
+  line-height: 1.6;
+}
+
+.proof__footer .button {
+  min-width: 19rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 760px) {
+  .proof__footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .proof__footer .button {
+    min-width: 0;
+  }
+}
