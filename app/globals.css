@@ -4893,3 +4893,25 @@ html {
     min-height: 27rem;
   }
 }
+
+
+/* === IMAGE SHARPNESS LOCK === */
+
+.asset-image > img {
+  image-rendering: auto;
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+
+.service-panel__media,
+.process-golden__visual,
+.insight-card__visual,
+.insights-index__visual {
+  transform: none;
+}
+
+@media (min-resolution: 2dppx) {
+  .asset-image > img {
+    image-rendering: auto;
+  }
+}
