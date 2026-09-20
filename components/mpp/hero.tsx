@@ -36,10 +36,10 @@ export function Hero() {
         <div className="hero__visual-wrap">
           <AssetImage
             className="hero__visual"
-            src="/assets/founder/hero.webp"
+            src="/assets/founder/hero.png"
             alt="Mattias Pedro Panthel im Gespräch"
             label="FOUNDER / HERO"
-            note="Upload: public/assets/founder/hero.webp"
+            note="Upload: public/assets/founder/hero.png"
             eager
             quality={100}
             sizes="(max-width: 760px) 100vw, (max-width: 1400px) 58vw, 900px"
