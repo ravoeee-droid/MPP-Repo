@@ -58,10 +58,10 @@ export function MotionScenes() {
         if (heroImg) {
           gsap.fromTo(
             heroImg,
-            { yPercent: -2, scale: 1.045 },
+            { yPercent: -1.2, scale: 1.015 },
             {
-              yPercent: 5,
-              scale: 1.075,
+              yPercent: 2.4,
+              scale: 1.035,
               ease: "none",
               scrollTrigger: {
                 trigger: ".hero",
@@ -337,10 +337,10 @@ export function MotionScenes() {
 
           gsap.fromTo(
             image,
-            { yPercent: -2.5, scale: 1.035 },
+            { yPercent: -1.2, scale: 1.01 },
             {
-              yPercent: 2.5,
-              scale: 1.065,
+              yPercent: 1.2,
+              scale: 1.025,
               ease: "none",
               scrollTrigger: {
                 trigger: container,
