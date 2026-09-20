@@ -5,25 +5,25 @@ const stages = [
     index: "01",
     name: "Analyse",
     body: "Wir verstehen Ihre Ausgangslage, hören genau hin und erkennen, was wirklich zählt – im System, bei den Menschen und in den Zielen.",
-    src: "/assets/process/01-analyse.webp"
+    src: "/assets/process/01-analyse.png"
   },
   {
     index: "02",
     name: "Klarheit",
     body: "Wir verdichten Erkenntnisse, priorisieren gemeinsam und entwickeln ein klares, realistisches Zielbild – als Grundlage für wirksame Entscheidungen.",
-    src: "/assets/process/02-klarheit.webp"
+    src: "/assets/process/02-klarheit.png"
   },
   {
     index: "03",
     name: "Umsetzung",
     body: "Wir bringen die vereinbarte Lösung in die Praxis – mit klarer Verantwortung, pragmatischem Vorgehen und enger Begleitung im Alltag.",
-    src: "/assets/process/03-umsetzung.webp"
+    src: "/assets/process/03-umsetzung.png"
   },
   {
     index: "04",
     name: "Entwicklung",
     body: "Wir messen Wirkung, lernen gemeinsam und entwickeln weiter – damit Fortschritt kein Projekt bleibt, sondern Teil Ihrer Organisation wird.",
-    src: "/assets/process/04-entwicklung.webp"
+    src: "/assets/process/04-entwicklung.png"
   }
 ];
 
