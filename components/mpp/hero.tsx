@@ -40,6 +40,7 @@ export function Hero() {
             alt="Mattias Pedro Panthel im Gespräch"
             label="FOUNDER / HERO"
             note="Upload: public/assets/founder/hero.webp"
+            eager
           >
             <div className="hero__image-caption">
               <span>Unternehmen für morgen.</span>
