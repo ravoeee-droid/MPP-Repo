@@ -4,19 +4,29 @@ Updated: 2026-09-20
 
 ## Built
 - Next.js 16 / React 19 project foundation
-- MPP design tokens
-- editorial typography setup
+- MPP design tokens and editorial typography setup
 - responsive header
 - Golden Master hero structure
 - Hero Operating Line
 - MPP Operating System section
 - Services section
 - interactive 5-step Growth Diagnostic
-- responsive mobile layouts for current sections
-- reduced-motion CSS safety
+- Problem / category-reframing section
+- Founder / trust section shell
+- Process timeline
+- People / Performance / Systems proof engine shell
+- Trust OS section
+- Fit / qualification section
+- FAQ
+- Final CTA
+- Footer
+- Mia · MPP KI-Assistentin front-end shell
+- responsive mobile layouts for all current sections
+- GSAP reveal system
 - Lenis smooth-scroll foundation
+- reduced-motion safety
 - preview noindex lock
-- all project framework / quality / trust / asset docs
+- project framework / quality / trust / asset documentation
 
 ## Waiting for uploaded assets
 Replace temporary media slots after the user uploads:
@@ -27,35 +37,39 @@ Replace temporary media slots after the user uploads:
 - People visual
 - Performance visual
 - Systems visual
-- Process visual
+- Process visuals
 - icon SVG set
-- approved proof / reviews / references
+- approved reviews / references / case studies / credentials
 
-## Important
-The temporary media slots are intentionally not fake company photography.
-They must be replaced with approved assets before release.
+## Current truth state
+No fake review counts, customer logos, case metrics, certifications or funding claims are published.
+Founder biography remains intentionally unfilled until verified.
 
-## Next build wave
-After assets arrive:
-1. compare Hero against uploaded Golden Master mockup
-2. replace Hero media
-3. add GSAP Hero choreography
-4. build scroll-linked Operating System motion
-5. replace service visuals
-6. visual QA desktop 1440
-7. visual QA mobile 390/430
-8. lock Wave 1
+## Immediate next pass after asset upload
+1. map exact uploaded filenames
+2. replace all asset slots
+3. compare Hero to uploaded Golden Master
+4. tune typography / spacing / crops
+5. add Hero choreography
+6. add scroll-linked Operating System timeline
+7. tune Services motion
+8. desktop visual QA at 1440
+9. mobile visual QA at 390 / 430
+10. fix loop and lock Wave 1
+11. then refine Wave 2 + Trust sections
 
-Then:
-- Problem
-- Founder
-- Process
-- Recruiting Proof
-- Performance Proof
-- Systems Proof
+## Build verification
+A local production build could not be executed from the container because outbound network access to GitHub/npm is unavailable there.
+Therefore:
+- Code authored: PASS
+- Connector writes to GitHub: PASS
+- Local production build: UNVERIFIED
+- Visual QA: UNVERIFIED
+- Runtime QA: UNVERIFIED
+
+Per framework, UNVERIFIED is not PASS.
 
 ## Release state
 **REVISION_REQUIRED / BUILD IN PROGRESS**
 
-Not production ready.
 No final deploy without explicit human approval.
