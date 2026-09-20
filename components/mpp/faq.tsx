@@ -27,7 +27,7 @@ export function Faq() {
   return (
     <section className="faq section-pad" id="faq">
       <div className="section-kicker">
-        <span>13 / FRAGEN VOR DEM ERSTEN GESPRÄCH</span>
+        <span>14 / FRAGEN VOR DEM ERSTEN GESPRÄCH</span>
         <span>Klarheit vor Conversion.</span>
       </div>
 
