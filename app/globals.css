@@ -3725,3 +3725,37 @@ html {
 .asset-image[data-loaded="true"] > .founder-golden__signature {
   text-shadow: 0 1px 14px rgba(244, 240, 232, 0.32);
 }
+
+
+/* Founder principle — intentionally not presented as an attributed quote */
+.founder-golden__principle {
+  margin: clamp(2.2rem, 3.5vw, 3.8rem) 0 0;
+  display: grid;
+  grid-template-columns: 2.4rem 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.founder-golden__principle > i {
+  color: var(--citron);
+  font-size: 2rem;
+  font-style: normal;
+  line-height: 1;
+}
+
+.founder-golden__principle span {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--graphite);
+  font-size: 0.56rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.founder-golden__principle p {
+  margin: 0;
+  max-width: 31rem;
+  color: #414549;
+  font-size: clamp(0.95rem, 1.18vw, 1.15rem);
+  line-height: 1.45;
+}
