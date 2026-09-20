@@ -3691,3 +3691,37 @@ html {
     transition: none !important;
   }
 }
+
+
+/* === ASSET AUTO-WIRING === */
+
+.asset-image > img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 360ms ease;
+}
+
+.asset-image[data-loaded="true"] > img {
+  opacity: 1;
+}
+
+.asset-image[data-loaded="true"]::after,
+.asset-image[data-loaded="true"] > .asset-slot__meta {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.asset-image > .hero__image-caption,
+.asset-image > .founder-golden__signature {
+  z-index: 2;
+}
+
+.asset-image[data-loaded="true"] > .hero__image-caption,
+.asset-image[data-loaded="true"] > .founder-golden__signature {
+  text-shadow: 0 1px 14px rgba(244, 240, 232, 0.32);
+}
