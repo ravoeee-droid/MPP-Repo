@@ -1,3 +1,5 @@
+import { AssetImage } from "@/components/mpp/asset-image";
+
 const pillars = [
   {
     number: "01",
@@ -66,12 +68,13 @@ export function OperatingSystem() {
           </p>
         </div>
 
-        <div className="os-hero__visual asset-slot" role="img" aria-label="MPP Workshop Bildplatzhalter">
-          <div className="asset-slot__meta">
-            <span>APPROACH / WORKSHOP</span>
-            <strong>Finales Bild folgt.</strong>
-          </div>
-        </div>
+        <AssetImage
+          className="os-hero__visual"
+          src="/assets/systems/approach-workshop.webp"
+          alt="MPP Workshop zur Organisationsentwicklung"
+          label="APPROACH / WORKSHOP"
+          note="Upload: public/assets/systems/approach-workshop.webp"
+        />
       </div>
 
       <div className="os-flow">
