@@ -19,7 +19,37 @@ public/assets/
   references/
 ```
 
+## Auto-wired production paths
+
+The website now attempts these exact paths automatically. If a file is missing, the visual fallback remains visible; once the file is uploaded, it appears without another code edit.
+
+### Founder
+- `public/assets/founder/hero.webp`
+- `public/assets/founder/portrait.webp`
+
+### People
+- `public/assets/people/recruiting.webp`
+
+### Performance
+- `public/assets/performance/meeting.webp`
+
+### Systems
+- `public/assets/systems/approach-workshop.webp`
+- `public/assets/systems/structure.webp`
+
+### Process
+- `public/assets/process/01-analyse.webp`
+- `public/assets/process/02-klarheit.webp`
+- `public/assets/process/03-umsetzung.webp`
+- `public/assets/process/04-entwicklung.webp`
+
+### Insights
+- `public/assets/insights/people.webp`
+- `public/assets/insights/performance.webp`
+- `public/assets/insights/systems.webp`
+
 ## Golden Master references
+
 Expected under `public/assets/references/`:
 
 - `menschen_leistung_systemeqatigiit.png`
@@ -31,6 +61,7 @@ Expected under `public/assets/references/`:
 These are DESIGN references, not final full-page images to embed.
 
 ## Logo source of truth
+
 Expected:
 - primary dark logo
 - inverse/light logo
@@ -38,18 +69,20 @@ Expected:
 - compact mark
 - favicon/app icons
 
-Before implementation, declare one canonical source for each. Never mix generated variants.
+Before production release, declare one canonical source for each and update all instances to that source. Never mix generated variants.
 
-## Founder
-Expected:
-- original identity/reference portrait
-- approved hero/founder photo
-- editorial portrait
-- workshop/analysis/CTA photos if available
+## Founder truth rule
 
-AI-generated founder approximations must not be presented as real photography.
+Founder identity verified from MPP's public imprint:
+- Mattias Pedro Panthel
+- Inhaber MPP / MPP - Recruit
+
+Detailed biography, years of experience and career milestones still require client/source evidence.
+
+AI-generated founder approximations must not be presented as documentary proof photography.
 
 ## Icons
+
 Direction:
 - 24×24 viewBox
 - 1.7px stroke
@@ -61,12 +94,13 @@ Expected:
 People, Recruiting, Performance, Systems, Structure, Analysis, Strategy, Growth, Confidentiality, Calendar, Conversation, Search, Case Study, Review, Check, Arrow, Diagnostic, Leadership, Process, Role.
 
 ## Media rules
+
 - no text burned into photographs
 - no fake wall logos
 - no fake client names
 - no fake dashboards/results
-- AVIF/WebP where useful
-- fixed dimensions / aspect ratios
+- prefer AVIF/WebP
+- fixed dimensions/aspect ratios
 - responsive crops
-- real alt text
+- meaningful alt text
 - rights/source ledger before release
