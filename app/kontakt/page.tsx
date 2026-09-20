@@ -3,7 +3,8 @@ import { SiteFooter } from "@/components/mpp/site-footer";
 
 export default function KontaktPage() {
   return (
-    <main>
+    <main id="main-content">
+      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
       <SiteHeader />
 
       <section className="contact-page">
