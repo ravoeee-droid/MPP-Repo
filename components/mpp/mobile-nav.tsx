@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#services", label: "Leistungen" },
-  { href: "#operating-system", label: "Ansatz" },
-  { href: "#founder", label: "Über uns" },
-  { href: "#insights", label: "Insights" },
-  { href: "#contact", label: "Kontakt" }
+  { href: "/#services", label: "Leistungen" },
+  { href: "/#operating-system", label: "Ansatz" },
+  { href: "/#founder", label: "Über uns" },
+  { href: "/#insights", label: "Insights" },
+  { href: "/kontakt", label: "Kontakt" }
 ];
 
 export function MobileNav() {
@@ -62,7 +62,7 @@ export function MobileNav() {
 
           <a
             className="button button--primary mobile-nav-panel__cta"
-            href="#contact"
+            href="/#contact"
             onClick={() => setOpen(false)}
           >
             Gemeinsam morgen bauen <span aria-hidden="true">→</span>
