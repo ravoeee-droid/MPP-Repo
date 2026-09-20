@@ -24,35 +24,35 @@ public/assets/
 The website now attempts these exact paths automatically. If a file is missing, the visual fallback remains visible; once the file is uploaded, it appears without another code edit.
 
 ### Founder
-- `public/assets/founder/hero.webp`
-- `public/assets/founder/portrait.webp`
+- `public/assets/founder/hero.png`
+- `public/assets/founder/portrait.png`
 
 ### People
-- `public/assets/people/recruiting.webp`
-- `public/assets/people/detail-role.webp`
-- `public/assets/people/detail-selection.webp`
+- `public/assets/people/recruiting.png`
+- `public/assets/people/detail-role.png`
+- `public/assets/people/detail-selection.png`
 
 ### Performance
-- `public/assets/performance/meeting.webp`
-- `public/assets/performance/detail-rhythm.webp`
-- `public/assets/performance/detail-coaching.webp`
+- `public/assets/performance/meeting.png`
+- `public/assets/performance/detail-rhythm.png`
+- `public/assets/performance/detail-coaching.png`
 
 ### Systems
-- `public/assets/systems/approach-workshop.webp`
-- `public/assets/systems/structure.webp`
-- `public/assets/systems/detail-mapping.webp`
-- `public/assets/systems/detail-process.webp`
+- `public/assets/systems/approach-workshop.png`
+- `public/assets/systems/structure.png`
+- `public/assets/systems/detail-mapping.png`
+- `public/assets/systems/detail-process.png`
 
 ### Process
-- `public/assets/process/01-analyse.webp`
-- `public/assets/process/02-klarheit.webp`
-- `public/assets/process/03-umsetzung.webp`
-- `public/assets/process/04-entwicklung.webp`
+- `public/assets/process/01-analyse.png`
+- `public/assets/process/02-klarheit.png`
+- `public/assets/process/03-umsetzung.png`
+- `public/assets/process/04-entwicklung.png`
 
 ### Insights
-- `public/assets/insights/people.webp`
-- `public/assets/insights/performance.webp`
-- `public/assets/insights/systems.webp`
+- `public/assets/insights/people.png`
+- `public/assets/insights/performance.png`
+- `public/assets/insights/systems.png`
 
 ## Golden Master references
 
@@ -158,3 +158,8 @@ Never run final MPP photography through:
 - repeated JPEG → WebP → JPEG conversion chains.
 
 Use the original master file whenever possible.
+
+
+## Current upload wiring
+
+The current production masters uploaded on 2026-09-20 are PNG source files. They are wired into the runtime paths above, and Next/Image handles responsive browser delivery. Do not pre-compress them again before use.
