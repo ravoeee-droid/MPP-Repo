@@ -1,45 +1,41 @@
 const services = [
   {
     index: "01",
-    label: "PEOPLE",
-    title: "Die richtigen Menschen finden.",
-    text: "MPP verbindet Recruiting mit einem tieferen Verständnis von Rolle, Verantwortung und Unternehmensrealität.",
-    link: "Recruiting"
+    label: "RECRUITING / BESETZUNG",
+    title: "Die richtigen\nMenschen finden.",
+    text: "Wir besetzen Schlüsselrollen mit Menschen, die fachlich überzeugen und kulturell zu Ihnen passen – für nachhaltige Wirkung im System.",
+    link: "Mehr über Recruiting",
+    asset: "PEOPLE / VISUAL"
   },
   {
     index: "02",
-    label: "PERFORMANCE",
-    title: "Teams zu Ergebnissen befähigen.",
-    text: "Führung, Vertriebsleistung und Klarheit werden so ausgerichtet, dass Leistung nachvollziehbar und entwickelbar wird.",
-    link: "Performance"
+    label: "VERTRIEBSLEISTUNG / PERFORMANCE",
+    title: "Teams zu\nErgebnissen befähigen.",
+    text: "Wir stärken Vertriebsorganisationen mit den richtigen Menschen, klaren Zielen und wirksamen Methoden – für messbare und planbare Leistung.",
+    link: "Mehr über Vertriebsleistung",
+    asset: "PERFORMANCE / VISUAL"
   },
   {
     index: "03",
-    label: "SYSTEMS",
-    title: "Wachstum tragfähig machen.",
-    text: "Strukturen, Prozesse und Verantwortlichkeiten werden so gestaltet, dass das Unternehmen mit seiner Ambition mitwachsen kann.",
-    link: "Systems"
+    label: "STRUKTUREN / UNTERNEHMENSENTWICKLUNG",
+    title: "Strukturen für\nnachhaltiges Wachstum.",
+    text: "Wir entwickeln Organisationen, Prozesse und Führungssysteme, die Menschen stärken und Wachstum dauerhaft ermöglichen.",
+    link: "Mehr über Unternehmensentwicklung",
+    asset: "SYSTEMS / VISUAL"
   }
 ];
 
 export function Services() {
   return (
     <section className="services section-pad" id="services">
-      <div className="section-kicker">
-        <span>03 / DREI HEBEL</span>
-        <span>Ein stärkeres Unternehmen.</span>
-      </div>
+      <div className="services__eyebrow">Menschen. Leistung. Systeme.</div>
 
       <div className="services__title-row">
-        <h2>
-          Drei Hebel.
-          <br />
-          <em>Ein stärkeres Unternehmen.</em>
-        </h2>
+        <h2>Drei Hebel. Ein stärkeres Unternehmen.</h2>
         <p>
-          Nicht drei voneinander getrennte Beratungsprodukte, sondern drei
-          Perspektiven auf dieselbe Frage: Was braucht Ihr Unternehmen, um
-          nachhaltig stärker zu werden?
+          MPP verbindet Recruiting, Vertriebsleistung und Struktur zu einem System.
+          <br />
+          Damit aus Potenzial messbare Wirkung wird.
         </p>
       </div>
 
@@ -47,19 +43,28 @@ export function Services() {
         {services.map((service) => (
           <article className="service-panel" key={service.label}>
             <div className="service-panel__media asset-slot asset-slot--service">
-              <span className="service-panel__number">{service.index}</span>
               <div className="asset-slot__meta">
-                <span>{service.label} / VISUAL</span>
+                <span>{service.asset}</span>
                 <strong>Finales Section-Asset folgt.</strong>
               </div>
             </div>
 
             <div className="service-panel__body">
+              <div className="service-panel__rule">
+                <span>{service.index}</span>
+                <i />
+                <b />
+              </div>
               <p className="service-panel__label">{service.label}</p>
-              <h3>{service.title}</h3>
+              <h3>
+                {service.title.split("\n").map((line) => (
+                  <span key={line}>{line}</span>
+                ))}
+              </h3>
               <p>{service.text}</p>
-              <a href="#diagnostic" className="text-link">
-                {service.link} ansehen <span aria-hidden="true">↗</span>
+              <a href="#diagnostic" className="service-panel__link">
+                <i aria-hidden="true">→</i>
+                <span>{service.link}</span>
               </a>
             </div>
           </article>
