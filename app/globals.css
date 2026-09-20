@@ -4273,3 +4273,11 @@ html {
     min-width: 0;
   }
 }
+
+
+.mia-panel__footer .mia-panel__contact {
+  margin-top: 0.55rem;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
