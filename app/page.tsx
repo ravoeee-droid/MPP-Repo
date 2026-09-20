@@ -18,8 +18,9 @@ import { MiaAssistant } from "@/components/mpp/mia-assistant";
 
 export default function HomePage() {
   return (
-    <main>
+    <main id="main-content">
       <MotionScenes />
+      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
       <SiteHeader />
       <MiaAssistant />
       <Hero />
