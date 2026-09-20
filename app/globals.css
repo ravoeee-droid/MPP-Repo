@@ -4982,3 +4982,36 @@ html {
     aspect-ratio: 4 / 3;
   }
 }
+
+
+/* === OFF-CANVAS OVERFLOW FIX ===
+   Keep Mia in the viewport coordinate space while closed. Visibility and
+   pointer-events handle the closed state, so no translated panel can widen
+   mobile documents. */
+.mia-panel {
+  transform: translateX(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 300ms ease,
+    visibility 300ms ease,
+    transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mia-panel[data-open="true"] {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+@media (max-width: 760px) {
+  .mia-panel {
+    transform: translateY(0.75rem);
+  }
+
+  .mia-panel[data-open="true"] {
+    transform: translateY(0);
+  }
+}
