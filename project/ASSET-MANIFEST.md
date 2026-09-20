@@ -110,3 +110,51 @@ People, Recruiting, Performance, Systems, Structure, Analysis, Strategy, Growth,
 - responsive crops
 - meaningful alt text
 - rights/source ledger before release
+
+
+## IMAGE QUALITY LOCK — HARD GATE
+
+MPP imagery must never be upscaled from small source files.
+
+### Delivery quality
+- Next/Image quality: **95 by default**
+- Hero / founder-critical images: **quality 100**
+- Responsive candidates available up to **3840 px**
+- Browser delivery format: **WebP**
+- Default `sizes` intentionally favors resolution over aggressive bandwidth saving
+- No CSS blur, sharpening filter, fake grain layer or low-resolution placeholder is allowed to become the final image
+
+### Minimum source resolution
+
+The CI quality gate rejects uploaded production assets below these minimums:
+
+| Asset type | Minimum source |
+| --- | --- |
+| Founder Hero | 2800 × 1800 px |
+| Founder Portrait | 2000 × 2600 px |
+| Main People / Performance / Systems photos | 2200 × 1600 px |
+| Systems workshop | 2400 × 1600 px |
+| Process images | 1600 × 1200 px |
+| Insight/editorial images | 1800 × 1400 px |
+
+For retina-heavy or wide desktop hero use, prefer source masters around **3200–4000 px on the long edge**.
+
+### Source rule
+
+If the only available image is smaller than the minimum:
+1. do **not** stretch it into a large website slot,
+2. obtain the original / higher-resolution export,
+3. or regenerate/re-export the image at a genuinely higher native resolution.
+
+Simply exporting a 1024 px image as a 3000 px WebP does not create real detail and does not pass the visual quality standard.
+
+### Compression rule
+
+Never run final MPP photography through:
+- WhatsApp compression,
+- screenshots,
+- social-media downloads,
+- low-quality CloudConvert/WebP settings,
+- repeated JPEG → WebP → JPEG conversion chains.
+
+Use the original master file whenever possible.
