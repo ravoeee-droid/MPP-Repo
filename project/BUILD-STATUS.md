@@ -141,3 +141,22 @@ Per framework, UNVERIFIED is not PASS.
 
 Preview QA is allowed.
 No final production deploy, domain switch or production-ready declaration without explicit human approval.
+
+
+## Image quality hardening
+
+The soft-image issue has been addressed at delivery level:
+
+- AssetImage defaults to quality 100
+- Hero / founder use explicit high-resolution responsive sizing
+- WebP delivery only; AVIF transcoding disabled for this premium image system
+- responsive device candidates up to 3840 px
+- source-resolution validation in CI via Sharp
+- runtime retina-resolution guard on every AssetImage
+- parallax scale reduced to avoid unnecessary interpolation softness
+- CSS image filters / forced GPU upscaling blocked
+
+Important:
+The selected Golden Master boards are layout references only. Their embedded photography must never be cropped out and reused as production photography.
+
+The previously supplied small founder reference portrait is identity/reference material, not a valid large-format hero master. Large founder imagery must come from a genuinely high-resolution source or a newly approved high-resolution production asset.
