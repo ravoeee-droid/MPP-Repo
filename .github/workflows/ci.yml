@@ -9,7 +9,7 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -34,3 +34,31 @@ jobs:
 
       - name: Production build
         run: npm run build
+
+      - name: Install Chromium for visual QA
+        run: npx playwright install --with-deps chromium
+
+      - name: Start production server
+        run: |
+          npm run start > /tmp/mpp-next.log 2>&1 &
+          echo $! > /tmp/mpp-next.pid
+          for i in {1..40}; do
+            if curl -fsS http://127.0.0.1:3000 >/dev/null; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat /tmp/mpp-next.log
+          exit 1
+
+      - name: Golden Master browser QA
+        run: npm run qa:visual
+
+      - name: Upload visual QA evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mpp-visual-qa
+          path: artifacts/visual-qa
+          if-no-files-found: warn
+          retention-days: 7
