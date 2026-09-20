@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
@@ -36,7 +37,7 @@ const articles = [
 export default function InsightsPage() {
   return (
     <main id="main-content">
-      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
+      <Link className="skip-link" href="#main-content">Zum Inhalt springen</Link>
       <SiteHeader />
       <MiaAssistant />
 
@@ -72,9 +73,9 @@ export default function InsightsPage() {
 
               <h2>{article.title}</h2>
               <p>{article.intro}</p>
-              <a href="/kontakt">
+              <Link href="/kontakt">
                 Thema besprechen <span aria-hidden="true">↗</span>
-              </a>
+              </Link>
             </article>
           ))}
         </div>
