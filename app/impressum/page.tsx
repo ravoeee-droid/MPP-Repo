@@ -3,7 +3,8 @@ import { SiteFooter } from "@/components/mpp/site-footer";
 
 export default function ImpressumPage() {
   return (
-    <main>
+    <main id="main-content">
+      <a className="skip-link" href="#main-content">Zum Inhalt springen</a>
       <SiteHeader />
       <section className="legal-page">
         <p className="eyebrow">Rechtliches</p>
@@ -11,7 +12,7 @@ export default function ImpressumPage() {
 
         <div className="legal-page__content">
           <section>
-            <h2>Angaben gemäß § 5 TMG</h2>
+            <h2>Angaben gemäß § 5 DDG</h2>
             <p>
               MPP - Recruit<br />
               Inhaber: Mattias Pedro Panthel<br />
