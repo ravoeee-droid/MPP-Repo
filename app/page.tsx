@@ -7,6 +7,11 @@ import { Problem } from "@/components/mpp/problem";
 import { Founder } from "@/components/mpp/founder";
 import { Process } from "@/components/mpp/process";
 import { ProofTriad } from "@/components/mpp/proof-triad";
+import { TrustStack } from "@/components/mpp/trust-stack";
+import { Fit } from "@/components/mpp/fit";
+import { Faq } from "@/components/mpp/faq";
+import { FinalCta } from "@/components/mpp/final-cta";
+import { SiteFooter } from "@/components/mpp/site-footer";
 import { MotionScenes } from "@/components/mpp/motion-scenes";
 
 export default function HomePage() {
@@ -22,6 +27,11 @@ export default function HomePage() {
       <Founder />
       <Process />
       <ProofTriad />
+      <TrustStack />
+      <Fit />
+      <Faq />
+      <FinalCta />
+      <SiteFooter />
     </main>
   );
 }
