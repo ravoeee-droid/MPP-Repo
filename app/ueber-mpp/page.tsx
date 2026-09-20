@@ -91,10 +91,10 @@ export default function UeberMppPage() {
 
         <AssetImage
           className="about-page__visual"
-          src="/assets/founder/portrait.webp"
+          src="/assets/founder/portrait.png"
           alt="Mattias Pedro Panthel, Inhaber von MPP"
           label="FOUNDER / PORTRAIT"
-          note="Upload: public/assets/founder/portrait.webp"
+          note="Upload: public/assets/founder/portrait.png"
           eager
           quality={100}
           sizes="(max-width: 760px) 100vw, (max-width: 1400px) 58vw, 900px"
