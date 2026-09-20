@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { SiteHeader } from "@/components/mpp/site-header";
 import { SiteFooter } from "@/components/mpp/site-footer";
+
+export const metadata: Metadata = {
+  title: "Impressum | MPP",
+  description: "Impressum von MPP - Recruit, Inhaber Mattias Pedro Panthel."
+};
 
 export default function ImpressumPage() {
   return (
