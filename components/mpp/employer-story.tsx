@@ -5,25 +5,19 @@ const story = [
     index: "01",
     kicker: "ANZIEHEN",
     title: "Menschen wollen wissen, wofür sie antreten.",
-    text: "Arbeitgeberstärke beginnt vor dem ersten Gespräch: mit einer klaren Rolle, einer glaubwürdigen Geschichte und einem Bild davon, was jemand wirklich bewegen kann."
+    text: "Arbeitgeberstärke beginnt vor dem ersten Gespräch: mit einer klaren Rolle, einer glaubwürdigen Geschichte und einem realistischen Bild davon, was jemand bewegen kann."
   },
   {
     index: "02",
     kicker: "ANKOMMEN",
-    title: "Der erste Arbeitstag darf kein Realitätsbruch sein.",
-    text: "Was im Recruiting versprochen wird, muss sich im Alltag wiederfinden. Deshalb gehören Auswahl, Erwartungsmanagement und Führung in dieselbe Geschichte."
+    title: "Das Versprechen muss zum Arbeitsalltag passen.",
+    text: "Was im Recruiting versprochen wird, muss sich in Rolle, Führung und Zusammenarbeit wiederfinden. Sonst entsteht schon beim Einstieg Reibung."
   },
   {
     index: "03",
     kicker: "WACHSEN",
-    title: "Gute Leute bleiben dort, wo Entwicklung sichtbar wird.",
-    text: "Verantwortung, Feedback und klare Perspektiven machen aus einer Stelle eine Rolle, in der Menschen stärker werden können."
-  },
-  {
-    index: "04",
-    kicker: "WIRKEN",
-    title: "Arbeitgebermarke zeigt sich im System.",
-    text: "Kultur ist nicht nur Kommunikation. Sie wird in Entscheidungen, Abläufen und Führung spürbar – genau dort, wo tägliche Arbeit leicht oder schwer wird."
+    title: "Gute Leute bleiben dort, wo Entwicklung möglich ist.",
+    text: "Klare Verantwortung, Feedback und Perspektive machen aus einer Stelle eine Rolle, in der Menschen Wirkung entfalten und sich weiterentwickeln können."
   }
 ];
 
@@ -33,20 +27,20 @@ export function EmployerStory() {
       <div className="employer-story__inner">
         <div className="section-kicker section-kicker--dark">
           <span>08 / ARBEITGEBERSTÄRKE</span>
-          <span>Was Menschen erleben, bleibt.</span>
+          <span>Vom ersten Eindruck bis zum Alltag.</span>
         </div>
 
         <div className="employer-story__intro">
           <p className="eyebrow">EMPLOYER EXPERIENCE</p>
           <h2>
-            Arbeitgeberstärke entsteht
+            Starke Arbeitgeber gewinnen
             <br />
-            <em>zwischen Stellenanzeige und Alltag.</em>
+            <em>nicht nur Bewerbungen.</em>
           </h2>
           <p>
-            Eine starke Arbeitgeberstory ist kein Karriereseiten-Text.
-            Sie ist die Verbindung zwischen dem Versprechen nach außen und
-            dem Erlebnis im Unternehmen.
+            Für Arbeitgeber endet Recruiting nicht mit einer Bewerbung.
+            Entscheidend ist, ob das Versprechen nach außen zu Rolle, Führung
+            und Alltag im Unternehmen passt.
           </p>
         </div>
 
