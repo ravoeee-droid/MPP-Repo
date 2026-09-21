@@ -5030,3 +5030,873 @@ html {
     transform: translateY(0);
   }
 }
+
+
+/* === MPP WOW STORYTELLING / FEATURE BRANCH === */
+
+.brand-lockup--image {
+  align-items: center;
+}
+
+.brand-logo {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+}
+
+.brand-logo img {
+  object-fit: contain;
+  object-position: left center;
+}
+
+.brand-logo--header {
+  width: 5.8rem;
+  height: 2rem;
+}
+
+.brand-logo--footer {
+  width: 8.2rem;
+  height: 2.65rem;
+}
+
+/* Hero — cinematic first impression */
+.hero-wow {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+  padding-top: clamp(2.6rem, 4.8vw, 5rem);
+  background:
+    radial-gradient(circle at 78% 29%, rgba(219, 255, 62, 0.2), transparent 20rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.36), transparent 34%);
+}
+
+.hero-wow__ambient {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-wow__ambient span {
+  position: absolute;
+  border: 1px solid rgba(17, 19, 21, 0.08);
+  border-radius: 50%;
+}
+
+.hero-wow__ambient span:first-child {
+  width: min(58vw, 62rem);
+  aspect-ratio: 1;
+  top: -32rem;
+  right: -9rem;
+}
+
+.hero-wow__ambient span:last-child {
+  width: 20rem;
+  aspect-ratio: 1;
+  left: 44%;
+  bottom: -13rem;
+  border-color: rgba(219, 255, 62, 0.55);
+}
+
+.hero-wow__grid {
+  min-height: clamp(39rem, 72vh, 55rem);
+  grid-template-columns: minmax(0, 0.92fr) minmax(31rem, 1.08fr);
+  gap: clamp(2.5rem, 5.6vw, 7.8rem);
+}
+
+.hero-wow__copy {
+  position: relative;
+  z-index: 3;
+  padding: clamp(1rem, 3vw, 3rem) 0;
+}
+
+.hero-wow__topline {
+  margin-bottom: clamp(2.2rem, 4vw, 4.5rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-wow__topline .eyebrow {
+  margin: 0;
+}
+
+.hero-wow__topline > span {
+  color: var(--graphite);
+  font-size: 0.62rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.hero-wow h1 {
+  max-width: 8.8ch;
+  font-size: clamp(4.8rem, 7.7vw, 8.9rem);
+  line-height: 0.84;
+}
+
+.hero-wow h1 em {
+  position: relative;
+  display: inline-block;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.hero-wow h1 em::after {
+  content: "";
+  position: absolute;
+  left: 0.03em;
+  right: -0.03em;
+  bottom: 0.04em;
+  z-index: -1;
+  height: 0.14em;
+  background: var(--citron);
+  transform: rotate(-0.8deg);
+}
+
+.hero-wow .hero__lede {
+  max-width: 41rem;
+  margin-top: clamp(2rem, 3vw, 3rem);
+  font-size: clamp(1rem, 1.25vw, 1.17rem);
+}
+
+.hero-wow__proof {
+  margin-top: clamp(2.7rem, 4vw, 4rem);
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto;
+  gap: 0.7rem;
+  align-items: center;
+  color: var(--graphite);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.hero-wow__proof i {
+  height: 1px;
+  background: var(--line);
+}
+
+.hero-wow__visual-wrap {
+  position: relative;
+  align-self: center;
+  min-width: 0;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(0.5rem, 2vw, 2rem) clamp(2rem, 4vw, 4rem);
+}
+
+.hero-wow__visual {
+  position: relative;
+  z-index: 2;
+  max-width: 790px !important;
+  min-height: 0 !important;
+  aspect-ratio: 4 / 3;
+  border: 0;
+  box-shadow: 0 34px 90px rgba(17, 19, 21, 0.12);
+}
+
+.hero-wow__visual::after {
+  display: none;
+}
+
+.hero-wow__brand-watermark {
+  position: absolute;
+  top: -1.5rem;
+  right: -3.5rem;
+  z-index: 0;
+  width: clamp(15rem, 26vw, 28rem);
+  aspect-ratio: 1;
+  opacity: 0.055;
+  transform: rotate(7deg);
+}
+
+.hero-wow__brand-watermark img {
+  object-fit: contain;
+}
+
+.hero-wow__caption {
+  position: absolute;
+  right: 1.2rem;
+  bottom: 1.1rem;
+  left: 1.2rem;
+  z-index: 3;
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid rgba(244, 240, 232, 0.62);
+  color: var(--ivory);
+  font-size: 0.59rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-wow__caption i {
+  width: 0.55rem;
+  height: 0.55rem;
+  background: var(--citron);
+}
+
+.hero-wow__signal {
+  position: absolute;
+  z-index: 4;
+  width: clamp(9.5rem, 12vw, 12.5rem);
+  padding: 0.85rem 0.9rem 0.95rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.28rem 0.75rem;
+  background: rgba(251, 248, 241, 0.94);
+  border-top: 1px solid var(--ink);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 16px 42px rgba(17, 19, 21, 0.08);
+}
+
+.hero-wow__signal > span {
+  grid-row: 1 / 3;
+  color: var(--graphite);
+  font-size: 0.55rem;
+}
+
+.hero-wow__signal strong {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+}
+
+.hero-wow__signal small {
+  color: var(--graphite);
+  font-size: 0.58rem;
+  line-height: 1.35;
+}
+
+.hero-wow__signal--people {
+  top: 2.2rem;
+  left: -1rem;
+}
+
+.hero-wow__signal--performance {
+  top: 44%;
+  right: -0.75rem;
+}
+
+.hero-wow__signal--systems {
+  bottom: 1.6rem;
+  left: 12%;
+}
+
+.hero-wow__marquee {
+  position: relative;
+  z-index: 5;
+  margin-top: clamp(1.5rem, 3vw, 3rem);
+  overflow: hidden;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-wow__marquee > div {
+  min-height: 5.6rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto 1fr auto;
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: center;
+}
+
+.hero-wow__marquee span {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.55rem);
+  letter-spacing: -0.035em;
+}
+
+.hero-wow__marquee i {
+  height: 1px;
+  background: var(--line);
+}
+
+/* Mission storytelling */
+.mission-story {
+  background: var(--paper);
+}
+
+.mission-story__layout {
+  margin-top: clamp(4rem, 7vw, 7rem);
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(4rem, 8vw, 10rem);
+  align-items: start;
+}
+
+.mission-story__sticky {
+  position: sticky;
+  top: 7rem;
+  padding-bottom: 2rem;
+}
+
+.mission-story__sticky h2 {
+  margin: 0;
+  max-width: 9.5ch;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(4rem, 6vw, 7rem);
+  font-weight: 500;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.mission-story__sticky h2 em {
+  font-weight: 500;
+}
+
+.mission-story__sticky > p:not(.eyebrow) {
+  max-width: 34rem;
+  margin: 2rem 0 0;
+  color: var(--graphite);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.mission-story__link {
+  margin-top: 2rem;
+}
+
+.mission-story__chapters {
+  border-top: 1px solid var(--ink);
+}
+
+.mission-story__chapter {
+  position: relative;
+  min-height: clamp(20rem, 29vw, 30rem);
+  padding: clamp(1.5rem, 2.6vw, 2.7rem) 0;
+  display: grid;
+  grid-template-columns: 6rem minmax(0, 1fr) 2.2rem;
+  gap: clamp(1rem, 2.5vw, 2.8rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.mission-story__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: var(--graphite);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+}
+
+.mission-story__chapter-copy {
+  align-self: center;
+}
+
+.mission-story__chapter h3 {
+  margin: 0;
+  max-width: 13ch;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2.7rem, 4.4vw, 5.1rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+}
+
+.mission-story__chapter p {
+  max-width: 35rem;
+  margin: 1.2rem 0 0;
+  color: var(--graphite);
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.mission-story__pulse {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+}
+
+.mission-story__pulse::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
+}
+
+.mission-story__pulse i {
+  position: sticky;
+  top: 50%;
+  z-index: 1;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: 50%;
+  background: var(--citron);
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+}
+
+.mission-story__statement {
+  margin-top: clamp(4rem, 7vw, 7rem);
+  min-height: 7rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto;
+  gap: clamp(1rem, 2vw, 2rem);
+  align-items: center;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+
+.mission-story__statement i {
+  height: 1px;
+  background: var(--line);
+}
+
+/* Employer story — dark narrative chapter */
+.employer-story {
+  overflow: clip;
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+.employer-story__inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: clamp(6rem, 10vw, 11rem) var(--gutter);
+}
+
+.section-kicker--dark {
+  color: #aeb2ae;
+  border-color: var(--line-dark);
+}
+
+.employer-story .eyebrow {
+  color: var(--citron);
+}
+
+.employer-story__intro {
+  margin: clamp(4rem, 7vw, 7rem) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.28fr) minmax(18rem, 0.72fr);
+  gap: clamp(3rem, 8vw, 10rem);
+  align-items: end;
+}
+
+.employer-story__intro .eyebrow {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.employer-story__intro h2 {
+  margin: 0;
+  max-width: 13ch;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(4rem, 6.5vw, 7.5rem);
+  font-weight: 500;
+  line-height: 0.87;
+  letter-spacing: -0.055em;
+}
+
+.employer-story__intro h2 em {
+  color: var(--citron);
+  font-weight: 500;
+}
+
+.employer-story__intro > p:last-child {
+  max-width: 34rem;
+  margin: 0;
+  color: #b6bab7;
+  line-height: 1.72;
+}
+
+.employer-story__track {
+  position: relative;
+  border-top: 1px solid var(--line-dark);
+}
+
+.employer-story__track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 4.1rem;
+  width: 1px;
+  background: var(--line-dark);
+}
+
+.employer-story__chapter {
+  position: relative;
+  min-height: clamp(18rem, 25vw, 26rem);
+  padding: clamp(2.2rem, 4vw, 4rem) 0;
+  display: grid;
+  grid-template-columns: 8.2rem minmax(0, 1fr) 1rem;
+  gap: clamp(1.5rem, 3vw, 4rem);
+  align-items: center;
+  border-bottom: 1px solid var(--line-dark);
+}
+
+.employer-story__number {
+  color: #7d817e;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(3rem, 5vw, 5.4rem);
+  line-height: 1;
+}
+
+.employer-story__copy > span {
+  color: var(--citron);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+}
+
+.employer-story__copy h3 {
+  margin: 0.7rem 0 0;
+  max-width: 15ch;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2.7rem, 4.5vw, 5.2rem);
+  font-weight: 500;
+  line-height: 0.94;
+  letter-spacing: -0.045em;
+}
+
+.employer-story__copy p {
+  max-width: 38rem;
+  margin: 1.2rem 0 0;
+  color: #aeb2ae;
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.employer-story__node {
+  width: 0.8rem;
+  height: 0.8rem;
+  background: var(--citron);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.42rem rgba(219, 255, 62, 0.08);
+}
+
+.employer-story__end {
+  padding-top: clamp(2.5rem, 4vw, 4rem);
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.employer-story__end > div {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.employer-story__end span {
+  color: #8f9390;
+  font-size: 0.58rem;
+  letter-spacing: 0.13em;
+}
+
+.employer-story__end strong {
+  max-width: 22ch;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.8rem, 2.8vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+/* Mia — visually human, transparently digital */
+.mia-launcher {
+  min-width: 17rem;
+  min-height: 4.55rem;
+  border-color: rgba(244, 240, 232, 0.16);
+}
+
+.mia-avatar {
+  position: relative;
+  display: block;
+  flex: 0 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #d9dad5;
+}
+
+.mia-avatar img {
+  object-fit: cover;
+  object-position: center 34%;
+}
+
+.mia-avatar > i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block !important;
+  width: 0.62rem;
+  height: 0.62rem;
+  background: var(--citron);
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+}
+
+.mia-avatar--launcher {
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid rgba(244, 240, 232, 0.22);
+}
+
+.mia-avatar--panel {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--line);
+}
+
+.mia-avatar--panel > i {
+  border-color: var(--paper);
+}
+
+.mia-launcher__arrow {
+  font-style: normal;
+}
+
+.mia-panel__identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mia-panel__identity h2 {
+  margin-top: 0.3rem;
+}
+
+.mia-message--mia {
+  border-top: 0;
+  background: #fff;
+  box-shadow: 0 14px 38px rgba(17, 19, 21, 0.055);
+}
+
+@media (max-width: 1100px) {
+  .hero-wow__grid {
+    grid-template-columns: minmax(0, 0.95fr) minmax(24rem, 1.05fr);
+    gap: 2.5rem;
+  }
+
+  .hero-wow__signal--people {
+    left: 0;
+  }
+
+  .hero-wow__signal--performance {
+    right: 0;
+  }
+
+  .mission-story__layout {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .brand-logo--header {
+    width: 4.7rem;
+    height: 1.7rem;
+  }
+
+  .brand-logo--footer {
+    width: 7rem;
+    height: 2.35rem;
+  }
+
+  .hero-wow {
+    padding-top: 2.2rem;
+  }
+
+  .hero-wow__grid {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .hero-wow__topline {
+    margin-bottom: 2.3rem;
+  }
+
+  .hero-wow__topline > span {
+    display: none;
+  }
+
+  .hero-wow h1 {
+    max-width: 8.2ch;
+    font-size: clamp(4rem, 16.2vw, 6.25rem);
+  }
+
+  .hero-wow .hero__lede {
+    max-width: 34rem;
+  }
+
+  .hero-wow__proof {
+    grid-template-columns: 1fr;
+    gap: 0.48rem;
+  }
+
+  .hero-wow__proof i {
+    display: none;
+  }
+
+  .hero-wow__visual-wrap {
+    margin-top: 2.7rem;
+    padding: 2rem 0 4.8rem;
+  }
+
+  .hero-wow__visual {
+    width: 100%;
+    max-width: none !important;
+    aspect-ratio: 4 / 3;
+  }
+
+  .hero-wow__brand-watermark {
+    top: -1rem;
+    right: -4rem;
+    width: 16rem;
+  }
+
+  .hero-wow__signal {
+    width: 9.4rem;
+    padding: 0.7rem;
+  }
+
+  .hero-wow__signal--people {
+    top: 0.8rem;
+    left: 0.6rem;
+  }
+
+  .hero-wow__signal--performance {
+    top: auto;
+    right: 0;
+    bottom: 2.3rem;
+  }
+
+  .hero-wow__signal--systems {
+    display: none;
+  }
+
+  .hero-wow__marquee > div {
+    min-height: 4.8rem;
+    grid-template-columns: auto 1fr auto 1fr auto;
+  }
+
+  .hero-wow__marquee span {
+    font-size: 1.45rem;
+  }
+
+  .hero-wow__marquee span:last-child,
+  .hero-wow__marquee i:last-of-type {
+    display: none;
+  }
+
+  .mission-story__layout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .mission-story__sticky {
+    position: relative;
+    top: auto;
+  }
+
+  .mission-story__sticky h2 {
+    font-size: clamp(3.7rem, 14.6vw, 5.7rem);
+  }
+
+  .mission-story__chapter {
+    min-height: 21rem;
+    grid-template-columns: 3.2rem minmax(0, 1fr);
+  }
+
+  .mission-story__pulse {
+    display: none;
+  }
+
+  .mission-story__chapter h3 {
+    font-size: clamp(2.65rem, 11vw, 4rem);
+  }
+
+  .mission-story__statement {
+    min-height: 8rem;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+    align-content: center;
+  }
+
+  .mission-story__statement i {
+    width: 3rem;
+  }
+
+  .employer-story__intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .employer-story__intro .eyebrow {
+    grid-column: auto;
+  }
+
+  .employer-story__intro h2 {
+    font-size: clamp(3.7rem, 14vw, 5.8rem);
+  }
+
+  .employer-story__track::before {
+    left: 1.35rem;
+  }
+
+  .employer-story__chapter {
+    min-height: 22rem;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1.2rem;
+  }
+
+  .employer-story__number {
+    align-self: start;
+    padding-top: 0.2rem;
+    font-size: 2rem;
+  }
+
+  .employer-story__copy h3 {
+    font-size: clamp(2.7rem, 11vw, 4.2rem);
+  }
+
+  .employer-story__node {
+    position: absolute;
+    left: 0.96rem;
+    bottom: 2rem;
+  }
+
+  .employer-story__end {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .employer-story__end .button {
+    width: 100%;
+  }
+
+  .mia-launcher {
+    min-width: 0;
+  }
+
+  .mia-avatar--launcher {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .mia-panel__identity {
+    gap: 0.75rem;
+  }
+
+  .mia-avatar--panel {
+    width: 3.35rem;
+    height: 3.35rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-wow__ambient,
+  .hero-wow__signal,
+  .mission-story__pulse i,
+  .employer-story__node {
+    transform: none !important;
+  }
+}
