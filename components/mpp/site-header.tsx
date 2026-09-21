@@ -1,4 +1,5 @@
 import Image from "next/image";
+// Production logo and asset lock.
 import Link from "next/link";
 import { MobileNav } from "@/components/mpp/mobile-nav";
 
