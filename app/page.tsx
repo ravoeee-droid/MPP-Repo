@@ -24,6 +24,7 @@ export default function HomePage() {
       <SiteHeader />
       <MiaAssistant />
       <Hero />
+      <ImmediateTrust />
       <MissionStory />
       <OperatingSystem />
       <Services />
