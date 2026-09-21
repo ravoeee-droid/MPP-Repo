@@ -5007,6 +5007,12 @@ html {
 }
 
 @media (max-width: 760px) {
+  .mia-launcher {
+    /* Prevent the fixed launcher's desktop shadow from expanding the mobile
+       document's visual overflow area beyond the viewport. */
+    box-shadow: none;
+  }
+
   .mia-panel {
     transform: translateY(0.75rem);
   }
