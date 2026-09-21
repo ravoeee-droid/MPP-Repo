@@ -30,8 +30,8 @@ export function SiteHeader() {
         <Link href="/kontakt">Kontakt</Link>
       </nav>
 
-      <Link className="button button--header button--primary" href="/#contact">
-        Gemeinsam morgen bauen
+      <Link className="button button--header button--primary" href="/kontakt">
+        Erstgespräch anfragen
         <span aria-hidden="true">→</span>
       </Link>
 
