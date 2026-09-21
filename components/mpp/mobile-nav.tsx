@@ -63,10 +63,10 @@ export function MobileNav() {
 
           <Link
             className="button button--primary mobile-nav-panel__cta"
-            href="/#contact"
+            href="/kontakt"
             onClick={() => setOpen(false)}
           >
-            Gemeinsam morgen bauen <span aria-hidden="true">→</span>
+            Erstgespräch anfragen <span aria-hidden="true">→</span>
           </Link>
         </div>
       </div>
