@@ -54,6 +54,24 @@ export function MotionScenes() {
             0.53
           );
 
+        gsap.from(".hero-wow__signal", {
+          y: 18,
+          opacity: 0,
+          duration: 0.68,
+          ease: "power3.out",
+          stagger: 0.11,
+          delay: 0.28
+        });
+
+        gsap.from(".hero-wow__marquee span", {
+          y: 18,
+          opacity: 0,
+          duration: 0.7,
+          stagger: 0.07,
+          delay: 0.46,
+          ease: "power3.out"
+        });
+
         const heroImg = document.querySelector<HTMLElement>(".hero__visual img");
         if (heroImg) {
           gsap.fromTo(
@@ -72,6 +90,81 @@ export function MotionScenes() {
             }
           );
         }
+
+        gsap.utils
+          .toArray<HTMLElement>(".mission-story__chapter")
+          .forEach((chapter, index) => {
+            gsap.from(chapter.querySelector(".mission-story__chapter-copy"), {
+              y: 34,
+              opacity: 0,
+              duration: 0.86,
+              delay: index * 0.04,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: chapter,
+                start: "top 82%",
+                once: true
+              }
+            });
+
+            const pulse = chapter.querySelector<HTMLElement>(".mission-story__pulse i");
+            if (pulse) {
+              gsap.from(pulse, {
+                scale: 0,
+                duration: 0.42,
+                ease: "back.out(1.8)",
+                scrollTrigger: {
+                  trigger: chapter,
+                  start: "top 72%",
+                  once: true
+                }
+              });
+            }
+          });
+
+        gsap.from(".mission-story__statement > *", {
+          y: 12,
+          opacity: 0,
+          duration: 0.6,
+          stagger: 0.08,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".mission-story__statement",
+            start: "top 90%",
+            once: true
+          }
+        });
+
+        gsap.utils
+          .toArray<HTMLElement>(".employer-story__chapter")
+          .forEach((chapter, index) => {
+            gsap.from(chapter.querySelector(".employer-story__copy"), {
+              x: 40,
+              opacity: 0,
+              duration: 0.9,
+              delay: index * 0.035,
+              ease: "power3.out",
+              scrollTrigger: {
+                trigger: chapter,
+                start: "top 84%",
+                once: true
+              }
+            });
+
+            const node = chapter.querySelector<HTMLElement>(".employer-story__node");
+            if (node) {
+              gsap.from(node, {
+                scale: 0,
+                duration: 0.4,
+                ease: "back.out(1.7)",
+                scrollTrigger: {
+                  trigger: chapter,
+                  start: "top 74%",
+                  once: true
+                }
+              });
+            }
+          });
 
         gsap.from(".os-hero__copy > *", {
           y: 30,
