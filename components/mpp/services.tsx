@@ -9,8 +9,8 @@ const services = [
     link: "Mehr über Recruiting",
     href: "/recruiting",
     asset: "PEOPLE / VISUAL",
-    src: "/assets/people/recruiting.png",
-    alt: "Recruiting Gespräch bei MPP"
+    src: "/assets/editorial/pflege-gespraech.webp",
+    alt: "MPP im persönlichen Austausch mit Menschen aus der Pflege"
   },
   {
     index: "02",
@@ -20,8 +20,8 @@ const services = [
     link: "Mehr über Vertriebsleistung",
     href: "/performance",
     asset: "PERFORMANCE / VISUAL",
-    src: "/assets/performance/meeting.png",
-    alt: "Performance Gespräch im Vertriebsumfeld"
+    src: "/assets/editorial/kundenberatung.webp",
+    alt: "MPP im persönlichen Beratungsgespräch mit Kunden"
   },
   {
     index: "03",
@@ -31,8 +31,8 @@ const services = [
     link: "Mehr über Unternehmensentwicklung",
     href: "/systems",
     asset: "SYSTEMS / VISUAL",
-    src: "/assets/systems/structure.png",
-    alt: "Strukturen und Organisationsentwicklung"
+    src: "/assets/editorial/handwerk-planung.webp",
+    alt: "MPP in der gemeinsamen Planung mit Handwerkern"
   }
 ];
 

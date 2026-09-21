@@ -6,24 +6,24 @@ const proofs = [
     title: "Recruiting mit Blick auf Rolle, Passung und Verantwortung.",
     body: "MPP beschreibt öffentlich die passgenaue Verbindung von Kandidaten und Unternehmen als Kern des Recruiting-Angebots. Die neue Website übersetzt das konsequent in ein Rollen- und Verantwortungssystem statt in reine CV-Vermittlung.",
     tag: "VERIFIED / MPP WEBSITE",
-    src: "/assets/people/recruiting.png",
-    alt: "MPP Recruiting und People Beratung"
+    src: "/assets/editorial/pflege-alltag.webp",
+    alt: "MPP im Austausch mit einer Pflegekraft im Arbeitsalltag"
   },
   {
     eyebrow: "09 / PERFORMANCE",
     title: "Vertriebsunterstützung und Coaching mit Praxisfokus.",
     body: "MPP führt Vertrieb und Sales Coaching als eigenes Leistungsfeld. Die Performance-Perspektive macht daraus eine klare Frage: Wie wird gute Leistung im Alltag nachvollziehbar und entwickelbar?",
     tag: "VERIFIED / MPP WEBSITE",
-    src: "/assets/performance/meeting.png",
-    alt: "MPP Performance und Vertriebsberatung"
+    src: "/assets/performance/detail-coaching.png",
+    alt: "MPP Coaching und Performance Entwicklung"
   },
   {
     eyebrow: "10 / SYSTEMS",
     title: "Organisationsentwicklung dort, wo Wachstum Reibung erzeugt.",
     body: "Auf der Unternehmensberatungsseite nennt MPP Prozessoptimierung, Organisationsentwicklung und strategisches Personalmanagement. Systems bündelt diese Themen in einer klaren Wachstumslogik.",
     tag: "VERIFIED / MPP WEBSITE",
-    src: "/assets/systems/structure.png",
-    alt: "MPP Systems und Organisationsentwicklung"
+    src: "/assets/systems/detail-mapping.png",
+    alt: "MPP Mapping von Rollen und Organisationsstrukturen"
   }
 ];
 

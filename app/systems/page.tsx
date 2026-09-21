@@ -39,10 +39,10 @@ export default function SystemsPage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/systems/structure.png"
-            alt="MPP Workshop zu Strukturen und Organisationsentwicklung"
-            label="SYSTEMS / ORGANISATION"
-            note="Upload: public/assets/systems/structure.png"
+            src="/assets/editorial/handwerk-planung.webp"
+            alt="MPP im Austausch mit Handwerkern zu Rollen und Prozessen"
+            label="SYSTEMS / REAL WORLD"
+            note="MPP Editorial Asset"
             eager
           />
         </div>

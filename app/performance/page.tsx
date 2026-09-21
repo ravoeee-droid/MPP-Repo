@@ -39,10 +39,10 @@ export default function PerformancePage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/performance/meeting.png"
-            alt="MPP Gespräch zu Vertriebsleistung und Performance"
-            label="PERFORMANCE / VERTRIEB"
-            note="Upload: public/assets/performance/meeting.png"
+            src="/assets/editorial/kundenberatung.webp"
+            alt="MPP im Beratungsgespräch zu Leistung und Entwicklung"
+            label="PERFORMANCE / REAL WORLD"
+            note="MPP Editorial Asset"
             eager
           />
         </div>
