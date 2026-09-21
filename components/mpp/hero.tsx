@@ -32,7 +32,7 @@ export function Hero() {
 
           <div className="hero__actions">
             <a className="button button--primary" href="#diagnostic">
-              Potenziale ins Wirken bringen <span aria-hidden="true">→</span>
+              Growth Diagnostic starten <span aria-hidden="true">→</span>
             </a>
             <a className="text-link" href="#mission">
               Unsere Mission <span aria-hidden="true">↗</span>
