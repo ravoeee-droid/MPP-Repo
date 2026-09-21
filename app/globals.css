@@ -5900,3 +5900,86 @@ html {
     transform: none !important;
   }
 }
+
+
+/* === CRO FINAL: IMMEDIATE TRUST + DIRECT CONTACT === */
+.immediate-trust {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  background: var(--ivory);
+}
+
+.immediate-trust__inner {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.immediate-trust__item {
+  min-width: 0;
+  padding: 1.25rem clamp(1rem, 2vw, 2rem) 1.35rem 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.immediate-trust__item + .immediate-trust__item {
+  padding-left: clamp(1rem, 2vw, 2rem);
+  border-left: 1px solid var(--line);
+}
+
+.immediate-trust__item > span {
+  color: var(--graphite);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.immediate-trust__item strong {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.11em;
+}
+
+.immediate-trust__item p {
+  margin: 0.45rem 0 0;
+  color: var(--graphite);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.contact-page__actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 1.5rem;
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  .immediate-trust__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .immediate-trust__item,
+  .immediate-trust__item + .immediate-trust__item {
+    padding: 1rem 0 1.05rem;
+    border-left: 0;
+  }
+
+  .immediate-trust__item + .immediate-trust__item {
+    border-top: 1px solid var(--line);
+  }
+
+  .contact-page__actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-page__actions .button,
+  .contact-page__actions .text-link {
+    width: 100%;
+  }
+}
