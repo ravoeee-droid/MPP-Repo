@@ -4,8 +4,8 @@ import { useState } from "react";
 
 const items = [
   {
-    q: "Ist MPP eine Recruiting-Agentur?",
-    a: "Recruiting ist ein möglicher Hebel, aber die Positionierung dieser Website geht bewusst weiter: People, Performance und Systems werden gemeinsam betrachtet. Die finale Formulierung wird mit den verifizierten MPP-Leistungen abgeglichen."
+    q: "Ist MPP nur eine Recruiting-Agentur?",
+    a: "Nein. Recruiting ist ein Leistungsfeld. MPP verbindet People, Performance und Systems und betrachtet deshalb neben der Besetzung auch Vertriebsleistung, Führung, Prozesse und Organisationsentwicklung."
   },
   {
     q: "Womit beginnt eine Zusammenarbeit?",
@@ -13,11 +13,11 @@ const items = [
   },
   {
     q: "Muss bereits klar sein, ob das Problem bei People, Performance oder Systems liegt?",
-    a: "Nein. Genau dafür ist das Growth Diagnostic gedacht: als erste strukturierte Orientierung, nicht als wissenschaftliche Diagnose."
+    a: "Nein. Das Growth Diagnostic dient als erste Orientierung. Im persönlichen Gespräch wird anschließend geprüft, welcher Hebel für Ihre konkrete Situation tatsächlich relevant ist."
   },
   {
-    q: "Welche Förderungen oder Zertifizierungen gibt es?",
-    a: "Diese Angaben werden erst veröffentlicht, wenn der exakte Status belegt ist. Bis dahin zeigt die Website bewusst keine ungeprüften Förder- oder Zertifizierungsclaims."
+    q: "Sind Beratungsleistungen von MPP förderfähig?",
+    a: "MPP weist darauf hin, dass zahlreiche Beratungsleistungen grundsätzlich förderfähig sein können. Ob eine konkrete Maßnahme und Ihr Unternehmen die jeweiligen Voraussetzungen erfüllen, muss im Einzelfall geprüft werden."
   }
 ];
 
@@ -28,7 +28,7 @@ export function Faq() {
     <section className="faq section-pad" id="faq">
       <div className="section-kicker">
         <span>14 / FRAGEN VOR DEM ERSTEN GESPRÄCH</span>
-        <span>Klarheit vor Conversion.</span>
+        <span>Klarheit vor dem nächsten Schritt.</span>
       </div>
 
       <div className="faq__grid">
