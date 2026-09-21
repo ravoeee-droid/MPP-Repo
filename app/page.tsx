@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/mpp/site-header";
 import { Hero } from "@/components/mpp/hero";
-import { MissionStory } from "@/components/mpp/mission-story";\nimport { ImmediateTrust } from "@/components/mpp/immediate-trust";
+import { MissionStory } from "@/components/mpp/mission-story";
+import { ImmediateTrust } from "@/components/mpp/immediate-trust";
 import { OperatingSystem } from "@/components/mpp/operating-system";
 import { Services } from "@/components/mpp/services";
 import { GrowthDiagnostic } from "@/components/mpp/growth-diagnostic";
