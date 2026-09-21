@@ -3,25 +3,25 @@ import { AssetImage } from "@/components/mpp/asset-image";
 const proofs = [
   {
     eyebrow: "08 / PEOPLE",
-    title: "Recruiting mit Blick auf Rolle, Passung und Verantwortung.",
-    body: "MPP beschreibt öffentlich die passgenaue Verbindung von Kandidaten und Unternehmen als Kern des Recruiting-Angebots. Die neue Website übersetzt das konsequent in ein Rollen- und Verantwortungssystem statt in reine CV-Vermittlung.",
-    tag: "VERIFIED / MPP WEBSITE",
+    title: "Recruiting, das bei Rolle und Verantwortung beginnt.",
+    body: "MPP verbindet Kandidaten und Unternehmen nicht nur über Lebensläufe. Entscheidend ist, welche Verantwortung eine Rolle trägt, welche Erwartungen zusammenpassen und ob daraus im Alltag echte Wirkung entstehen kann.",
+    tag: "RECRUITING / ROLLENKLARHEIT",
     src: "/assets/people/recruiting.png",
     alt: "MPP Recruiting und People Beratung"
   },
   {
     eyebrow: "09 / PERFORMANCE",
-    title: "Vertriebsunterstützung und Coaching mit Praxisfokus.",
-    body: "MPP führt Vertrieb und Sales Coaching als eigenes Leistungsfeld. Die Performance-Perspektive macht daraus eine klare Frage: Wie wird gute Leistung im Alltag nachvollziehbar und entwickelbar?",
-    tag: "VERIFIED / MPP WEBSITE",
+    title: "Vertriebsleistung, die im Alltag wiederholbar wird.",
+    body: "Vertriebsunterstützung und Coaching setzen dort an, wo Ziele, Führung und Umsetzung zusammenkommen. Der Fokus liegt darauf, Leistung nachvollziehbarer zu machen und Abhängigkeiten von einzelnen Top-Performern zu reduzieren.",
+    tag: "VERTRIEB / COACHING",
     src: "/assets/performance/meeting.png",
     alt: "MPP Performance und Vertriebsberatung"
   },
   {
     eyebrow: "10 / SYSTEMS",
-    title: "Organisationsentwicklung dort, wo Wachstum Reibung erzeugt.",
-    body: "Auf der Unternehmensberatungsseite nennt MPP Prozessoptimierung, Organisationsentwicklung und strategisches Personalmanagement. Systems bündelt diese Themen in einer klaren Wachstumslogik.",
-    tag: "VERIFIED / MPP WEBSITE",
+    title: "Strukturen, die Wachstum nicht ausbremsen.",
+    body: "Prozessoptimierung, Organisationsentwicklung und strategisches Personalmanagement greifen dort ineinander, wo Rollen, Entscheidungen und Abläufe unter Wachstum zunehmend Reibung erzeugen.",
+    tag: "ORGANISATION / PROZESSE",
     src: "/assets/systems/structure.png",
     alt: "MPP Systems und Organisationsentwicklung"
   }
@@ -54,7 +54,7 @@ export function ProofTriad() {
               src={proof.src}
               alt={proof.alt}
               label={proof.eyebrow}
-              note="MPP Production Asset"
+              note="MPP"
               sizes="(max-width: 760px) 100vw, 42vw"
             />
           </article>
@@ -63,12 +63,11 @@ export function ProofTriad() {
 
       <div className="proof__footer">
         <p>
-          Kundenergebnisse, Referenzlogos und Kennzahlen werden erst ergänzt,
-          wenn MPP dafür belastbare Daten und Freigaben bereitstellt. Bis dahin
-          bleibt die Website bei nachprüfbaren Leistungs- und Erfahrungsfakten.
+          Entscheidend ist nicht ein einzelner Hebel, sondern wie People,
+          Performance und Systems im Unternehmen zusammenspielen.
         </p>
-        <a className="button button--primary" href="/case-studies">
-          Case-Study-System ansehen <span aria-hidden="true">→</span>
+        <a className="button button--primary" href="/kontakt">
+          Erstgespräch anfragen <span aria-hidden="true">→</span>
         </a>
       </div>
     </section>
