@@ -237,6 +237,13 @@ for (const capture of captures) {
         }
       }
 
+      const proofSection = document.querySelector("#proof");
+      if (proofSection) {
+        for (const el of Array.from(proofSection.querySelectorAll("*"))) {
+          measureWithoutElement(el, "proof-descendant>" + nodeName(el));
+        }
+      }
+
       measureWithInjectedStyle(
         "disable-pseudo-elements",
         "*::before,*::after{display:none!important}"
