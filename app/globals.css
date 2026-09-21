@@ -1455,7 +1455,10 @@ button:focus-visible {
   }
 
   .proof-case__copy h2 {
-    font-size: clamp(3rem, 12vw, 5rem);
+    max-width: 100%;
+    font-size: clamp(2.55rem, 10.5vw, 4.7rem);
+    hyphens: auto;
+    overflow-wrap: anywhere;
   }
 
   .proof-case__visual {
