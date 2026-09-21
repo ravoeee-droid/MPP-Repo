@@ -1,9 +1,22 @@
+import Image from "next/image";
 import Link from "next/link";
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="site-footer__brand">
-        <span className="brand-mark">MPP</span>
+        <span
+          aria-hidden="true"
+          style={{ position: "relative", display: "block", width: "12rem", height: "3.4rem" }}
+        >
+          <Image
+            src="/assets/logos/light.png"
+            alt=""
+            fill
+            sizes="192px"
+            style={{ objectFit: "contain", objectPosition: "left center" }}
+          />
+        </span>
         <p>People · Performance · Systems.</p>
       </div>
 

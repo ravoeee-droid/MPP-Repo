@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { MobileNav } from "@/components/mpp/mobile-nav";
 
@@ -5,11 +6,18 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand-lockup" href="/#top" aria-label="MPP Startseite">
-        <span className="brand-mark">MPP</span>
-        <span className="brand-subline">
-          <b>PEOPLE</b>
-          <b>PERFORMANCE</b>
-          <b>SYSTEMS</b>
+        <span
+          aria-hidden="true"
+          style={{ position: "relative", display: "block", width: "11rem", height: "3rem" }}
+        >
+          <Image
+            src="/assets/logos/horizontal.png"
+            alt=""
+            fill
+            priority
+            sizes="176px"
+            style={{ objectFit: "contain", objectPosition: "left center" }}
+          />
         </span>
       </Link>
 

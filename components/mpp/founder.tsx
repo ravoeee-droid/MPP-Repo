@@ -51,10 +51,10 @@ export function Founder() {
 
         <AssetImage
           className="founder-golden__visual"
-          src="/assets/founder/portrait.png"
-          alt="Mattias Pedro Panthel, Inhaber von MPP"
-          label="FOUNDER / PORTRAIT"
-          note="Upload: public/assets/founder/portrait.png"
+          src="/assets/editorial/gf-koeln.webp"
+          alt="Mattias Pedro Panthel im MPP Markenauftritt in Köln"
+          label="FOUNDER / KÖLN"
+          note="MPP Editorial Asset"
           quality={100}
           sizes="(max-width: 760px) 100vw, (max-width: 1400px) 58vw, 900px"
         >

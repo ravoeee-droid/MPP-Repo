@@ -14,16 +14,16 @@ const proofs = [
     title: "Vertriebsunterstützung und Coaching mit Praxisfokus.",
     body: "MPP führt Vertrieb und Sales Coaching als eigenes Leistungsfeld. Die Performance-Perspektive macht daraus eine klare Frage: Wie wird gute Leistung im Alltag nachvollziehbar und entwickelbar?",
     tag: "VERIFIED / MPP WEBSITE",
-    src: "/assets/performance/detail-coaching.png",
-    alt: "MPP Coaching und Performance Entwicklung"
+    src: "/assets/editorial/kundenberatung.webp",
+    alt: "MPP im persönlichen Beratungsgespräch mit Kunden"
   },
   {
     eyebrow: "10 / SYSTEMS",
     title: "Organisationsentwicklung dort, wo Wachstum Reibung erzeugt.",
     body: "Auf der Unternehmensberatungsseite nennt MPP Prozessoptimierung, Organisationsentwicklung und strategisches Personalmanagement. Systems bündelt diese Themen in einer klaren Wachstumslogik.",
     tag: "VERIFIED / MPP WEBSITE",
-    src: "/assets/systems/detail-mapping.png",
-    alt: "MPP Mapping von Rollen und Organisationsstrukturen"
+    src: "/assets/editorial/handwerk-planung.webp",
+    alt: "MPP in der gemeinsamen Planung mit Handwerkern"
   }
 ];
 
@@ -54,7 +54,7 @@ export function ProofTriad() {
               src={proof.src}
               alt={proof.alt}
               label={proof.eyebrow}
-              note="MPP Production Asset"
+              note="MPP Editorial Asset"
               sizes="(max-width: 760px) 100vw, 42vw"
             />
           </article>
