@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -122,7 +123,7 @@ export function MiaAssistant() {
     () => [
       {
         role: "mia",
-        text: `Hi, ich bin Mia, die KI-Assistentin von MPP. ${context.intro}`
+        text: `Hi, ich bin Mia. Ich begleite Sie hier durch MPP und helfe Ihnen bei der ersten Einordnung. ${context.intro}`
       },
       ...thread
     ],
@@ -149,25 +150,44 @@ export function MiaAssistant() {
         aria-controls="mia-panel"
         onClick={() => setOpen((value) => !value)}
       >
-        <span className="mia-launcher__status" aria-hidden="true" />
+        <span className="mia-avatar mia-avatar--launcher" aria-hidden="true">
+          <Image
+            src="/assets/people/detail-selection.png"
+            alt=""
+            fill
+            sizes="48px"
+          />
+          <i />
+        </span>
         <span>
           <b>Mia</b>
-          <small>MPP KI-Assistentin</small>
+          <small>Ihre Ansprechpartnerin · online</small>
         </span>
-        <i aria-hidden="true">{open ? "×" : "↗"}</i>
+        <i className="mia-launcher__arrow" aria-hidden="true">{open ? "×" : "↗"}</i>
       </button>
 
       <aside
         className="mia-panel"
         id="mia-panel"
         data-open={open}
-        aria-label="MPP KI-Assistentin Mia"
+        aria-label="Digitale MPP Ansprechpartnerin Mia"
       >
         <div className="mia-panel__header">
-          <div>
-            <span className="mia-panel__eyebrow">MPP DIGITAL CONSULTANT</span>
-            <h2>Mia</h2>
-            <p>KI-Assistentin · keine reale Mitarbeiterin</p>
+          <div className="mia-panel__identity">
+            <span className="mia-avatar mia-avatar--panel" aria-hidden="true">
+              <Image
+                src="/assets/people/detail-selection.png"
+                alt=""
+                fill
+                sizes="64px"
+              />
+              <i />
+            </span>
+            <div>
+              <span className="mia-panel__eyebrow">MPP · ERSTE ORIENTIERUNG</span>
+              <h2>Mia</h2>
+              <p>Ihre digitale Ansprechpartnerin</p>
+            </div>
           </div>
           <button type="button" onClick={() => setOpen(false)} aria-label="Mia schließen">
             ×
@@ -177,7 +197,7 @@ export function MiaAssistant() {
         <div className="mia-panel__thread" aria-live="polite">
           {messages.map((item, index) => (
             <div className={"mia-message mia-message--" + item.role} key={index}>
-              <span>{item.role === "mia" ? "MIA / AI" : "SIE"}</span>
+              <span>{item.role === "mia" ? "MIA" : "SIE"}</span>
               <p>{item.text}</p>
             </div>
           ))}
@@ -201,9 +221,10 @@ export function MiaAssistant() {
             Gespräch vorbereiten <span aria-hidden="true">↗</span>
           </Link>
           <small>
-            Demo-Shell: Mia nutzt aktuell ausschließlich freigegebene
-            Projektlogik. Vor Production wird sie an eine verifizierte
-            MPP-Wissensbasis und den finalen Datenschutzprozess angebunden.
+            Transparenz: Mia ist eine digitale, KI-gestützte Assistenz und keine
+            reale Mitarbeiterin. Aktuell nutzt sie ausschließlich freigegebene
+            Projektlogik; der finale Datenschutzprozess wird vor öffentlicher
+            Freigabe geprüft.
           </small>
         </div>
       </aside>
