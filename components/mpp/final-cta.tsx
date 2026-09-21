@@ -21,8 +21,11 @@ export function FinalCta() {
             <div><span>01</span><p>Ausgangslage verstehen</p></div>
             <div><span>02</span><p>2–3 größte Hebel identifizieren</p></div>
             <div><span>03</span><p>Nächsten sinnvollen Schritt definieren</p></div>
-            <a className="button button--primary" href="#diagnostic">
-              Growth Diagnostic starten <span aria-hidden="true">→</span>
+            <a className="button button--primary" href="/kontakt">
+              Erstgespräch anfragen <span aria-hidden="true">→</span>
+            </a>
+            <a className="text-link text-link--dark" href="#diagnostic">
+              Noch unsicher? Growth Diagnostic starten <span aria-hidden="true">↗</span>
             </a>
           </div>
         </div>
