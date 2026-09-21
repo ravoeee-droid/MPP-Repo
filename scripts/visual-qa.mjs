@@ -108,7 +108,9 @@ for (const capture of captures) {
       );
     }).length;
 
-    const overflowOffenders = Array.from(document.querySelectorAll("body *"))
+    const allBodyElements = Array.from(document.querySelectorAll("body *"));
+
+    const overflowOffenders = allBodyElements
       .map((el) => {
         const rect = el.getBoundingClientRect();
         const style = getComputedStyle(el);
@@ -132,9 +134,58 @@ for (const capture of captures) {
         right: Math.round(rect.right),
         width: Math.round(rect.width),
         position: style.position,
+        visibility: style.visibility,
         whiteSpace: style.whiteSpace,
         text: (el.textContent || "").trim().replace(/\s+/g, " ").slice(0, 90)
       }));
+
+    const baselineScrollWidth = html.scrollWidth;
+    const overflowReducers = [];
+
+    if (baselineScrollWidth > window.innerWidth + 2) {
+      const candidates = allBodyElements.filter((el) => {
+        const style = getComputedStyle(el);
+        return (
+          style.display !== "none" &&
+          (style.visibility === "hidden" ||
+            style.position === "fixed" ||
+            style.position === "absolute")
+        );
+      });
+
+      for (const el of candidates) {
+        const previousDisplay = el.style.getPropertyValue("display");
+        const previousPriority = el.style.getPropertyPriority("display");
+        el.style.setProperty("display", "none", "important");
+        const reducedWidth = html.scrollWidth;
+
+        if (previousDisplay) {
+          el.style.setProperty("display", previousDisplay, previousPriority);
+        } else {
+          el.style.removeProperty("display");
+        }
+
+        if (reducedWidth < baselineScrollWidth) {
+          const rect = el.getBoundingClientRect();
+          const style = getComputedStyle(el);
+          overflowReducers.push({
+            node:
+              el.tagName.toLowerCase() +
+              (el.id ? "#" + el.id : "") +
+              (el.className && typeof el.className === "string"
+                ? "." + el.className.trim().replace(/\s+/g, ".")
+                : ""),
+            reducedWidth,
+            delta: baselineScrollWidth - reducedWidth,
+            left: Math.round(rect.left),
+            right: Math.round(rect.right),
+            width: Math.round(rect.width),
+            position: style.position,
+            visibility: style.visibility
+          });
+        }
+      }
+    }
 
     return {
       title: document.title,
@@ -143,6 +194,7 @@ for (const capture of captures) {
       visibleAssetFallbacks,
       forbiddenText: forbidden.filter((text) => bodyText.includes(text)),
       overflowOffenders,
+      overflowReducers,
       bodyHeight: document.body.scrollHeight
     };
   }, forbiddenVisibleText);
@@ -158,6 +210,9 @@ for (const capture of captures) {
       `horizontal overflow +${checks.statusOverflow}px at ${capture.width}px; offenders: ${checks.overflowOffenders
         .slice(0, 6)
         .map((x) => `${x.node}[${x.left},${x.right}]`)
+        .join(", ")}; reducers: ${checks.overflowReducers
+        .slice(0, 6)
+        .map((x) => `${x.node}(-${x.delta}px)`)
         .join(", ")}`
     );
   }
