@@ -5015,6 +5015,7 @@ html {
 
   .mia-panel {
     transform: translateY(0.75rem);
+    box-shadow: none;
   }
 
   .mia-panel[data-open="true"] {
