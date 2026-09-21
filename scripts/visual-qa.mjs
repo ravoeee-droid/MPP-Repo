@@ -141,6 +141,51 @@ for (const capture of captures) {
 
     const baselineScrollWidth = html.scrollWidth;
     const overflowReducers = [];
+    const overflowSensitivity = [];
+
+    const nodeName = (el) =>
+      el.tagName.toLowerCase() +
+      (el.id ? "#" + el.id : "") +
+      (el.className && typeof el.className === "string"
+        ? "." + el.className.trim().replace(/\s+/g, ".")
+        : "");
+
+    const measureWithoutElement = (el, label = nodeName(el)) => {
+      const previousDisplay = el.style.getPropertyValue("display");
+      const previousPriority = el.style.getPropertyPriority("display");
+      el.style.setProperty("display", "none", "important");
+      const reducedWidth = html.scrollWidth;
+
+      if (previousDisplay) {
+        el.style.setProperty("display", previousDisplay, previousPriority);
+      } else {
+        el.style.removeProperty("display");
+      }
+
+      if (reducedWidth < baselineScrollWidth) {
+        overflowSensitivity.push({
+          label,
+          reducedWidth,
+          delta: baselineScrollWidth - reducedWidth
+        });
+      }
+    };
+
+    const measureWithInjectedStyle = (label, cssText) => {
+      const styleEl = document.createElement("style");
+      styleEl.textContent = cssText;
+      document.head.appendChild(styleEl);
+      const reducedWidth = html.scrollWidth;
+      styleEl.remove();
+
+      if (reducedWidth < baselineScrollWidth) {
+        overflowSensitivity.push({
+          label,
+          reducedWidth,
+          delta: baselineScrollWidth - reducedWidth
+        });
+      }
+    };
 
     if (baselineScrollWidth > window.innerWidth + 2) {
       const candidates = allBodyElements.filter((el) => {
@@ -169,12 +214,7 @@ for (const capture of captures) {
           const rect = el.getBoundingClientRect();
           const style = getComputedStyle(el);
           overflowReducers.push({
-            node:
-              el.tagName.toLowerCase() +
-              (el.id ? "#" + el.id : "") +
-              (el.className && typeof el.className === "string"
-                ? "." + el.className.trim().replace(/\s+/g, ".")
-                : ""),
+            node: nodeName(el),
             reducedWidth,
             delta: baselineScrollWidth - reducedWidth,
             left: Math.round(rect.left),
@@ -185,6 +225,30 @@ for (const capture of captures) {
           });
         }
       }
+
+      for (const el of Array.from(document.body.children)) {
+        measureWithoutElement(el, "body>" + nodeName(el));
+      }
+
+      const main = document.querySelector("main");
+      if (main) {
+        for (const el of Array.from(main.children)) {
+          measureWithoutElement(el, "main>" + nodeName(el));
+        }
+      }
+
+      measureWithInjectedStyle(
+        "disable-pseudo-elements",
+        "*::before,*::after{display:none!important}"
+      );
+      measureWithInjectedStyle(
+        "disable-transforms",
+        "body *{transform:none!important}"
+      );
+      measureWithInjectedStyle(
+        "disable-shadows-outlines",
+        "body *{box-shadow:none!important;outline:none!important}"
+      );
     }
 
     return {
@@ -195,6 +259,7 @@ for (const capture of captures) {
       forbiddenText: forbidden.filter((text) => bodyText.includes(text)),
       overflowOffenders,
       overflowReducers,
+      overflowSensitivity,
       bodyHeight: document.body.scrollHeight
     };
   }, forbiddenVisibleText);
@@ -213,6 +278,9 @@ for (const capture of captures) {
         .join(", ")}; reducers: ${checks.overflowReducers
         .slice(0, 6)
         .map((x) => `${x.node}(-${x.delta}px)`)
+        .join(", ")}; sensitivity: ${checks.overflowSensitivity
+        .slice(0, 10)
+        .map((x) => `${x.label}(-${x.delta}px)`)
         .join(", ")}`
     );
   }
