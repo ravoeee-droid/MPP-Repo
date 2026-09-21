@@ -68,6 +68,18 @@ export default async function KontaktPage({
               "Wenn Sie eine Schlüsselrolle besetzen, Vertriebsleistung stärken oder Strukturen professionalisieren möchten, können Sie MPP direkt kontaktieren."}
           </p>
 
+          <div className="contact-page__actions">
+            <a
+              className="button button--primary"
+              href="mailto:mpp-recruit@web.de?subject=Erstgespräch%20mit%20MPP"
+            >
+              Erstgespräch per E-Mail anfragen <span aria-hidden="true">→</span>
+            </a>
+            <a className="text-link" href="tel:+491764516719">
+              Direkt anrufen <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
           {context && (
             <div className="contact-focus">
               <span>IHRE VORBEREITUNG</span>
