@@ -3705,7 +3705,10 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
+  /* Images must never depend on client hydration to become visible.
+     The previous opacity:0 + data-loaded gate could leave all production
+     photography invisible when an image finished before React attached onLoad. */
+  opacity: 1;
   transition: opacity 360ms ease;
 }
 
