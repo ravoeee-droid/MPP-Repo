@@ -32,7 +32,7 @@ export function EmployerStory() {
     <section className="employer-story" id="arbeitgeberstory">
       <div className="employer-story__inner">
         <div className="section-kicker section-kicker--dark">
-          <span>08 / ARBEITGEBERSTORY</span>
+          <span>08 / ARBEITGEBERSTÄRKE</span>
           <span>Was Menschen erleben, bleibt.</span>
         </div>
 
@@ -67,7 +67,7 @@ export function EmployerStory() {
         <div className="employer-story__end">
           <div>
             <span>PEOPLE → PERFORMANCE → SYSTEMS</span>
-            <strong>Die Arbeitgeberstory endet nicht bei der Bewerbung.</strong>
+            <strong>Arbeitgeberstärke endet nicht bei der Bewerbung.</strong>
           </div>
           <Link className="button button--primary" href="/recruiting">
             Recruiting neu denken <span aria-hidden="true">→</span>
