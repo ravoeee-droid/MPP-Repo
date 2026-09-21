@@ -1,30 +1,30 @@
 const trustItems = [
   {
-    label: "INHABER",
-    title: "Verantwortung hat einen Namen.",
-    text: "Mattias Pedro Panthel ist als Inhaber von MPP - Recruit im öffentlichen Impressum ausgewiesen.",
-    state: "VERIFIZIERT / IMPRESSUM",
+    label: "INHABERGEFÜHRT",
+    title: "Verantwortung hat einen direkten Ansprechpartner.",
+    text: "Mattias Pedro Panthel führt MPP persönlich und steht hinter der Verbindung aus Recruiting, Leistung und Organisationsentwicklung.",
+    state: "MPP / KÖLN",
     verified: true
   },
   {
-    label: "FÜHRUNGSPRAXIS",
-    title: "Operative Führung vor Beratung.",
-    text: "Öffentlich dokumentierte Stationen umfassen Operations Management, Niederlassungsleitung und eine COO-Rolle – zusätzlich zur Führung von MPP-Recruit.",
-    state: "VERIFIZIERT / PUBLIC PROFILE",
+    label: "OPERATIVE ERFAHRUNG",
+    title: "Beratung mit Blick auf den Unternehmensalltag.",
+    text: "Erfahrung aus Operations Management, Niederlassungsleitung und COO-Verantwortung prägt den Blick auf Menschen, Führung und Strukturen.",
+    state: "FÜHRUNG / OPERATIONS",
     verified: true
   },
   {
-    label: "LEISTUNGSFELDER",
-    title: "Recruiting, Vertrieb und Organisation aus einer Hand.",
-    text: "MPP beschreibt öffentlich Recruiting, Vertriebsunterstützung bzw. Coaching sowie Unternehmensberatung mit Prozessoptimierung, Organisationsentwicklung und strategischem Personalmanagement.",
-    state: "VERIFIZIERT / MPP WEBSITE",
+    label: "DREI LEISTUNGSFELDER",
+    title: "Recruiting, Vertrieb und Organisation zusammengedacht.",
+    text: "MPP verbindet Recruiting, Vertriebsunterstützung und Coaching mit Prozessoptimierung, Organisationsentwicklung und strategischem Personalmanagement.",
+    state: "PEOPLE / PERFORMANCE / SYSTEMS",
     verified: true
   },
   {
     label: "FÖRDERUNG",
-    title: "Förderfähigkeit wird nicht als Badge verkauft.",
-    text: "MPP weist auf der eigenen Unternehmensberatungsseite darauf hin, dass zahlreiche Leistungen BAFA-förderfähig sind. Ob eine konkrete Beratung förderfähig ist, muss im Einzelfall geprüft werden.",
-    state: "QUELLENCLAIM / EINZELPRÜFUNG",
+    title: "Fördermöglichkeiten werden im Einzelfall geprüft.",
+    text: "MPP weist darauf hin, dass zahlreiche Beratungsleistungen grundsätzlich förderfähig sein können. Ob eine konkrete Maßnahme förderfähig ist, wird individuell geprüft.",
+    state: "INDIVIDUELLE PRÜFUNG",
     verified: false
   }
 ];
@@ -34,19 +34,19 @@ export function TrustStack() {
     <section className="trust section-pad" id="trust">
       <div className="section-kicker">
         <span>11 / VERTRAUEN</span>
-        <span>Nachvollziehbar statt dekorativ.</span>
+        <span>Substanz vor Show.</span>
       </div>
 
       <div className="trust__intro">
         <h2>
-          Vertrauen entsteht nicht
+          Vertrauen beginnt mit
           <br />
-          durch <em>Badge-Wände.</em>
+          <em>klarer Verantwortung.</em>
         </h2>
         <p>
-          MPP zeigt deshalb lieber, wer Verantwortung trägt, welche Erfahrung
-          öffentlich nachvollziehbar ist und welche Leistungsfelder tatsächlich
-          beschrieben sind. Kundenproof kommt erst dazu, wenn er belastbar ist.
+          Wer berät, sollte nicht nur Konzepte kennen, sondern verstehen,
+          wie Führung, Vertrieb und Organisation im Alltag tatsächlich
+          ineinandergreifen.
         </p>
       </div>
 
