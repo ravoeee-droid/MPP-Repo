@@ -36,7 +36,7 @@ export function Hero() {
         <div className="hero__visual-wrap">
           <AssetImage
             className="hero__visual"
-            src="/assets/editorial/gf-koeln.webp"
+            src="/assets/founder/hero.png"
             alt="MPP Gründerbild vor Kölner Kulisse"
             label="FOUNDER / KÖLN"
             note="MPP Editorial Asset"

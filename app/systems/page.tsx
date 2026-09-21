@@ -39,7 +39,7 @@ export default function SystemsPage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/editorial/handwerk-planung.webp"
+            src="/assets/systems/structure.png"
             alt="MPP im Austausch mit Handwerkern zu Rollen und Prozessen"
             label="SYSTEMS / REAL WORLD"
             note="MPP Editorial Asset"

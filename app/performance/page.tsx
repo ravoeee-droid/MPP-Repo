@@ -39,7 +39,7 @@ export default function PerformancePage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/editorial/kundenberatung.webp"
+            src="/assets/performance/meeting.png"
             alt="MPP im Beratungsgespräch zu Leistung und Entwicklung"
             label="PERFORMANCE / REAL WORLD"
             note="MPP Editorial Asset"

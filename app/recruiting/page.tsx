@@ -38,7 +38,7 @@ export default function RecruitingPage() {
           </div>
           <AssetImage
             className="service-detail__visual"
-            src="/assets/editorial/pflege-alltag.webp"
+            src="/assets/people/recruiting.png"
             alt="MPP Recruiting im persönlichen Austausch mit einer Pflegekraft"
             label="PEOPLE / REAL WORLD"
             note="MPP Editorial Asset"

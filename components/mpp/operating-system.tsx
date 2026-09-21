@@ -70,7 +70,7 @@ export function OperatingSystem() {
 
         <AssetImage
           className="os-hero__visual"
-          src="/assets/editorial/mixed-team.webp"
+          src="/assets/systems/approach-workshop.png"
           alt="MPP im Austausch mit Menschen aus Pflege, Handwerk und Unternehmen"
           label="APPROACH / REAL WORLD"
           note="MPP Editorial Asset"

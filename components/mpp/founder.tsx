@@ -51,7 +51,7 @@ export function Founder() {
 
         <AssetImage
           className="founder-golden__visual"
-          src="/assets/editorial/gf-koeln.webp"
+          src="/assets/founder/portrait.png"
           alt="Mattias Pedro Panthel im MPP Markenauftritt in Köln"
           label="FOUNDER / KÖLN"
           note="MPP Editorial Asset"
