@@ -978,3 +978,328 @@
   .aiList article { grid-template-columns: 2rem 1fr; }
   .aiList article button { grid-column: 2; width: 100%; }
 }
+
+
+/* === UNIFIED INBOX / COMMUNICATION === */
+.inboxShell {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(24rem, .82fr) minmax(32rem, 1.18fr);
+  background: var(--admin-line);
+  border: 1px solid var(--admin-line);
+  gap: 1px;
+}
+.inboxList,
+.conversation {
+  min-width: 0;
+  background: var(--admin-paper);
+}
+.inboxList {
+  padding: 1.2rem;
+}
+.inboxHead,
+.conversationHead {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+}
+.inboxHead {
+  min-height: 4.5rem;
+  justify-content: space-between;
+}
+.inboxHead h2 {
+  margin: 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+.channelTabs {
+  margin: 1rem 0;
+  display: flex;
+  gap: .35rem;
+  overflow-x: auto;
+}
+.channelTabs button {
+  min-height: 2.35rem;
+  padding: .6rem .72rem;
+  border: 1px solid var(--admin-line);
+  background: transparent;
+  font-size: .57rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.channelTabs button[data-active="true"] {
+  color: var(--admin-paper);
+  background: var(--admin-ink);
+  border-color: var(--admin-ink);
+}
+.channelTabs b {
+  margin-left: .35rem;
+  color: var(--admin-ink);
+  background: var(--admin-citron);
+  padding: .15rem .3rem;
+  font-size: .5rem;
+}
+.messageRows {
+  border-top: 1px solid var(--admin-line);
+}
+.messageRows article {
+  position: relative;
+  min-height: 7.2rem;
+  padding: 1rem .7rem;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: .8rem;
+  border-bottom: 1px solid var(--admin-line);
+  cursor: pointer;
+}
+.messageRows article[data-active="true"] {
+  background: #e8e6de;
+}
+.messageAvatar {
+  width: 2.35rem;
+  height: 2.35rem;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  color: var(--admin-paper);
+  background: var(--admin-ink);
+  font-size: .55rem;
+  font-weight: 700;
+}
+.messageCopy > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.messageCopy strong {
+  font-size: .67rem;
+}
+.messageCopy time {
+  color: #969a96;
+  font-size: .53rem;
+}
+.messageCopy > span {
+  display: block;
+  margin-top: .2rem;
+  color: #7f847f;
+  font-size: .56rem;
+}
+.messageCopy p {
+  margin: .6rem 0;
+  overflow: hidden;
+  color: #626762;
+  font-size: .61rem;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.messageCopy footer {
+  display: flex;
+  justify-content: space-between;
+  gap: .7rem;
+}
+.messageCopy footer b,
+.messageCopy footer em {
+  font-size: .5rem;
+  font-style: normal;
+  letter-spacing: .07em;
+}
+.messageCopy footer b {
+  color: #4e5700;
+}
+.messageCopy footer em {
+  color: #939793;
+}
+.unreadDot {
+  position: absolute;
+  top: 1rem;
+  right: .2rem;
+  width: .45rem;
+  height: .45rem;
+  border-radius: 50%;
+  background: var(--admin-citron);
+  border: 1px solid var(--admin-ink);
+}
+.conversation {
+  display: flex;
+  flex-direction: column;
+}
+.conversationHead {
+  min-height: 5.9rem;
+  padding: 1rem 1.3rem;
+  border-bottom: 1px solid var(--admin-line);
+}
+.conversationHead > div:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+.conversationHead h3 {
+  margin: 0;
+  font-size: .72rem;
+}
+.conversationHead p {
+  margin: .28rem 0 0;
+  color: #818681;
+  font-size: .56rem;
+}
+.timeline {
+  min-height: 28rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+  background:
+    linear-gradient(rgba(16,18,20,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,18,20,.025) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.timelineEvent {
+  width: fit-content;
+  max-width: 82%;
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: .8rem;
+  color: #929692;
+  font-size: .53rem;
+}
+.timelineEvent p {
+  margin: 0;
+}
+.timelineEvent b {
+  color: #707570;
+}
+.bubbleIncoming,
+.bubbleOutgoing {
+  max-width: 76%;
+  padding: .9rem 1rem;
+  border: 1px solid var(--admin-line);
+}
+.bubbleIncoming {
+  align-self: flex-start;
+  background: var(--admin-paper);
+}
+.bubbleOutgoing {
+  align-self: flex-end;
+  background: var(--admin-ink);
+  color: #f5f2e9;
+}
+.bubbleIncoming small,
+.bubbleOutgoing small {
+  display: block;
+  margin-bottom: .45rem;
+  color: #8c918c;
+  font-size: .5rem;
+}
+.bubbleIncoming p,
+.bubbleOutgoing p {
+  margin: 0;
+  font-size: .64rem;
+  line-height: 1.6;
+}
+.aiReply {
+  margin: 0 1.3rem 1rem;
+  padding: 1rem;
+  border: 1px solid var(--admin-ink);
+  background: #f0ffd0;
+}
+.aiReply > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.aiReply span {
+  font-size: .5rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+}
+.aiReply strong {
+  font-size: .58rem;
+}
+.aiReply p {
+  margin: .8rem 0;
+  font-size: .62rem;
+  line-height: 1.55;
+}
+.aiReply > div:last-child {
+  display: flex;
+  gap: .5rem;
+}
+.aiReply button {
+  padding: .5rem .7rem;
+  border: 1px solid var(--admin-ink);
+  background: transparent;
+  font-size: .53rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.aiReply button:first-child {
+  color: var(--admin-paper);
+  background: var(--admin-ink);
+}
+.composer {
+  padding: 1rem 1.3rem 1.3rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: .7rem;
+  align-items: end;
+  border-top: 1px solid var(--admin-line);
+}
+.composer > span {
+  padding: .6rem;
+  border: 1px solid var(--admin-line);
+  font-size: .53rem;
+  font-weight: 700;
+}
+.composer textarea {
+  min-height: 4.1rem;
+  resize: none;
+  padding: .75rem;
+  color: var(--admin-ink);
+  background: transparent;
+  border: 1px solid var(--admin-line);
+  font: inherit;
+  font-size: .62rem;
+  line-height: 1.45;
+}
+.composer button {
+  min-height: 4.1rem;
+  padding: .75rem 1rem;
+  color: var(--admin-ink);
+  background: var(--admin-citron);
+  border: 1px solid var(--admin-ink);
+  font-size: .57rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 1180px) {
+  .inboxShell {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 620px) {
+  .inboxShell {
+    display: block;
+  }
+  .conversationHead {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .timeline {
+    min-height: 22rem;
+    padding: 1rem;
+  }
+  .bubbleIncoming,
+  .bubbleOutgoing {
+    max-width: 92%;
+  }
+  .composer {
+    grid-template-columns: 1fr;
+  }
+  .composer button {
+    min-height: 2.8rem;
+  }
+}
