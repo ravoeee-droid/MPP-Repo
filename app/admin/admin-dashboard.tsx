@@ -3,11 +3,12 @@
 import { useMemo, useState } from "react";
 import styles from "./admin.module.css";
 
-type View = "overview" | "crm" | "recruiting" | "visibility" | "automation" | "ai" | "system";
+type View = "overview" | "crm" | "messages" | "recruiting" | "visibility" | "automation" | "ai" | "system";
 
 const nav: Array<{ id: View; label: string; meta: string }> = [
   { id: "overview", label: "Command Center", meta: "Live overview" },
   { id: "crm", label: "Leads & CRM", meta: "18 active" },
+  { id: "messages", label: "Nachrichten", meta: "9 ungelesen" },
   { id: "recruiting", label: "Recruiting", meta: "42 applicants" },
   { id: "visibility", label: "SEO & GEO", meta: "78 / 100" },
   { id: "automation", label: "Automationen", meta: "12 active" },
@@ -276,6 +277,121 @@ function CRM() {
   );
 }
 
+function Messages() {
+  const inbox = [
+    { initials: "TW", name: "Thomas Weber", company: "Weber Elektrotechnik", channel: "WHATSAPP", time: "13:14", text: "Ja, morgen um 10 Uhr passt bei mir sehr gut.", unread: true, score: "92" },
+    { initials: "LK", name: "Laura Klein", company: "Bewerbung · Sales Manager", channel: "E-MAIL", time: "12:48", text: "Vielen Dank für die schnelle Rückmeldung. Anbei meine Unterlagen …", unread: true, score: "94" },
+    { initials: "MH", name: "Michael Hahn", company: "Hahn Industrie GmbH", channel: "CHAT", time: "11:37", text: "Wie schnell könnten Sie uns bei der Personalsuche unterstützen?", unread: true, score: "86" },
+    { initials: "AS", name: "Anna Schmitz", company: "Care West GmbH", channel: "WHATSAPP", time: "10:22", text: "Können Sie mir vorab noch die Leistungsübersicht senden?", unread: false, score: "81" },
+    { initials: "JR", name: "Jonas Richter", company: "Richter Logistik", channel: "E-MAIL", time: "09:16", text: "Der Termin ist bestätigt. Bis später.", unread: false, score: "76" }
+  ];
+
+  return (
+    <>
+      <Header eyebrow="UNIFIED INBOX / COMMUNICATION" title="Jede Nachricht. Ein Verlauf." />
+      <div className={styles.metricsGrid}>
+        <Metric label="NACHRICHTEN" value="184" delta="+29%" foot="E-Mail · WhatsApp · Chat" values={[72, 88, 91, 112, 136, 154, 184]} />
+        <Metric label="UNGelesen" value="9" delta="-31%" foot="offene Antworten" values={[18, 16, 14, 13, 12, 10, 9]} />
+        <Metric label="Ø ANTWORTZEIT" value="4:12" delta="-38%" foot="Minuten" values={[10, 9, 8, 7, 6, 5, 4]} />
+        <Metric label="AUTO FOLLOW-UPS" value="41" delta="+12" foot="diesen Monat" values={[8, 13, 18, 21, 27, 33, 41]} />
+      </div>
+
+      <div className={styles.inboxShell}>
+        <section className={styles.inboxList}>
+          <div className={styles.inboxHead}>
+            <div>
+              <span className={styles.panelKicker}>ALLE KANÄLE</span>
+              <h2>Posteingang</h2>
+            </div>
+            <button className={styles.actionButton}>+ Nachricht</button>
+          </div>
+
+          <div className={styles.channelTabs}>
+            <button data-active="true">Alle <b>9</b></button>
+            <button>E-Mail <b>4</b></button>
+            <button>WhatsApp <b>3</b></button>
+            <button>Chat <b>2</b></button>
+          </div>
+
+          <div className={styles.messageRows}>
+            {inbox.map((item, index) => (
+              <article key={item.name} data-active={index === 0}>
+                <div className={styles.messageAvatar}>{item.initials}</div>
+                <div className={styles.messageCopy}>
+                  <div><strong>{item.name}</strong><time>{item.time}</time></div>
+                  <span>{item.company}</span>
+                  <p>{item.text}</p>
+                  <footer><b>{item.channel}</b><em>Lead Score {item.score}</em></footer>
+                </div>
+                {item.unread && <i className={styles.unreadDot} />}
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className={styles.conversation}>
+          <div className={styles.conversationHead}>
+            <div className={styles.messageAvatar}>TW</div>
+            <div>
+              <h3>Thomas Weber</h3>
+              <p>Weber Elektrotechnik · Lead Score 92 · Qualifiziert</p>
+            </div>
+            <span className={styles.state}>WhatsApp</span>
+          </div>
+
+          <div className={styles.timeline}>
+            <div className={styles.timelineEvent}>
+              <span>12:41</span><p><b>System</b> Lead automatisch mit Score 92 qualifiziert.</p>
+            </div>
+            <div className={styles.bubbleIncoming}>
+              <small>Thomas · 12:46</small>
+              <p>Hallo, ich habe gerade Ihre Seite gesehen. Wir suchen aktuell dringend zwei Elektriker und kommen mit den normalen Stellenportalen kaum weiter.</p>
+            </div>
+            <div className={styles.bubbleOutgoing}>
+              <small>MPP · 12:49</small>
+              <p>Hallo Herr Weber, danke für Ihre Nachricht. Das klingt genau nach einem Fall, bei dem unser Recruiting-System helfen kann. Ich würde Ihnen gerne kurz zeigen, wie wir Bewerber über Website, Ads und automatisches Follow-up zusammenführen.</p>
+            </div>
+            <div className={styles.timelineEvent}>
+              <span>12:50</span><p><b>Automation</b> Terminvorschlag und Kalenderlink gesendet.</p>
+            </div>
+            <div className={styles.bubbleIncoming}>
+              <small>Thomas · 13:14</small>
+              <p>Ja, morgen um 10 Uhr passt bei mir sehr gut.</p>
+            </div>
+          </div>
+
+          <div className={styles.aiReply}>
+            <div><span>AI REPLY COPILOT</span><strong>Antwortvorschlag bereit</strong></div>
+            <p>Perfekt, Herr Weber. Ich habe morgen um 10 Uhr für Sie reserviert. Sie erhalten den Termin gleich noch einmal per E-Mail mit dem Link. Bis morgen!</p>
+            <div><button>Übernehmen</button><button>Neu formulieren</button></div>
+          </div>
+
+          <div className={styles.composer}>
+            <span>WhatsApp</span>
+            <textarea defaultValue="Perfekt, Herr Weber. Ich habe morgen um 10 Uhr für Sie reserviert." aria-label="Nachricht" />
+            <button>Senden →</button>
+          </div>
+        </section>
+      </div>
+
+      <div className={styles.threeCol}>
+        <section className={styles.stageCard}>
+          <div><span>01</span><b>E-Mail</b><em>4</em></div>
+          <p>Alle Anfragen, Antworten, Angebote und Bewerbermails laufen direkt am Kontakt zusammen.</p>
+        </section>
+        <section className={styles.stageCard}>
+          <div><span>02</span><b>WhatsApp</b><em>3</em></div>
+          <p>Schnelle Kommunikation mit Interessenten und Bewerbern inklusive automatischer Follow-ups.</p>
+        </section>
+        <section className={styles.stageCard}>
+          <div><span>03</span><b>Website Chat</b><em>2</em></div>
+          <p>Chats werden zum CRM-Kontakt, qualifiziert und bei Bedarf automatisch an den richtigen Mitarbeiter übergeben.</p>
+        </section>
+      </div>
+    </>
+  );
+}
+
 function Recruiting() {
   return (
     <>
@@ -459,6 +575,7 @@ export function AdminDashboard() {
 
   const content = useMemo(() => {
     if (active === "crm") return <CRM />;
+    if (active === "messages") return <Messages />;
     if (active === "recruiting") return <Recruiting />;
     if (active === "visibility") return <Visibility />;
     if (active === "automation") return <Automation />;
